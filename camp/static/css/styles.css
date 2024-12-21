@@ -1,0 +1,37 @@
+/* Change background color for all pages*/
+body {
+    background-color: lightgray;
+}
+
+
+tr:hover {
+    background-color: lightgreen;
+    /* Make text bold */
+    font-weight: bold;
+}
+
+.badge {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+/* optional styles for spacing and alignment */
+p {
+    margin: 0;
+}
+
+span:first-child {
+    margin-right: 10px;
+}

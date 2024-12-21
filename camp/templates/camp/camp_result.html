@@ -1,0 +1,40 @@
+{% extends 'camp/layout.html' %}
+{% load static %}
+
+{% block body %} 
+
+{% block content %}
+<div class="d-flex flex-column justify-content-center align-items-center min-vh-100">
+  <h2 class="text-center mb-4">Camp Reservation Results</h2>
+  <ul class="list-unstyled text-center">
+    <li><strong>Start Date:</strong> {{ start_date }}</li>
+    <li><strong>End Date:</strong> {{ end_date }}</li>
+    <li><strong>Campsite ID:</strong> {{ campsite_id }}</li>
+    <li><strong>Nights:</strong> {{ nights }}</li>
+  </ul>
+
+  {% if has_availabilities %}
+    <h2 class="text-center mt-4">Availability Status</h2>
+    <p class="text-success text-center">Campsites are available for your selected dates!</p>
+  {% else %}
+    <h2 class="text-center mt-4">Availability Status</h2>
+    <p class="text-danger text-center">Unfortunately, no campsites are available for your selected dates.</p>
+  {% endif %}
+
+  <h2 class="text-center mt-4">Detailed Output</h2>
+  {% if output %}
+    <pre class="bg-light p-3 rounded text-wrap" style="white-space: pre-wrap; word-break: break-word;">{{ output }}</pre>
+  {% else %}
+    <p class="text-center">No additional information available.</p>
+  {% endif %}
+
+  <a href="{% url 'select_camp' %}" 
+    class="btn btn-primary rounded-pill mt-4"
+    data-toggle="tooltip"
+    data-placement="right"
+    title="Search Again"
+    type="search_again"
+    style="padding: 0.5em; width: 100%; max-width: 200px;">Search Again</a>
+{% endblock %}
+</div>
+{% endblock %}
