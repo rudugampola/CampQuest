@@ -1,8 +1,10 @@
-{% extends "camp/layout.html" %} 
-{% load static %} 
+{% extends "camp/layout.html" %}
+{% load static %}
 {% block body %}
 
 <div class="d-flex flex-column justify-content-center align-items-center min-vh-100">
+  <img src="{% static 'images/campfire.jpg' %}" alt="Campfire" class="img-fluid mb-4" style="max-width: 200px;">
+
   <form 
     action="{% url 'select_camp' %}" 
     method="post" 

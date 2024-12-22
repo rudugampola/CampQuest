@@ -23,6 +23,18 @@ sh.setFormatter(log_formatter)
 LOG.addHandler(sh)
 
 
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+
 def get_park_information(
     park_id, start_date, end_date, campsite_type=None, campsite_ids=(), excluded_site_ids=[]
 ):
@@ -79,8 +91,17 @@ def get_num_available_sites(
     num_available = 0
     num_days = (end_date - start_date).days
     dates = [end_date - timedelta(days=i) for i in range(1, num_days + 1)]
+
     if weekends_only:
-        dates = filter(is_weekend, dates)
+        # Convert the filter object to a list
+        dates = list(filter(is_weekend, dates))
+
+    # print(bcolors.FAIL + "Dates:" + bcolors.ENDC)
+    # for date in dates:
+    #     print(date)
+    #     print(bcolors.FAIL + "Weekday #" + str(date.weekday()) + bcolors.OKCYAN)
+    # print(dates)
+
     dates = set(
         formatter.format_date(
             i, format_string=DateFormat.ISO_DATE_FORMAT_RESPONSE.value
@@ -90,7 +111,7 @@ def get_num_available_sites(
 
     if nights not in range(1, num_days + 1):
         nights = num_days
-        LOG.debug("Setting number of nights to {}.".format(nights))
+        # LOG.debug("Setting number of nights to {}.".format(nights))
 
     available_dates_by_campsite_id = defaultdict(list)
     for site, availabilities in park_information.items():
@@ -107,7 +128,7 @@ def get_num_available_sites(
 
         if appropriate_consecutive_ranges:
             num_available += 1
-            LOG.debug("Available site {}: {}".format(num_available, site))
+            # LOG.debug("Available site {}: {}".format(num_available, site))
 
         for r in appropriate_consecutive_ranges:
             start, end = r
@@ -155,11 +176,11 @@ def check_park(
     park_information = get_park_information(
         park_id, start_date, end_date, campsite_type, campsite_ids, excluded_site_ids=excluded_site_ids,
     )
-    LOG.debug(
-        "Information for park {}: {}".format(
-            park_id, json.dumps(park_information, indent=2)
-        )
-    )
+    # LOG.debug(
+    #     "Information for park {}: {}".format(
+    #         park_id, json.dumps(park_information, indent=2)
+    #     )
+    # )
     park_name = RecreationClient.get_park_name(park_id)
     current, maximum, availabilities_filtered = get_num_available_sites(
         park_information, start_date, end_date, nights=nights, weekends_only=weekends_only,

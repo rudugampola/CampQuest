@@ -1,6 +1,6 @@
 import unittest
 
-import camping
+import _camping
 import notifier
 from utils.camping_argparser import CampingArgumentParser
 
@@ -19,7 +19,7 @@ class TestNotifier(unittest.TestCase):
                 "SOME PARK",
             )
         }
-        output, _ = camping.generate_human_output(
+        output, _ = _camping.generate_human_output(
             info_by_park_id,
             CampingArgumentParser.TypeConverter.date("2022-06-22"),
             CampingArgumentParser.TypeConverter.date("2022-06-24"),
@@ -48,7 +48,7 @@ class TestNotifier(unittest.TestCase):
                 "SOME PARK",
             )
         }
-        output, _ = camping.generate_human_output(
+        output, _ = _camping.generate_human_output(
             info_by_park_id,
             CampingArgumentParser.TypeConverter.date("2022-06-22"),
             CampingArgumentParser.TypeConverter.date("2022-06-24"),

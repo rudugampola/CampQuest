@@ -3,6 +3,18 @@ from django.http import HttpResponse
 from datetime import datetime
 from .camping import run_campsite_check
 
+# TODO: Add a bootstrap notification if no data is entered and submitted. Also add required fields to submit form
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
 
 def select_camp(request):
     if request.method == "POST":
@@ -23,7 +35,7 @@ def select_camp(request):
         show_campsite_info = request.POST.get("show_campsite_info") == "true"
 
         # Get the Weekends Only checkbox value
-        weekends_only = request.POST.get("weekend_only") == "true"
+        weekends_only = request.POST.get("weekends_only") == "true"
 
         # Pass the 'show_campsite_info' value as "true" if checked
         if show_campsite_info:
@@ -56,11 +68,13 @@ def select_camp(request):
             'has_availabilities': has_availabilities,
             'show_campsite_info': show_campsite_info,
             'campsite_info': campsite_info,  # Include detailed campsite info
+            'weekends_only': weekends_only,
             'title': 'Camp Reservation Result'
         }
 
         # print("Context:", context)
-        print("Output:", output)
+        print(bcolors.OKGREEN + "Output: " +
+              output + bcolors.ENDC)
 
         # Return the rendered template with the context data
         return render(request, 'camp/camp_result.html', context)

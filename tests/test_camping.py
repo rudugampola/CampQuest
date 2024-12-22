@@ -1,6 +1,6 @@
 import unittest
 
-import camping
+import _camping
 from enums.date_format import DateFormat
 from enums.emoji import Emoji
 from utils.camping_argparser import CampingArgumentParser
@@ -24,7 +24,7 @@ class TestCamping(unittest.TestCase):
             ],
         }
 
-        _, _, available_dates_by_campsite_id = camping.get_num_available_sites(
+        _, _, available_dates_by_campsite_id = _camping.get_num_available_sites(
             park_info,
             CampingArgumentParser.TypeConverter.date("2022-06-22"),
             CampingArgumentParser.TypeConverter.date("2022-06-23"),
@@ -68,7 +68,7 @@ class TestCamping(unittest.TestCase):
                 park_name,
             )
         }
-        output, _ = camping.generate_human_output(
+        output, _ = _camping.generate_human_output(
             info_by_park_id, start_date, end_date
         )
         self.assertEqual(output, expected)
@@ -97,7 +97,7 @@ class TestCamping(unittest.TestCase):
         )
 
         info_by_park_id = {park_id: (current, maximum, {}, park_name)}
-        output, _ = camping.generate_human_output(
+        output, _ = _camping.generate_human_output(
             info_by_park_id, start_date, end_date
         )
         self.assertEqual(output, expected)
@@ -147,7 +147,7 @@ class TestCamping(unittest.TestCase):
                 park_name,
             )
         }
-        output, _ = camping.generate_human_output(
+        output, _ = _camping.generate_human_output(
             info_by_park_id, start_date, end_date, True
         )
         self.assertEqual(output, expected)
@@ -176,7 +176,7 @@ class TestCamping(unittest.TestCase):
         )
 
         info_by_park_id = {park_id: (current, maximum, {}, park_name)}
-        output, _ = camping.generate_human_output(
+        output, _ = _camping.generate_human_output(
             info_by_park_id, start_date, end_date, True
         )
         self.assertEqual(output, expected)

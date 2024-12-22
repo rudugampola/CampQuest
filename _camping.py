@@ -95,6 +95,7 @@ def get_park_information(
 
     return data
 
+
 def is_weekend(date):
     weekday = date.weekday()
 
