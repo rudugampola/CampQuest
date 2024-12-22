@@ -31,18 +31,32 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.1.0/mdb.min.css"
     rel="stylesheet"
     />
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .content {
+            flex: 1;
+        }
+    </style>
   </head>
 
-  <body class="body">
-        {% block body %} {% endblock %}
+  <body>
+    <div class="content">
+      {% block body %} {% endblock %}
+    </div>
 
-        <footer>
-          <div class="container-fluid bg-dark text-light py-3">
-              <div class="text-center">
-                  <a href="https://github.com/rudugampola" class="text-light" style="text-decoration: none">
-                      <i class="fab fa-github"></i>&nbsp &nbspRavindu Udugampola
-                  </a>
-              </div>
-          </div>
-      </footer>
+    <footer>
+      <div class="container-fluid bg-dark text-light py-3">
+        <div class="text-center">
+          <a href="https://github.com/rudugampola" class="text-light" style="text-decoration: none">
+            <i class="fab fa-github"></i>&nbsp &nbspRavindu Udugampola
+          </a>
+        </div>
+      </div>
+    </footer>
   </body>
+</html>

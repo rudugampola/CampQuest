@@ -2,7 +2,7 @@
 {% load static %}
 {% block body %}
 
-<div class="d-flex flex-column justify-content-center align-items-center min-vh-100">
+<div class="d-flex flex-column justify-content-center align-items-center my-5">
   <img src="{% static 'images/campfire.jpg' %}" alt="Campfire" class="img-fluid mb-4" style="max-width: 200px;">
 
   <form 
@@ -36,7 +36,7 @@
     </div>
 
     <div class="form-group">
-      <label for="campsite_id">Campsite ID(s):</label>
+      <label for="campsite_id">Park ID(s):</label>
       <input 
         type="text" 
         id="campsite_id" 
@@ -47,7 +47,7 @@
       />
     </div>
 
-    <div class="form-group">
+    {% comment %} <div class="form-group">
       <label for="nights">Number of Nights:</label>
       <input 
         type="number" 
@@ -56,7 +56,7 @@
         class="form-control mb-3" 
         min="1" 
       />
-    </div>
+    </div> {% endcomment %}
 
     <div class="form-group">
       <div class="form-check">
@@ -83,6 +83,8 @@
         <label for="weekends_only" class="form-check-label">Weekends Only</label>
       </div>
     </div>
+
+    <hr>
 
     <div class="d-flex justify-content-center">
       <input 

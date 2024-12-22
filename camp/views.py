@@ -28,7 +28,7 @@ def select_camp(request):
         # The campsite_id has comma-separated values, so we need to split them into a list of integers
         campsite_id = int(request.POST.get("campsite_id"))
 
-        nights = request.POST.get("nights")
+        # nights = request.POST.get("nights")
 
         # The dates are in the format "YYYY-MM-DD", so we can parse them into datetime objects
         start_date = datetime.strptime(start_date_str, "%Y-%m-%d")
@@ -46,7 +46,7 @@ def select_camp(request):
                 [campsite_id],
                 start_date,
                 end_date,
-                nights=int(nights),
+                # nights=int(nights),
                 show_campsite_info=show_campsite_info,
                 weekends_only=weekends_only
             )
@@ -73,7 +73,7 @@ def select_camp(request):
                 [campsite_id],
                 start_date,
                 end_date,
-                nights=int(nights),
+                # nights=int(nights),
                 show_campsite_info=show_campsite_info,
                 weekends_only=weekends_only
             )
@@ -84,7 +84,7 @@ def select_camp(request):
             'start_date': start_date_str,
             'end_date': end_date_str,
             'campsite_id': campsite_id,
-            'nights': nights,
+            # 'nights': nights,
             'output': output,
             'has_availabilities': has_availabilities,
             'show_campsite_info': show_campsite_info,
