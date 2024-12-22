@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from datetime import datetime
+from collections import defaultdict
 from .camping import run_campsite_check
 
-# TODO: Add a bootstrap notification if no data is entered and submitted. Also add required fields to submit form.
+# TODO: Add a rating for the campsite
 
 
 class bcolors:
@@ -41,7 +42,7 @@ def select_camp(request):
 
         # Pass the 'show_campsite_info' value as "true" if checked
         if show_campsite_info:
-            output, has_availabilities, campsite_info = run_campsite_check(
+            output, has_availabilities, raw_campsite_info = run_campsite_check(
                 [campsite_id],
                 start_date,
                 end_date,
@@ -49,6 +50,24 @@ def select_camp(request):
                 show_campsite_info=show_campsite_info,
                 weekends_only=weekends_only
             )
+
+            # Convert raw_campsite_info to a list of dictionaries for easier iteration in the template
+            campsite_info = []
+            for park_id, park_info in raw_campsite_info.items():
+                park_data = {
+                    'park_id': park_id,
+                    'available_sites': park_info[0],
+                    'total_sites': park_info[1],
+                    'sites': [],
+                    'park_name': park_info[3]
+                }
+                for site_id, dates in park_info[2].items():
+                    site_data = {
+                        'site_id': site_id,
+                        'dates': dates
+                    }
+                    park_data['sites'].append(site_data)
+                campsite_info.append(park_data)
         else:
             output, has_availabilities = run_campsite_check(
                 [campsite_id],
@@ -74,9 +93,10 @@ def select_camp(request):
             'title': 'Camp Reservation Result'
         }
 
-        # print("Context:", context)
-        print(bcolors.OKGREEN + "Output: " +
-              output + bcolors.ENDC)
+        # Print the output
+        print(bcolors.OKGREEN + "Output: " + output + bcolors.ENDC)
+        # Print the campsite_info
+        # print(campsite_info)
 
         # Return the rendered template with the context data
         return render(request, 'camp/camp_result.html', context)
