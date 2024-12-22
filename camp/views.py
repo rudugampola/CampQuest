@@ -3,7 +3,9 @@ from django.http import HttpResponse
 from datetime import datetime
 from .camping import run_campsite_check
 
-# TODO: Add a bootstrap notification if no data is entered and submitted. Also add required fields to submit form
+# TODO: Add a bootstrap notification if no data is entered and submitted. Also add required fields to submit form.
+
+
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
