@@ -10,7 +10,7 @@ def select_camp(request):
         start_date_str = request.POST.get("start_date")
         end_date_str = request.POST.get("end_date")
 
-        # The campsite_id has comma separated values, so we need to split them into a list of integers
+        # The campsite_id has comma-separated values, so we need to split them into a list of integers
         campsite_id = int(request.POST.get("campsite_id"))
 
         nights = request.POST.get("nights")
@@ -19,10 +19,32 @@ def select_camp(request):
         start_date = datetime.strptime(start_date_str, "%Y-%m-%d")
         end_date = datetime.strptime(end_date_str, "%Y-%m-%d")
 
-        # Render the camp_result.html template with the results
-        output, has_availabilities = run_campsite_check(
-            [campsite_id], start_date, end_date, nights=int(nights)
-        )
+        # Get the Show Campsite Info checkbox value
+        show_campsite_info = request.POST.get("show_campsite_info") == "true"
+
+        # Get the Weekends Only checkbox value
+        weekends_only = request.POST.get("weekend_only") == "true"
+
+        # Pass the 'show_campsite_info' value as "true" if checked
+        if show_campsite_info:
+            output, has_availabilities, campsite_info = run_campsite_check(
+                [campsite_id],
+                start_date,
+                end_date,
+                nights=int(nights),
+                show_campsite_info=show_campsite_info,
+                weekends_only=weekends_only
+            )
+        else:
+            output, has_availabilities = run_campsite_check(
+                [campsite_id],
+                start_date,
+                end_date,
+                nights=int(nights),
+                show_campsite_info=show_campsite_info,
+                weekends_only=weekends_only
+            )
+            campsite_info = None
 
         # Create a context dictionary with the form data and the results
         context = {
@@ -32,11 +54,13 @@ def select_camp(request):
             'nights': nights,
             'output': output,
             'has_availabilities': has_availabilities,
+            'show_campsite_info': show_campsite_info,
+            'campsite_info': campsite_info,  # Include detailed campsite info
             'title': 'Camp Reservation Result'
         }
 
-        # Print the context to the console for debugging
-        print(context)
+        # print("Context:", context)
+        print("Output:", output)
 
         # Return the rendered template with the context data
         return render(request, 'camp/camp_result.html', context)
