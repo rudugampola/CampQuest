@@ -10,9 +10,28 @@
     <div class="row">
         {% for facility in facilities %}
             <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm">
+                <div class="card h-100 shadow-sm"  style="background-color: #f5f5dc;">
                     <div class="card-body">
-                        <h5 class="card-title">{{ facility.name }}</h5>
+                        <h5 class="card-title">{{ facility.name }}
+                            {% if facility.type == "Campground" %}
+                            <i class="fa-solid fa-campground"></i>
+                            {% endif %}
+                            {% if facility.type == "Permit" %}
+                            <i class="fa-solid fa-file-lines"></i>
+                            {% endif %}
+                            {% if facility.type == "Timed Entry" %}
+                            <i class="fa-solid fa-clock"></i>
+                            {% endif %}
+                            {% if facility.type == "Ticket Facility" %}
+                            <i class="fa-solid fa-ticket-simple"></i>
+                            {% endif %}
+                            {% if facility.type == "Facility" %}
+                            <i class="fa-solid fa-building"></i>
+                            {% endif %}
+                            {% if facility.type == "Visitor Center" %}
+                            <i class="fa-solid fa-flag"></i>
+                            {% endif %}
+                        </h5>
                         <p class="card-text">
                             <strong>Type:</strong> {{ facility.type }}<br>
                             <strong>Latitude:</strong> {{ facility.latitude }}<br>

@@ -1,5 +1,6 @@
 {% extends "camp/layout.html" %}
 {% load static %}
+
 {% block body %}
 
 <div class="container my-5">
@@ -17,7 +18,7 @@
     <div class="row">
         {% for park in parks %}
             <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm">
+                <div class="card h-100 shadow-sm" style="background-color: #f5f5dc;">
                     <div class="card-body">
                         <h5 class="card-title">
                             <a href="{% url 'show_facilities' park.id %}">{{ park.name }}</a>
