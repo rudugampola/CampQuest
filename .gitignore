@@ -1,8 +1,3 @@
-/myvenv/
+/camp/other/*
+/myenv/*
 __pycache__
-/next*
-/tweetlog
-/twitter_credentials.py
-/twitter_credentials.json
-*.swp
-*egg-info

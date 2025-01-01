@@ -7,15 +7,11 @@
 <div class="d-flex flex-column justify-content-center align-items-center my-4">
   <h2 class="text-center mb-3">Camp Reservation Results</h2>
   <div class="card mb-3 shadow-sm w-75">
-    <div class="card-header">
-      <h5 class="card-title text-center">Reservation Details</h5>
-    </div>
     <div class="card-body p-2">
       <ul class="list-group list-group-flush">
         <li class="list-group-item"><strong>Start Date:</strong> {{ start_date }}</li>
         <li class="list-group-item"><strong>End Date:</strong> {{ end_date }}</li>
-        <li class="list-group-item"><strong>Campsite ID:</strong> {{ campsite_id }}</li>
-        <li class="list-group-item"><strong>Nights:</strong> {{ nights }}</li>
+        <li class="list-group-item"><strong>Campsite ID:</strong> {{ parks }}</li>
         {% if weekends_only %}
           <li class="list-group-item"><strong>Showing only weekends</strong></li>
         {% endif %}
@@ -33,39 +29,41 @@
     </div>
   {% endif %}
 
-  <h4 class="text-center mt-3">Detailed Output</h4>
+  <h4 class="text-center mt-3">Output</h4>
   {% if output %}
-    <pre class="bg-light p-2 rounded w-75" style="white-space: pre-wrap; word-break: break-word;">{{ output }}</pre>
+    <pre class="bg-light p-2 rounded w-75 " style="white-space: pre-wrap; word-break: break-word;">{{ output }}</pre>
   {% else %}
     <p class="text-center">No additional information available.</p>
   {% endif %}
 
-  {% if show_campsite_info and campsite_info %}
-    <h5 class="text-center mt-3">Detailed Campsite Information</h5>
-    {% for park_id, park_info in campsite_info.items %}
-      <div class="mt-2 w-75">
-        <h6 class="text-center">
-          {{ park_info.3 }} (
-          <a href="https://www.recreation.gov/camping/campgrounds/{{ park_id }}" target="_blank">
-            {{ park_id }}
-          </a>)
-        </h6>
-        <p class="text-center">{{ park_info.0 }} site(s) available out of {{ park_info.1 }} site(s)</p>
-        <ul class="list-group">
-          {% for site_id, dates in park_info.2.items %}
-            <li class="list-group-item p-1">
-              <strong>Site {{ site_id }}:</strong>
-              <ul class="list-unstyled">
-                {% for date in dates %}
-                  <li>{{ date.start }} -> {{ date.end }}</li>
-                {% endfor %}
-              </ul>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    {% endfor %}
-  {% endif %}
+  <div class="d-flex flex-column justify-content-center align-items-center">  
+    {% if show_campsite_info and campsite_info %}
+        <h5 class="text-center mt-3">Detailed Campsite Information</h5>
+        {% for park in campsite_info %}
+          <div class="mt-2">
+            <h6 class="text-center">
+              {{ park.park_name }} (
+              <a href="https://www.recreation.gov/camping/campgrounds/{{ park.park_id }}" target="_blank">
+                {{ park.park_id }}
+              </a>)
+            </h6>
+            <p class="text-center">{{ park.available_sites }} site(s) available out of {{ park.total_sites }} site(s)</p>
+            <ul>
+              {% for site in park.sites %}
+                <li>
+                  <a href="https://www.recreation.gov/camping/campsites/{{ site.site_id }}" target="_blank"><strong>Site {{ site.site_id }}:</strong></a>
+                  <ul>
+                    {% for date in site.dates %}
+                      <li>{{ date.start }} - {{ date.end }}</li>
+                    {% endfor %}
+                  </ul>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
+    {% endif %}
+  </div>
 
   <a href="{% url 'select_camp' %}" 
     class="btn btn-primary rounded-pill mt-3"
