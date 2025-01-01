@@ -1,8 +1,11 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from datetime import datetime
-from collections import defaultdict
 from .camping import run_campsite_check
+import json
+from django.http import JsonResponse
+from django.conf import settings
+import os
+import ijson
 
 # TODO: Add a rating for the campsite
 
@@ -25,8 +28,8 @@ def select_camp(request):
         start_date_str = request.POST.get("start_date")
         end_date_str = request.POST.get("end_date")
 
-        # The campsite_id has comma-separated values, so we need to split them into a list of integers
-        campsite_id = int(request.POST.get("campsite_id"))
+        # The parks has comma-separated values, so we need to split them into a list of strings
+        parks = request.POST.get("parks").strip().split(',')
 
         # nights = request.POST.get("nights")
 
@@ -43,7 +46,7 @@ def select_camp(request):
         # Pass the 'show_campsite_info' value as "true" if checked
         if show_campsite_info:
             output, has_availabilities, raw_campsite_info = run_campsite_check(
-                [campsite_id],
+                parks,
                 start_date,
                 end_date,
                 # nights=int(nights),
@@ -70,7 +73,7 @@ def select_camp(request):
                 campsite_info.append(park_data)
         else:
             output, has_availabilities = run_campsite_check(
-                [campsite_id],
+                parks,
                 start_date,
                 end_date,
                 # nights=int(nights),
@@ -83,7 +86,7 @@ def select_camp(request):
         context = {
             'start_date': start_date_str,
             'end_date': end_date_str,
-            'campsite_id': campsite_id,
+            'parks': parks,
             # 'nights': nights,
             'output': output,
             'has_availabilities': has_availabilities,
@@ -103,3 +106,75 @@ def select_camp(request):
 
     # Render the select_camp.html template
     return render(request, 'camp/select_camp.html', {'title': 'Select Camp'})
+
+
+def show_parks(request):
+    # Define the file path
+    file_path = os.path.join(settings.BASE_DIR, 'camp',
+                             'other', 'RecAreas_API_v1.json')
+
+    # Get the search query from the request
+    search_query = request.GET.get('q', '').lower()
+
+    # Initialize an empty list to hold the filtered parks
+    parks = []
+
+    # Read the JSON data from the file using ijson
+    try:
+        with open(file_path, 'r', encoding='utf-8') as json_file:
+            # Use ijson to parse the JSON incrementally
+            objects = ijson.items(json_file, 'RECDATA.item')
+            for obj in objects:
+                if isinstance(obj, dict) and search_query in obj.get('RecAreaName', '').lower():
+                    parks.append({
+                        'id': obj.get('RecAreaID', 'N/A'),
+                        'name': obj.get('RecAreaName', 'N/A'),
+                        'latitude': obj.get('RecAreaLatitude', 'N/A'),
+                        'longitude': obj.get('RecAreaLongitude', 'N/A')
+                    })
+
+        return render(request, 'camp/show_parks.html', {'parks': parks, 'search_query': search_query})
+    except FileNotFoundError:
+        return JsonResponse({'error': 'RecAreas_API_v1.json file not found'}, status=404)
+    except ijson.JSONError:
+        return JsonResponse({'error': 'Error decoding JSON data'}, status=500)
+    except UnicodeDecodeError as e:
+        return JsonResponse({'error': f'Unicode decode error: {str(e)}'}, status=500)
+    except Exception as e:
+        return JsonResponse({'error': f'Unexpected error: {str(e)}'}, status=500)
+
+
+def show_campsites(request):
+    # Define the file path
+    file_path = os.path.join(settings.BASE_DIR, 'camp',
+                             'other', 'Campsites_API_v1.json')
+
+    # Get the search query from the request
+    search_query = request.GET.get('q', '').lower()
+
+    # Initialize an empty list to hold the filtered campsites
+    campsites = []
+
+    # Read the JSON data from the file using ijson
+    try:
+        with open(file_path, 'r', encoding='utf-8') as json_file:
+            # Use ijson to parse the JSON incrementally
+            objects = ijson.items(json_file, 'RECDATA.item')
+            for obj in objects:
+                if isinstance(obj, dict) and search_query in obj.get('FacilityID', '').lower():
+                    campsites.append({
+                        'id': obj.get('CampsiteID', 'N/A'),
+                        'name': obj.get('CampsiteName', 'N/A'),
+                        'loop': obj.get('Loop', 'N/A'),
+                        'facility_id': obj.get('FacilityID', 'N/A'),
+                    })
+
+        return render(request, 'camp/show_campsites.html', {'campsites': campsites, 'search_query': search_query})
+    except FileNotFoundError:
+        return JsonResponse({'error': 'Campsites_API_v1.json file not found'}, status=404)
+    except ijson.JSONError:
+        return JsonResponse({'error': 'Error decoding JSON data'}, status=500)
+    except UnicodeDecodeError as e:
+        return JsonResponse({'error': f'Unicode decode error: {str(e)}'}, status=500)
+    except Exception as e:
+        return JsonResponse({'error': f'Unexpected error: {str(e)}'}, status=500)

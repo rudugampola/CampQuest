@@ -11,8 +11,7 @@
       <ul class="list-group list-group-flush">
         <li class="list-group-item"><strong>Start Date:</strong> {{ start_date }}</li>
         <li class="list-group-item"><strong>End Date:</strong> {{ end_date }}</li>
-        <li class="list-group-item"><strong>Campsite ID:</strong> {{ campsite_id }}</li>
-        <li class="list-group-item"><strong>Nights:</strong> {{ nights }}</li>
+        <li class="list-group-item"><strong>Campsite ID:</strong> {{ parks }}</li>
         {% if weekends_only %}
           <li class="list-group-item"><strong>Showing only weekends</strong></li>
         {% endif %}
@@ -30,7 +29,7 @@
     </div>
   {% endif %}
 
-  <h4 class="text-center mt-3">Detailed Output</h4>
+  <h4 class="text-center mt-3">Output</h4>
   {% if output %}
     <pre class="bg-light p-2 rounded w-75 " style="white-space: pre-wrap; word-break: break-word;">{{ output }}</pre>
   {% else %}

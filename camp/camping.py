@@ -68,7 +68,7 @@ def get_park_information(
 
                 if (
                     len(campsite_ids) > 0
-                    and int(campsite_data["campsite_id"]) not in campsite_ids
+                    and campsite_data["campsite_id"] not in campsite_ids
                 ):
                     continue
 

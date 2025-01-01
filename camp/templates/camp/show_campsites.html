@@ -1,0 +1,41 @@
+{% extends "camp/layout.html" %}
+{% load static %}
+{% block body %}
+
+   <div class="container">
+        <h1 class="my-4">Campsites</h1>
+        
+        <!-- Search Form -->
+        <form method="GET" action="{% url 'show_campsites' %}" class="mb-4">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="Search by facility ID" value="{{ search_query }}" style="width: 200px;">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit" style="margin-left: 10px;">Search</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Campsites Table -->
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Facility ID</th>
+                    <th>Campground ID</th>
+                    <th>Name</th>
+                    <th>Loop</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for campsite in campsites %}
+                <tr>
+                    <td>{{ campsite.facility_id }}</td>
+                    <td>{{ campsite.id }}</td>
+                    <td>{{ campsite.name }}</td>
+                    <td>{{ campsite.loop }}</td>
+                    
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

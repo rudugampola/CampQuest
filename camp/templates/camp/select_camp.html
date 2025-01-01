@@ -5,97 +5,101 @@
 <div class="d-flex flex-column justify-content-center align-items-center my-5">
   <img src="{% static 'images/campfire.jpg' %}" alt="Campfire" class="img-fluid mb-4" style="max-width: 200px;">
 
-  <form 
-    action="{% url 'select_camp' %}" 
-    method="post" 
-    enctype="multipart/form-data" 
-    class="w-100 p-3" 
-    style="max-width: 400px;">
-    {% csrf_token %}
+  <div class="card shadow p-4" style="max-width: 500px; width: 100%;">
+    <form 
+      action="{% url 'select_camp' %}" 
+      method="post" 
+      enctype="multipart/form-data"
+      class="w-100"
+    >
+      {% csrf_token %}
 
-    <div class="form-group">
-      <label for="start_date">Start Date:</label>
-      <input 
-        type="date" 
-        id="start_date" 
-        name="start_date" 
-        class="form-control mb-3" 
-        required
-      />
-    </div>
-
-    <div class="form-group">
-      <label for="end_date">End Date:</label>
-      <input 
-        type="date" 
-        id="end_date" 
-        name="end_date" 
-        class="form-control mb-3" 
-        required
-      />
-    </div>
-
-    <div class="form-group">
-      <label for="campsite_id">Park ID(s):</label>
-      <input 
-        type="text" 
-        id="campsite_id" 
-        name="campsite_id" 
-        class="form-control mb-3" 
-        placeholder="Enter comma-separated IDs (e.g., 101, 102, 103)"
-        required
-      />
-    </div>
-
-    {% comment %} <div class="form-group">
-      <label for="nights">Number of Nights:</label>
-      <input 
-        type="number" 
-        id="nights" 
-        name="nights" 
-        class="form-control mb-3" 
-        min="1" 
-      />
-    </div> {% endcomment %}
-
-    <div class="form-group">
-      <div class="form-check">
+      <div class="form-group">
+        <label for="start_date">Start Date:</label>
         <input 
-          type="checkbox" 
-          id="show_info" 
-          name="show_campsite_info" 
-          value="true" 
-          class="form-check-input"
+          type="date" 
+          id="start_date" 
+          name="start_date" 
+          class="form-control mb-3" 
+          required
         />
-        <label for="show_info" class="form-check-label">Show Campsite Info</label>
       </div>
-    </div>
 
-    <div class="form-group">
-      <div class="form-check">
+      <div class="form-group">
+        <label for="end_date">End Date:</label>
         <input 
-          type="checkbox" 
-          id="weekends_only" 
-          name="weekends_only" 
-          value="true" 
-          class="form-check-input"
+          type="date" 
+          id="end_date" 
+          name="end_date" 
+          class="form-control mb-3" 
+          required
         />
-        <label for="weekends_only" class="form-check-label">Weekends Only</label>
       </div>
-    </div>
 
-    <hr>
+      <div class="form-group">
+        <label for="parks">Campground ID(s):</label>
+        <input 
+          type="text" 
+          id="parks" 
+          name="parks" 
+          class="form-control mb-3" 
+          placeholder="Enter comma-separated IDs (e.g., 101, 102, 103)"
+          required
+        />
+      </div>
 
-    <div class="d-flex justify-content-center">
-      <input 
-        data-toggle="tooltip" 
-        data-placement="right" 
-        title="Submit" 
-        type="submit" 
-        class="btn btn-success rounded-pill w-100" 
-        style="max-width: 200px; padding: 0.5em;" 
-      />
-    </div>
-  </form>
+      {% comment %} 
+      <div class="form-group">
+        <label for="nights">Number of Nights:</label>
+        <input 
+          type="number" 
+          id="nights" 
+          name="nights" 
+          class="form-control mb-3" 
+          min="1" 
+        />
+      </div>
+      {% endcomment %}
+
+      <div class="form-group">
+        <div class="form-check">
+          <input 
+            type="checkbox" 
+            id="show_info" 
+            name="show_campsite_info" 
+            value="true" 
+            class="form-check-input"
+          />
+          <label for="show_info" class="form-check-label">Show Campsite Info</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="form-check">
+          <input 
+            type="checkbox" 
+            id="weekends_only" 
+            name="weekends_only" 
+            value="true" 
+            class="form-check-input"
+          />
+          <label for="weekends_only" class="form-check-label">Weekends Only</label>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="d-flex justify-content-center">
+        <input 
+          data-toggle="tooltip" 
+          data-placement="right" 
+          title="Submit" 
+          type="submit" 
+          class="btn btn-success rounded-pill w-100" 
+          style="max-width: 200px; padding: 0.5em;" 
+        />
+      </div>
+    </form>
+  </div>
 </div>
 {% endblock %}
