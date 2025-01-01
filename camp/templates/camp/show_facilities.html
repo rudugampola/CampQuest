@@ -1,0 +1,33 @@
+{% extends "camp/layout.html" %}
+{% load static %}
+{% block body %}
+
+<div class="container my-5">
+    <!-- Header -->
+    <h1 class="text-center mb-4">Facilities for Park {{ recarea_id }}</h1>
+
+    <!-- List of facilities -->
+    <div class="row">
+        {% for facility in facilities %}
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ facility.name }}</h5>
+                        <p class="card-text">
+                            <strong>Type:</strong> {{ facility.type }}<br>
+                            <strong>Latitude:</strong> {{ facility.latitude }}<br>
+                            <strong>Longitude:</strong> {{ facility.longitude }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <!-- Back link styled as a button -->
+    <div class="d-flex justify-content-center mt-4">
+        <a href="{% url 'show_parks' %}" class="btn btn-primary">Back to Parks</a>
+    </div>
+</div>
+
+{% endblock %}

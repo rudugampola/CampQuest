@@ -2,40 +2,35 @@
 {% load static %}
 {% block body %}
 
-<div class="container">
-    <h1 class="my-4">Recreation Areas</h1>
-    
-    <!-- Search Form -->
-    <form method="GET" action="{% url 'show_parks' %}" class="mb-4">
-        <div class="input-group">
-            <input type="text" name="q" class="form-control" placeholder="Search by park name" value="{{ search_query }}" style="width: 200px;">
-            <div class="input-group-append">
-                <button class="btn btn-primary" type="submit" style="margin-left: 10px;">Search</button>
-            </div>
+<div class="container my-5">
+    <div class="row justify-content-center mb-4">
+        <div class="col-md-8">
+            <form method="get" action="" class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="Search parks..." value="{{ search_query }}" style="width: 200px;">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-primary" style="margin-left: 10px; height: 35px;">Search</button>
+                </div>
+            </form>
         </div>
-    </form>
+    </div>
 
-    <!-- Parks Table -->
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Latitude</th>
-                <th>Longitude</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for park in parks %}
-            <tr>
-                <td>{{ park.id }}</td>
-                <td>{{ park.name }}</td>
-                <td>{{ park.latitude }}</td>
-                <td>{{ park.longitude }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    <div class="row">
+        {% for park in parks %}
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <a href="{% url 'show_facilities' park.id %}">{{ park.name }}</a>
+                        </h5>
+                        <p class="card-text">
+                            Latitude: {{ park.latitude }}<br>
+                            Longitude: {{ park.longitude }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 </div>
 
 {% endblock %}

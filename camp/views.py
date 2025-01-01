@@ -21,6 +21,21 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
+# Utility to load JSON data from a file
+
+
+def load_json(file_name):
+    file_path = os.path.join(settings.BASE_DIR, 'camp', 'other', file_name)
+    with open(file_path, 'r', encoding='utf-8') as file:
+        return json.load(file)
+
+
+# Load JSON data once
+recareas_data = load_json('RecAreas_API_v1.json')["RECDATA"]
+recareas_facilities_data = load_json(
+    'RecAreaFacilities_API_v1.json')["RECDATA"]
+facilities_data = load_json('Facilities_API_v1.json')["RECDATA"]
+
 
 def select_camp(request):
     if request.method == "POST":
@@ -109,39 +124,40 @@ def select_camp(request):
 
 
 def show_parks(request):
-    # Define the file path
-    file_path = os.path.join(settings.BASE_DIR, 'camp',
-                             'other', 'RecAreas_API_v1.json')
-
-    # Get the search query from the request
     search_query = request.GET.get('q', '').lower()
+    parks = [
+        {
+            'id': park.get('RecAreaID', 'N/A'),
+            'name': park.get('RecAreaName', 'N/A'),
+            'latitude': park.get('RecAreaLatitude', 'N/A'),
+            'longitude': park.get('RecAreaLongitude', 'N/A')
+        }
+        for park in recareas_data
+        if search_query in park.get('RecAreaName', '').lower()
+    ]
 
-    # Initialize an empty list to hold the filtered parks
-    parks = []
+    return render(request, 'camp/show_parks.html', {'parks': parks, 'search_query': search_query})
 
-    # Read the JSON data from the file using ijson
-    try:
-        with open(file_path, 'r', encoding='utf-8') as json_file:
-            # Use ijson to parse the JSON incrementally
-            objects = ijson.items(json_file, 'RECDATA.item')
-            for obj in objects:
-                if isinstance(obj, dict) and search_query in obj.get('RecAreaName', '').lower():
-                    parks.append({
-                        'id': obj.get('RecAreaID', 'N/A'),
-                        'name': obj.get('RecAreaName', 'N/A'),
-                        'latitude': obj.get('RecAreaLatitude', 'N/A'),
-                        'longitude': obj.get('RecAreaLongitude', 'N/A')
-                    })
 
-        return render(request, 'camp/show_parks.html', {'parks': parks, 'search_query': search_query})
-    except FileNotFoundError:
-        return JsonResponse({'error': 'RecAreas_API_v1.json file not found'}, status=404)
-    except ijson.JSONError:
-        return JsonResponse({'error': 'Error decoding JSON data'}, status=500)
-    except UnicodeDecodeError as e:
-        return JsonResponse({'error': f'Unicode decode error: {str(e)}'}, status=500)
-    except Exception as e:
-        return JsonResponse({'error': f'Unexpected error: {str(e)}'}, status=500)
+def show_facilities(request, recarea_id):
+    # Find all facilities linked to the given RecAreaID
+    linked_facilities = [
+        entry["FacilityID"] for entry in recareas_facilities_data if entry["RecAreaID"] == recarea_id
+    ]
+
+    # Retrieve FacilityNames for the found FacilityIDs
+    facility_details = [
+        {
+            'id': facility["FacilityID"],
+            'name': facility.get("FacilityName", "N/A"),
+            'type': facility.get("FacilityTypeDescription", "N/A"),
+            'latitude': facility.get("FacilityLatitude", "N/A"),
+            'longitude': facility.get("FacilityLongitude", "N/A")
+        }
+        for facility in facilities_data if facility["FacilityID"] in linked_facilities
+    ]
+
+    return render(request, 'camp/show_facilities.html', {'facilities': facility_details, 'recarea_id': recarea_id})
 
 
 def show_campsites(request):
