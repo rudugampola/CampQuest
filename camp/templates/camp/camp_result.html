@@ -5,9 +5,15 @@
 
 {% block content %}
 <div class="d-flex flex-column justify-content-center align-items-center my-4">
+
+  <!-- Back button at the top left corner -->
+  {% comment %} <a href="{% url 'select_camp' %}" class="btn btn-secondary rounded-pill position-absolute d-flex align-items-center" data-toggle="tooltip" data-placement="right" title="Back to Homepage" style="top: 10px; left: 10px; padding: 0.5em; max-width: 100px;">
+    <i class="fas fa-arrow-left mr-2"></i> <span>Back</span>
+  </a> {% endcomment %}
+  
   <h2 class="text-center mb-3">Camp Reservation Results</h2>
-  <div class="card mb-3 shadow-sm w-75">
-    <div class="card-body p-2">
+  <div class="card mb-3 shadow-sm w-75" style="background-color: #f5f5dc; border-radius: 10px;">
+    <div class="card-body p-2" style="background-color: #f5f5dc;">
       <ul class="list-group list-group-flush">
         <li class="list-group-item"><strong>Start Date:</strong> {{ start_date }}</li>
         <li class="list-group-item"><strong>End Date:</strong> {{ end_date }}</li>
@@ -20,18 +26,18 @@
   </div>
 
   {% if has_availabilities %}
-    <div class="alert alert-success text-center w-75" role="alert">
+    <div class="alert alert-success text-center w-75" role="alert" style="border-radius: 10px;">
       Campsites are available for your selected dates! 😄
     </div>
   {% else %}
-    <div class="alert alert-danger text-center w-75" role="alert">
+    <div class="alert alert-danger text-center w-75" role="alert" style="border-radius: 10px;">
       Unfortunately, no campsites are available for your selected dates. 😢
     </div>
   {% endif %}
 
   <h4 class="text-center mt-3">Output</h4>
   {% if output %}
-    <pre class="bg-light p-2 rounded w-75 " style="white-space: pre-wrap; word-break: break-word;">{{ output }}</pre>
+    <pre class="bg-light p-2 rounded w-75" style="white-space: pre-wrap; word-break: break-word; border-radius: 10px;">{{ output }}</pre>
   {% else %}
     <p class="text-center">No additional information available.</p>
   {% endif %}
@@ -40,7 +46,7 @@
     {% if show_campsite_info and campsite_info %}
         <h5 class="text-center mt-3">Detailed Campsite Information</h5>
         {% for park in campsite_info %}
-          <div class="mt-2">
+          <div class="mt-2" style="border-radius: 10px;">
             <h6 class="text-center">
               {{ park.park_name }} (
               <a href="https://www.recreation.gov/camping/campgrounds/{{ park.park_id }}" target="_blank">
@@ -72,6 +78,7 @@
     title="Search Again"
     type="search_again"
     style="padding: 0.5em; width: 100%; max-width: 200px;">Search Again</a>
+
 {% endblock %}
 </div>
 {% endblock %}
