@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "livesync",
-    "django_user_agents"
+    "django_user_agents",
 ]
 
 MIDDLEWARE = [

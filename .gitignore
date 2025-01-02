@@ -9,3 +9,4 @@ __pycache__
 *egg-info
 /camp/other/*
 tempCodeRunnerFile.py
+db.sqlite3

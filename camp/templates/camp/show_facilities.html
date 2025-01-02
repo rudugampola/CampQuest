@@ -8,40 +8,47 @@
 
     <!-- List of facilities -->
     <div class="row">
-        {% for facility in facilities %}
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm"  style="background-color: #f5f5dc;">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ facility.name }}
+        {% if facilities %}
+            {% for facility in facilities %}
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 shadow-sm"  style="background-color: #f5f5dc;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ facility.name }}
+                                {% if facility.type == "Campground" %}
+                                <i class="fa-solid fa-campground"></i>
+                                {% endif %}
+                                {% if facility.type == "Permit" %}
+                                <i class="fa-solid fa-file-lines"></i>
+                                {% endif %}
+                                {% if facility.type == "Timed Entry" %}
+                                <i class="fa-solid fa-clock"></i>
+                                {% endif %}
+                                {% if facility.type == "Ticket Facility" %}
+                                <i class="fa-solid fa-ticket-simple"></i>
+                                {% endif %}
+                                {% if facility.type == "Facility" %}
+                                <i class="fa-solid fa-building"></i>
+                                {% endif %}
+                                {% if facility.type == "Visitor Center" %}
+                                <i class="fa-solid fa-flag"></i>
+                                {% endif %}
+                            </h5>
+                            <p class="card-text">
+                                <strong>Facility ID:</strong> {{ facility.id }}<br>
+                                <strong>Type:</strong> {{ facility.type }}<br>
+                                <strong>Latitude:</strong> {{ facility.latitude }}<br>
+                                <strong>Longitude:</strong> {{ facility.longitude }}
+                            </p>
                             {% if facility.type == "Campground" %}
-                            <i class="fa-solid fa-campground"></i>
+                                <a href="{% url 'show_campsites' facility.id %}" class="btn btn-success btn-rounded btn-sm">Show Campsites</a>
                             {% endif %}
-                            {% if facility.type == "Permit" %}
-                            <i class="fa-solid fa-file-lines"></i>
-                            {% endif %}
-                            {% if facility.type == "Timed Entry" %}
-                            <i class="fa-solid fa-clock"></i>
-                            {% endif %}
-                            {% if facility.type == "Ticket Facility" %}
-                            <i class="fa-solid fa-ticket-simple"></i>
-                            {% endif %}
-                            {% if facility.type == "Facility" %}
-                            <i class="fa-solid fa-building"></i>
-                            {% endif %}
-                            {% if facility.type == "Visitor Center" %}
-                            <i class="fa-solid fa-flag"></i>
-                            {% endif %}
-                        </h5>
-                        <p class="card-text">
-                            <strong>Facility ID:</strong> {{facility.id}}<br>
-                            <strong>Type:</strong> {{ facility.type }}<br>
-                            <strong>Latitude:</strong> {{ facility.latitude }}<br>
-                            <strong>Longitude:</strong> {{ facility.longitude }}
-                        </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
+        {% else %}
+            <p>No facilities found for this park.</p>
+        {% endif %}
     </div>
 
     <!-- Back link styled as a button -->

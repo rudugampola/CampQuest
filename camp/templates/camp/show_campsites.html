@@ -2,40 +2,36 @@
 {% load static %}
 {% block body %}
 
-   <div class="container">
-        <h1 class="my-4">Campsites</h1>
-        
-        <!-- Search Form -->
-        <form method="GET" action="{% url 'show_campsites' %}" class="mb-4">
-            <div class="input-group">
-                <input type="text" name="q" class="form-control" placeholder="Search by facility ID" value="{{ search_query }}" style="width: 200px;">
-                <div class="input-group-append">
-                    <button class="btn btn-primary" type="submit" style="margin-left: 10px;">Search</button>
-                </div>
-            </div>
-        </form>
+<div class="container my-5">
+    <!-- Header -->
+    <h1 class="text-center mb-4">Available Campsites</h1>
 
-        <!-- Campsites Table -->
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Facility ID</th>
-                    <th>Campground ID</th>
-                    <th>Name</th>
-                    <th>Loop</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for campsite in campsites %}
-                <tr>
-                    <td>{{ campsite.facility_id }}</td>
-                    <td>{{ campsite.id }}</td>
-                    <td>{{ campsite.name }}</td>
-                    <td>{{ campsite.loop }}</td>
-                    
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+    <!-- List of campsites -->
+    <div class="row">
+        {% if campsites %}
+            {% for campsite in campsites %}
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 shadow-sm"  style="background-color: #f5f5dc;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ campsite.name }}</h5>
+                            <p class="card-text">
+                                <strong>Campsite ID:</strong> {{ campsite.id }}<br>
+                                <strong>Loop:</strong> {{ campsite.loop }}<br>
+                                <strong>Facility ID:</strong> {{ campsite.facility_id }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No campsites found.</p>
+        {% endif %}
     </div>
+
+    <!-- Back link styled as a button -->
+    <div class="d-flex justify-content-center mt-4">
+        <a href="{% url 'show_parks' %}" class="btn btn-primary">Back to Parks</a>
+    </div>
+</div>
+
 {% endblock %}
