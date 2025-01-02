@@ -17,20 +17,11 @@
     <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <!-- Font Awesome -->
-    <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    rel="stylesheet"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <!-- Google Fonts -->
-    <link
-    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-    rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB -->
-    <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.1.0/mdb.min.css"
-    rel="stylesheet"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.1.0/mdb.min.css" rel="stylesheet" />
     <style>
         html, body {
             height: 100%;
@@ -41,11 +32,35 @@
         }
         .content {
             flex: 1;
+            padding-top: 56px; /* Adjust based on navbar height to prevent content overlap */
         }
     </style>
   </head>
 
   <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/camp">
+          <img src="{% static 'images/favicon.ico' %}" alt="favicon" style="height: 24px; margin-right: 8px;">
+          CampQuest
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav" id="navbarNavItems">
+            <li class="nav-item">
+              <a class="nav-link" href="/camp" data-url="/camp/">Camp</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/parks" data-url="/parks/">Parks</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <div class="content">
       {% block body %} {% endblock %}
     </div>
@@ -59,5 +74,24 @@
         </div>
       </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.1.0/mdb.min.js"></script>
+    <!-- Custom JavaScript to handle active state -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const navLinks = document.querySelectorAll('#navbarNavItems .nav-link');
+        const currentUrl = window.location.pathname;
+        
+        navLinks.forEach(link => {
+          console.log("Current URL:", currentUrl);
+          console.log("Link URL:", link.getAttribute('data-url'));
+          if (link.getAttribute('data-url') === currentUrl) {
+            link.classList.add('active');
+            console.log("Added active class to:", link.getAttribute('href'));
+          }
+        });
+      });
+    </script>
   </body>
 </html>
