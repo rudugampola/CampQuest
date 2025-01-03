@@ -15,3 +15,5 @@ This application uses data provided by the Recreation Information Database (RIDB
 Note: RIDB is a part of the Recreation One Stop (R1S) program, which oversees the operation of Recreation.gov -- a user-friendly, web-based resource to citizens, offering a single point of access to information about recreational opportunities nationwide. The data from RIDB served as an authoritative source of information and services for millions of visitors to federal lands, historic sites, museums, waterways and other destinations and activities.
 
 The application is built using Django. The database is a SQLite database. 
+
+Project is still in development.
