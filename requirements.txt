@@ -17,4 +17,7 @@ six==1.16.0
 soupsieve==1.8
 toml==0.10.0
 urllib3==2.2.2
-user_agent
+django==5.1.4
+livesync==0.3.4
+django-user-agents==0.4.0
+useragent
