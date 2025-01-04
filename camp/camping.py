@@ -95,13 +95,6 @@ def get_num_available_sites(
     if weekends_only:
         # Convert the filter object to a list
         dates = list(filter(is_weekend, dates))
-
-    # print(bcolors.FAIL + "Dates:" + bcolors.ENDC)
-    # for date in dates:
-    #     print(date)
-    #     print(bcolors.FAIL + "Weekday #" + str(date.weekday()) + bcolors.OKCYAN)
-    # print(dates)
-
     dates = set(
         formatter.format_date(
             i, format_string=DateFormat.ISO_DATE_FORMAT_RESPONSE.value

@@ -1,0 +1,3 @@
+"""
+GoingToCamp __init__
+"""

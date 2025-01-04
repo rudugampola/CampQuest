@@ -1,0 +1,2 @@
+[console_scripts]
+camply = camply.cli:cli
