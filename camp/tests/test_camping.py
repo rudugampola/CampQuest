@@ -1,12 +1,43 @@
 import unittest
-
-import _camping
+from click.testing import CliRunner
+import camp.cli as cli
 from camp.enums.date_format import DateFormat
 from camp.enums.emoji import Emoji
-from camp.utils.camping_argparser import CampingArgumentParser
+from camp.cli import TypeConverter
 
 
 class TestCamping(unittest.TestCase):
+    def setUp(self):
+        self.runner = CliRunner()
+        self.start_date = ["--start-date", "2022-01-01"]
+        self.end_date = ["--end-date", "2022-01-02"]
+        self.parks = ["--parks", "111"]
+        self.default_args = []
+        self.default_args.extend(self.start_date)
+        self.default_args.extend(self.end_date)
+        self.default_args.extend(self.parks)
+
+    def testCampsiteIdsWithMoreThanOneCampgroundIdThrowsException(self):
+        args = ["--campsite-ids", "333", "--parks", "1", "2"]
+        args.extend(self.start_date)
+        args.extend(self.end_date)
+        result = self.runner.invoke(cli.main, args)
+        self.assertNotEqual(result.exit_code, 0)
+        self.assertIn("Error", result.output)
+
+    def testAcceptsMultipleCampsiteIds(self):
+        args = ["--campsite-ids", "333", "444"]
+        args.extend(self.default_args)
+        result = self.runner.invoke(cli.main, args)
+        self.assertEqual(result.exit_code, 0)
+
+    def testAcceptsMultipleCampgroundIds(self):
+        args = ["--parks", "333", "444"]
+        args.extend(self.start_date)
+        args.extend(self.end_date)
+        result = self.runner.invoke(cli.main, args)
+        self.assertEqual(result.exit_code, 0)
+
     def testGetNumAvailableSites_AggregatesDataForMultipleCampsites(self):
         park_info = {
             "1": [],
@@ -24,10 +55,10 @@ class TestCamping(unittest.TestCase):
             ],
         }
 
-        _, _, available_dates_by_campsite_id = _camping.get_num_available_sites(
+        _, _, available_dates_by_campsite_id = cli.get_num_available_sites(
             park_info,
-            CampingArgumentParser.TypeConverter.date("2022-06-22"),
-            CampingArgumentParser.TypeConverter.date("2022-06-23"),
+            TypeConverter.date("2022-06-22"),
+            TypeConverter.date("2022-06-23"),
         )
 
         self.assertFalse(1 in available_dates_by_campsite_id)
@@ -35,8 +66,8 @@ class TestCamping(unittest.TestCase):
         self.assertTrue(3 in available_dates_by_campsite_id)
 
     def testGenerateOutputToHuman_DefaultOutputWithAvailabilities(self):
-        start_date = CampingArgumentParser.TypeConverter.date("2022-06-01")
-        end_date = CampingArgumentParser.TypeConverter.date("2022-07-01")
+        start_date = TypeConverter.date("2022-06-01")
+        end_date = TypeConverter.date("2022-07-01")
         park_name = "SOME PARK"
         park_id = 1
         current = 2
@@ -44,7 +75,7 @@ class TestCamping(unittest.TestCase):
 
         expected = "\n".join(
             [
-                """there are campsites available from {start} to {end}!!!""",
+                """There are campsites available from {start} to {end} 😊""",
                 """{emoji} {park_name} ({park_id}): {current} site(s) available out of {maximum} site(s)""",
             ]
         ).format(
@@ -68,14 +99,14 @@ class TestCamping(unittest.TestCase):
                 park_name,
             )
         }
-        output, _ = _camping.generate_human_output(
+        output, _ = cli.generate_human_output(
             info_by_park_id, start_date, end_date
         )
         self.assertEqual(output, expected)
 
     def testGenerateOutputToHuman_DefaultOutputWithNoAvailabilities(self):
-        start_date = CampingArgumentParser.TypeConverter.date("2022-06-01")
-        end_date = CampingArgumentParser.TypeConverter.date("2022-07-01")
+        start_date = TypeConverter.date("2022-06-01")
+        end_date = TypeConverter.date("2022-07-01")
         park_name = "SOME PARK"
         park_id = 1
         current = 0
@@ -83,7 +114,7 @@ class TestCamping(unittest.TestCase):
 
         expected = "\n".join(
             [
-                """There are no campsites available :(""",
+                """There are no campsites available 😢""",
                 """{emoji} {park_name} ({park_id}): {current} site(s) available out of {maximum} site(s)""",
             ]
         ).format(
@@ -97,14 +128,14 @@ class TestCamping(unittest.TestCase):
         )
 
         info_by_park_id = {park_id: (current, maximum, {}, park_name)}
-        output, _ = _camping.generate_human_output(
+        output, _ = cli.generate_human_output(
             info_by_park_id, start_date, end_date
         )
         self.assertEqual(output, expected)
 
     def testGenerateOutputToHuman_SiteOutputWithAvailabilities(self):
-        start_date = CampingArgumentParser.TypeConverter.date("2022-06-01")
-        end_date = CampingArgumentParser.TypeConverter.date("2022-07-01")
+        start_date = TypeConverter.date("2022-06-01")
+        end_date = TypeConverter.date("2022-07-01")
         park_name = "SOME PARK"
         park_id = 1
         current = 2
@@ -116,7 +147,7 @@ class TestCamping(unittest.TestCase):
 
         expected = "\n".join(
             [
-                """there are campsites available from {start} to {end}!!!""",
+                """There are campsites available from {start} to {end} 😊""",
                 """{emoji} {park_name} ({park_id}): {current} site(s) available out of {maximum} site(s)""",
                 """  * Site {site_id1} is available on the following dates:""",
                 """    * {start1} -> {end1}""",
@@ -147,14 +178,14 @@ class TestCamping(unittest.TestCase):
                 park_name,
             )
         }
-        output, _ = _camping.generate_human_output(
+        output, _ = cli.generate_human_output(
             info_by_park_id, start_date, end_date, True
         )
         self.assertEqual(output, expected)
 
     def testGenerateOutputToHuman_SiteOutputWithNoAvailabilities(self):
-        start_date = CampingArgumentParser.TypeConverter.date("2022-06-01")
-        end_date = CampingArgumentParser.TypeConverter.date("2022-07-01")
+        start_date = TypeConverter.date("2022-06-01")
+        end_date = TypeConverter.date("2022-07-01")
         park_name = "SOME PARK"
         park_id = 1
         current = 0
@@ -162,7 +193,7 @@ class TestCamping(unittest.TestCase):
 
         expected = "\n".join(
             [
-                """There are no campsites available :(""",
+                """There are no campsites available 😢""",
                 """{emoji} {park_name} ({park_id}): {current} site(s) available out of {maximum} site(s)""",
             ]
         ).format(
@@ -176,7 +207,7 @@ class TestCamping(unittest.TestCase):
         )
 
         info_by_park_id = {park_id: (current, maximum, {}, park_name)}
-        output, _ = _camping.generate_human_output(
+        output, _ = cli.generate_human_output(
             info_by_park_id, start_date, end_date, True
         )
         self.assertEqual(output, expected)
