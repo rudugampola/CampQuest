@@ -344,6 +344,7 @@ def remove_comments(lines: list[str]) -> list[str]:
 )
 def main(debug, start_date, end_date, nights, campsite_ids, show_campsite_info, campsite_type, json_output,
          weekends_only, exclusion_file, parks, stdin):
+
     if debug:
         LOG.setLevel(logging.DEBUG)
 
