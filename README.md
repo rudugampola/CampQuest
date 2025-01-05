@@ -4,9 +4,7 @@
     width="300" height="300" alt="campquest">
 </a>
 </div>
-
 ---
-
 This script scrapes the https://recreation.gov website for campsite availabilities.
 
 This application uses data provided by the Recreation Information Database (RIDB). All the data currently available was downloaded from RIDB site on December, 2024 and was used to create the database used by this application.
