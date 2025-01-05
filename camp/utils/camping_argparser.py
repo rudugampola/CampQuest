@@ -3,7 +3,7 @@ import logging
 import sys
 from datetime import datetime
 
-from enums.date_format import DateFormat
+from camp.enums.date_format import DateFormat
 
 
 class CampingArgumentParser(argparse.ArgumentParser):

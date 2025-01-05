@@ -1,6 +1,6 @@
 import unittest
 
-from utils.camping_argparser import CampingArgumentParser
+from camp.utils.camping_argparser import CampingArgumentParser
 
 
 class TestCampingArgParser(unittest.TestCase):

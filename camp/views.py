@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from datetime import datetime
-from .camping import run_campsite_check
+from camp.camping import run_campsite_check
 from django.http import JsonResponse
-from .models import RecreationArea, Facility, RecAreaFacilityLink, Campsite
+from camp.models import RecreationArea, Facility, RecAreaFacilityLink, Campsite
 
 # Utility to convert model instances to dictionaries for easier use in templates
 

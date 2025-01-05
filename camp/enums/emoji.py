@@ -2,5 +2,5 @@ from enum import Enum
 
 
 class Emoji(Enum):
-    SUCCESS = "🏕"
+    SUCCESS = "✅"
     FAILURE = "❌"

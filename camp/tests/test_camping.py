@@ -1,9 +1,9 @@
 import unittest
 
 import _camping
-from enums.date_format import DateFormat
-from enums.emoji import Emoji
-from utils.camping_argparser import CampingArgumentParser
+from camp.enums.date_format import DateFormat
+from camp.enums.emoji import Emoji
+from camp.utils.camping_argparser import CampingArgumentParser
 
 
 class TestCamping(unittest.TestCase):

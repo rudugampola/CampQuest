@@ -1,9 +1,9 @@
 import logging
 
 import requests
-import user_agent 
+import user_agent
 
-from utils import formatter
+from camp.utils import formatter
 
 LOG = logging.getLogger(__name__)
 
@@ -16,8 +16,8 @@ class RecreationClient:
     )
     MAIN_PAGE_ENDPOINT = BASE_URL + "/api/camps/campgrounds/{park_id}"
 
-    headers = {"User-Agent": user_agent.generate_user_agent() }
-    
+    headers = {"User-Agent": user_agent.generate_user_agent()}
+
     @classmethod
     def get_availability(cls, park_id, month_date):
         params = {"start_date": formatter.format_date(month_date)}

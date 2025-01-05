@@ -9,10 +9,10 @@ from itertools import count, groupby
 
 from dateutil import rrule
 
-from clients.recreation_client import RecreationClient
-from enums.date_format import DateFormat
-from enums.emoji import Emoji
-from utils import formatter
+from camp.clients.recreation_client import RecreationClient
+from camp.enums.date_format import DateFormat
+from camp.enums.emoji import Emoji
+from camp.utils import formatter
 
 LOG = logging.getLogger(__name__)
 log_formatter = logging.Formatter(
@@ -169,11 +169,7 @@ def check_park(
     park_information = get_park_information(
         park_id, start_date, end_date, campsite_type, campsite_ids, excluded_site_ids=excluded_site_ids,
     )
-    # LOG.debug(
-    #     "Information for park {}: {}".format(
-    #         park_id, json.dumps(park_information, indent=2)
-    #     )
-    # )
+    # LOG.debug("Park information: {}".format(park_information))
     park_name = RecreationClient.get_park_name(park_id)
     current, maximum, availabilities_filtered = get_num_available_sites(
         park_information, start_date, end_date, nights=nights, weekends_only=weekends_only,
