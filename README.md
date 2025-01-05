@@ -1,6 +1,6 @@
 <div align="center">
 <a href="https://github.com/rudugampola/Campsite-Finder">
-  <img src="https://github.com/rudugampola/Campsite-Finder/blob/fd237c338d0f97d1ac552cf377aca9aadcb8e4cb/camp/static/images/campquest.png"
+  <img src="https://github.com/rudugampola/Campsite-Finder/camp/static/images/campquest.png"
     width="300" height="300" alt="campquest">
 </a>
 </div>
