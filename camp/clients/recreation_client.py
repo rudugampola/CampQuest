@@ -6,6 +6,14 @@ import user_agent
 from camp.utils import formatter
 
 LOG = logging.getLogger(__name__)
+log_formatter = logging.Formatter(
+    "%(asctime)s - %(process)s - %(levelname)s - %(message)s"
+)
+
+# FileHandler for file output
+fh = logging.FileHandler('campquest.log')  # specify your log file name
+fh.setFormatter(log_formatter)
+LOG.addHandler(fh)
 
 
 class RecreationClient:
@@ -21,7 +29,7 @@ class RecreationClient:
     @classmethod
     def get_availability(cls, park_id, month_date):
         params = {"start_date": formatter.format_date(month_date)}
-        LOG.debug(
+        LOG.info(
             "Querying for {} with these params: {}".format(park_id, params)
         )
         url = cls.AVAILABILITY_ENDPOINT.format(park_id=park_id)
@@ -39,6 +47,11 @@ class RecreationClient:
     def _send_request(cls, url, params):
         resp = requests.get(url, params=params, headers=cls.headers)
         if resp.status_code != 200:
+            LOG.error(
+                "ERROR, {status_code} code received from {url}: {resp_text}".format(
+                    status_code=resp.status_code, url=url, resp_text=resp.text
+                )
+            )
             raise RuntimeError(
                 "failedRequest",
                 "ERROR, {status_code} code received from {url}: {resp_text}".format(

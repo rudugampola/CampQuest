@@ -16,15 +16,19 @@ from camp.enums.date_format import DateFormat
 from camp.enums.emoji import Emoji
 from camp.utils import formatter
 
+from camp.clients.reservecalifornia_client import rc_get_all_available_campsites, rc_get_campground_url
+
 click.rich_click.USE_RICH_MARKUP = True
 
 LOG = logging.getLogger(__name__)
 log_formatter = logging.Formatter(
     "%(asctime)s - %(process)s - %(levelname)s - %(message)s"
 )
-sh = logging.StreamHandler()
-sh.setFormatter(log_formatter)
-LOG.addHandler(sh)
+
+# FileHandler for file output
+fh = logging.FileHandler('campquest.log')  # specify your log file name
+fh.setFormatter(log_formatter)
+LOG.addHandler(fh)
 
 
 def get_park_information(
@@ -100,7 +104,7 @@ def get_num_available_sites(
 
     if nights not in range(1, num_days + 1):
         nights = num_days
-        LOG.debug("Setting number of nights to {}.".format(nights))
+        LOG.info("Setting number of nights to {}.".format(nights))
 
     available_dates_by_campsite_id = defaultdict(list)
     for site, availabilities in park_information.items():
@@ -121,7 +125,7 @@ def get_num_available_sites(
 
         if appropriate_consecutive_ranges:
             num_available += 1
-            LOG.debug("Available site {}: {}".format(num_available, site))
+            LOG.info("Available site {}: {}".format(num_available, site))
 
         for r in appropriate_consecutive_ranges:
             start, end = r
@@ -172,20 +176,32 @@ def consecutive_nights(available, nights):
 
 
 def check_park(
-    park_id, start_date, end_date, campsite_type, campsite_ids=(), nights=None, weekends_only=False, excluded_site_ids=[],
+    park_id, start_date, end_date, campsite_type, campsite_ids=(), nights=None, weekends_only=False, excluded_site_ids=[], source="recreation",
 ):
-    park_information = get_park_information(
-        park_id, start_date, end_date, campsite_type, campsite_ids, excluded_site_ids=excluded_site_ids,
-    )
-    LOG.debug(
-        "Information for park {}: {}".format(
-            park_id, json.dumps(park_information, indent=2)
+    if source == "recreation":
+        park_information = get_park_information(
+            park_id, start_date, end_date, campsite_type, campsite_ids, excluded_site_ids=excluded_site_ids,
         )
-    )
-    park_name = RecreationClient.get_park_name(park_id)
-    current, maximum, availabilities_filtered = get_num_available_sites(
-        park_information, start_date, end_date, nights=nights, weekends_only=weekends_only,
-    )
+        LOG.info(
+            "Information for park {}: {}".format(
+                park_id, json.dumps(park_information, indent=2)
+            )
+        )
+        park_name = RecreationClient.get_park_name(park_id)
+        current, maximum, availabilities_filtered = get_num_available_sites(
+            park_information, start_date, end_date, nights=nights, weekends_only=weekends_only,
+        )
+    elif source == "reserve_california":
+        park_information = rc_get_all_available_campsites(
+            park_id, start_date, (end_date - start_date).days // 30
+        )
+        # Update with the actual park name if available
+        park_name = "ReserveCalifornia Park"
+        current = len(park_information)
+        maximum = current  # Update with the actual max if available
+        availabilities_filtered = {site.campsite.campsite: [
+            {"start": site.date, "end": site.date}] for site in park_information}
+
     return current, maximum, availabilities_filtered, park_name
 
 
@@ -344,14 +360,24 @@ def remove_comments(lines: list[str]) -> list[str]:
     help="Read a list of park ID(s) from a file. For powershell use: Get-Content parks.txt | python cli.py --stdin",
 )
 @click.option("--debug", "-d", is_flag=True, help="Enable :point_right: [yellow]debug mode[/] :point_left: log level")
+@click.option(
+    "--source",
+    type=click.Choice(['recreation', 'reserve_california'],
+                      case_sensitive=False),
+    default='recreation',
+    help="Source of park information."
+)
 def main(debug, start_date, end_date, nights, campsite_ids, show_campsite_info, campsite_type, json_output,
-         weekends_only, exclusion_file, parks, stdin):
+         weekends_only, exclusion_file, parks, stdin, source):
     """ 
         This program is designed to check the availability of campsites in various parks over a specified date range. It uses a rich set of options to customize the search criteria and output format. 
     """
 
     if debug:
         LOG.setLevel(logging.DEBUG)
+        LOG.debug("Debug mode enabled.")
+    else:
+        LOG.setLevel(logging.INFO)
 
     if stdin:
         parks = tuple(map(int, sys.stdin.read().strip().split()))
@@ -377,6 +403,7 @@ def main(debug, start_date, end_date, nights, campsite_ids, show_campsite_info, 
             nights=nights,
             weekends_only=weekends_only,
             excluded_site_ids=excluded_site_ids,
+            source=source
         )
 
     if json_output:
@@ -390,6 +417,7 @@ def main(debug, start_date, end_date, nights, campsite_ids, show_campsite_info, 
         )
 
     print(output)
+    LOG.info("Success! Output generated.")
     return has_availabilities
 
 
