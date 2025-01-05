@@ -16,6 +16,8 @@ from camp.enums.date_format import DateFormat
 from camp.enums.emoji import Emoji
 from camp.utils import formatter
 
+click.rich_click.USE_RICH_MARKUP = True
+
 LOG = logging.getLogger(__name__)
 log_formatter = logging.Formatter(
     "%(asctime)s - %(process)s - %(levelname)s - %(message)s"
@@ -76,7 +78,7 @@ def get_park_information(
 
 def is_weekend(date):
     weekday = date.weekday()
-    return weekday == 4 or weekday == 5
+    return weekday == 5 or weekday == 6
 
 
 def get_num_available_sites(
@@ -266,7 +268,6 @@ def remove_comments(lines: list[str]) -> list[str]:
 
 
 @click.command()
-@click.option("--debug", "-d", is_flag=True, help="Debug log level")
 @click.option(
     "--start-date",
     required=True,
@@ -326,35 +327,37 @@ def remove_comments(lines: list[str]) -> list[str]:
 )
 @click.option(
     "--exclusion-file",
+    is_flag=True,
     help=(
-        "File with site IDs to exclude"
+        "Read a list of campsite IDs to exclude from a file. For powershell use: Get-Content parks.txt | python cli.py --exclusion-file"
     ),
 )
 @click.option(
     "--parks",
     type=int,
     multiple=True,
-    help="Park ID(s)",
+    help="Park ID(s). Can provide multiple park IDs separated by multuple --parks options.",
 )
 @click.option(
     "--stdin",
-    "-",
     is_flag=True,
-    help="Read list of park ID(s) from stdin instead",
+    help="Read a list of park ID(s) from a file. For powershell use: Get-Content parks.txt | python cli.py --stdin",
 )
+@click.option("--debug", "-d", is_flag=True, help="Enable :point_right: [yellow]debug mode[/] :point_left: log level")
 def main(debug, start_date, end_date, nights, campsite_ids, show_campsite_info, campsite_type, json_output,
          weekends_only, exclusion_file, parks, stdin):
+    """ 
+        This program is designed to check the availability of campsites in various parks over a specified date range. It uses a rich set of options to customize the search criteria and output format. 
+    """
 
     if debug:
         LOG.setLevel(logging.DEBUG)
 
     if stdin:
         parks = tuple(map(int, sys.stdin.read().strip().split()))
-
-    # Validate mutually exclusive options
-    if parks and stdin:
+    elif not parks:
         raise click.UsageError(
-            "Illegal usage: --parks is mutually exclusive with --stdin.")
+            "You must provide at least one park ID using --parks or --stdin.")
 
     excluded_site_ids = []
     if exclusion_file:
