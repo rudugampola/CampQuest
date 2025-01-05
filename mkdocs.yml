@@ -1,1 +1,43 @@
-site_name: My Docs
+site_name: CampQuest
+# schema: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+
+theme:
+    favicon: favicon.ico
+    logo: campquest.png
+    name: material
+    features:
+        - navigation.tracking
+        - content.code.annotate
+        - content.code.copy
+    palette:
+        - media: "(prefers-color-scheme: light)"
+          scheme: default
+          accent: purple
+          toggle:
+              icon: material/weather-sunny
+              name: Switch to dark mode
+        - media: "(prefers-color-scheme: dark)"
+          scheme: slate
+          primary: black
+          toggle:
+              icon: material/weather-night
+              name: Switch to light mode
+repo_url: https://github.com/rudugampola/CampQuest
+repo_name: CampQuest
+edit_uri: blob/main/docs/
+site_author: rudugampola
+remote_branch: gh-pages
+extra_css: [extra.css]
+nav:
+    - CampQuest ⛺: index.md
+    - Installation ☀️: installation.md
+    - Usage 📝: command_line_usage.md
+    - How To Run CampQuest 🏃: how_to_run.md
+    - Finding Campsites 🌲: recreationdotgov.md
+    - Command Line Interface ⌨️: cli.md
+    - API Documentation 🤖: reference/
+    - Dependencies ♻️: dependencies.md
+    - GitHub 🛠: https://github.com/rudugampola/CampQuest
+    - Changelog 📝: https://github.com/rudugampola/CampQuest/releases
+extra:
+    generator: false

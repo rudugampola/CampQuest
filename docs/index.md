@@ -1,17 +1,24 @@
-# Welcome to MkDocs
+# CampQuest
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+<div align="center">
+<a href="https://github.com/rudugampola/Campsite-Finder">
+  <img src="https://github.com/rudugampola/CampQuest/blob/main/camp/static/images/campquest.png?raw=true"
+    width="400" height="400" alt="campquest">
+</a>
+</div>
 
-## Commands
+---
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+This application scrapes the https://recreation.gov website for campsite availabilities.
 
-## Project layout
+This application uses data provided by the Recreation Information Database (RIDB). All the data currently available was downloaded from RIDB site on December, 2024 and was used to create the database used by this application.
+<div align="center"><img src="https://github.com/user-attachments/assets/c8dd586f-8b14-45c1-810b-31b344ed6071" alt="recreation.gov logo" height="90"></div>
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Note: RIDB is a part of the Recreation One Stop (R1S) program, which oversees the operation of Recreation.gov -- a user-friendly, web-based resource to citizens, offering a single point of access to information about recreational opportunities nationwide. The data from RIDB served as an authoritative source of information and services for millions of visitors to federal lands, historic sites, museums, waterways and other destinations and activities.
+
+The application has a web interface that is built using Django. The campsite data is stored in a SQLite database.
+Additionally, the application has a CLI interface that can be used to search for campsite and automate the process of checking for campsite availabilities.
+
+Project is still in development.
+
+## Table of Contents
