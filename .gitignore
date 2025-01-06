@@ -9,4 +9,5 @@ __pycache__
 /camp/other/*
 tempCodeRunnerFile.py
 db.sqlite3
-/myvenv
+.env
+myvenv

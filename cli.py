@@ -18,6 +18,8 @@ from camp.utils import formatter
 
 from camp.clients.reservecalifornia_client import rc_get_all_available_campsites, rc_get_campground_url
 
+from notifier import send_notification, check_limit
+
 click.rich_click.USE_RICH_MARKUP = True
 
 LOG = logging.getLogger(__name__)
@@ -182,11 +184,11 @@ def check_park(
         park_information = get_park_information(
             park_id, start_date, end_date, campsite_type, campsite_ids, excluded_site_ids=excluded_site_ids,
         )
-        LOG.info(
-            "Information for park {}: {}".format(
-                park_id, json.dumps(park_information, indent=2)
-            )
-        )
+        # LOG.info(
+        #     "Information for park {}: {}".format(
+        #         park_id, json.dumps(park_information, indent=2)
+        #     )
+        # )
         park_name = RecreationClient.get_park_name(park_id)
         current, maximum, availabilities_filtered = get_num_available_sites(
             park_information, start_date, end_date, nights=nights, weekends_only=weekends_only,
@@ -367,8 +369,13 @@ def remove_comments(lines: list[str]) -> list[str]:
     default='recreation',
     help="Source of park information."
 )
+@click.option(
+    "--notify",
+    is_flag=True,
+    help="Send a Pushover notification when campsites are available.",
+)
 def main(debug, start_date, end_date, nights, campsite_ids, show_campsite_info, campsite_type, json_output,
-         weekends_only, exclusion_file, parks, stdin, source):
+         weekends_only, exclusion_file, parks, stdin, source, notify):
     """ 
         This program is designed to check the availability of campsites in various parks over a specified date range. It uses a rich set of options to customize the search criteria and output format. 
     """
@@ -378,6 +385,9 @@ def main(debug, start_date, end_date, nights, campsite_ids, show_campsite_info, 
         LOG.debug("Debug mode enabled.")
     else:
         LOG.setLevel(logging.INFO)
+
+    LOG.info("Received inputs: start_date=%s, end_date=%s, nights=%s, campsite_ids=%s, show_campsite_info=%s, campsite_type=%s, json_output=%s, weekends_only=%s, exclusion_file=%s, parks=%s, stdin=%s, source=%s, notify=%s",
+             start_date, end_date, nights, campsite_ids, show_campsite_info, campsite_type, json_output, weekends_only, exclusion_file, parks, stdin, source, notify)
 
     if stdin:
         parks = tuple(map(int, sys.stdin.read().strip().split()))
@@ -417,6 +427,12 @@ def main(debug, start_date, end_date, nights, campsite_ids, show_campsite_info, 
         )
 
     print(output)
+
+    if notify:
+        send_notification("Success! Campsites Found 😎", "CampQuest")
+        limit_data = check_limit()
+        LOG.info("Message limit: %s, Remaining: %s",
+                 limit_data.get("limit"), limit_data.get("remaining"))
     LOG.info("Success! Output generated.")
     return has_availabilities
 
