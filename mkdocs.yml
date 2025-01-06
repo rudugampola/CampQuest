@@ -31,11 +31,11 @@ extra_css: [extra.css]
 nav:
     - CampQuest ⛺: index.md
     - Installation ☀️: installation.md
-    - Usage 📝: command_line_usage.md
-    - How To Run CampQuest 🏃: how_to_run.md
-    - Finding Campsites 🌲: recreationdotgov.md
+    - Usage 📝: usage.md
+    - How To Run CampQuest 🏃: run.md
+    - Finding Campsites 🌲: findings_campsites.md
     - Command Line Interface ⌨️: cli.md
-    - API Documentation 🤖: reference/
+    - API Documentation 🤖: api.md
     - Dependencies ♻️: dependencies.md
     - GitHub 🛠: https://github.com/rudugampola/CampQuest
     - Changelog 📝: https://github.com/rudugampola/CampQuest/releases

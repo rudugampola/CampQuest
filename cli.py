@@ -428,6 +428,7 @@ def main(debug, start_date, end_date, nights, campsite_ids, show_campsite_info, 
 
     print(output)
 
+#! TODO - Setup so it runs in a loop if notify is selected until a site is found. If a site is found exit the loop and notify the user.
     if notify:
         send_notification("Success! Campsites Found 😎", "CampQuest")
         limit_data = check_limit()
