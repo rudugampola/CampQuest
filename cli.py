@@ -4,6 +4,7 @@
 import json
 import logging
 import sys
+import time
 import rich_click as click
 from collections import defaultdict
 from datetime import datetime, timedelta
@@ -27,8 +28,8 @@ log_formatter = logging.Formatter(
     "%(asctime)s - %(process)s - %(levelname)s - %(message)s"
 )
 
-# FileHandler for file output
-fh = logging.FileHandler('campquest.log')  # specify your log file name
+# FileHandler for file output with UTF-8 encoding
+fh = logging.FileHandler('campquest.log', encoding='utf-8')
 fh.setFormatter(log_formatter)
 LOG.addHandler(fh)
 
@@ -285,6 +286,18 @@ def remove_comments(lines: list[str]) -> list[str]:
     return new_lines
 
 
+def countdown_timer(seconds):
+    for remaining in range(seconds, 0, -1):
+        sys.stdout.write("\r")
+        sys.stdout.write(
+            f"No campsites found, checking again in {remaining} seconds...")
+        sys.stdout.flush()
+        time.sleep(1)
+    sys.stdout.write("\r")  # Move cursor to the beginning of the line
+    sys.stdout.write("\033[K")  # Clear the line from the cursor to the end
+    sys.stdout.write("Completed waiting.\n")
+
+
 @click.command()
 @click.option(
     "--start-date",
@@ -377,7 +390,7 @@ def remove_comments(lines: list[str]) -> list[str]:
 def main(debug, start_date, end_date, nights, campsite_ids, show_campsite_info, campsite_type, json_output,
          weekends_only, exclusion_file, parks, stdin, source, notify):
     """ 
-        This program is designed to check the availability of campsites in various parks over a specified date range. It uses a rich set of options to customize the search criteria and output format. 
+        This program is designed to check the availability of campsites in various parks over a specified date range. It uses a rich set of options to customize the search criteria and output format.
     """
 
     if debug:
@@ -402,40 +415,49 @@ def main(debug, start_date, end_date, nights, campsite_ids, show_campsite_info, 
             excluded_site_ids = [l.strip() for l in excluded_site_ids]
             excluded_site_ids = remove_comments(excluded_site_ids)
 
-    info_by_park_id = {}
-    for park_id in parks:
-        info_by_park_id[park_id] = check_park(
-            park_id,
-            start_date,
-            end_date,
-            campsite_type,
-            campsite_ids,
-            nights=nights,
-            weekends_only=weekends_only,
-            excluded_site_ids=excluded_site_ids,
-            source=source
-        )
+    while True:
+        info_by_park_id = {}
+        for park_id in parks:
+            info_by_park_id[park_id] = check_park(
+                park_id,
+                start_date,
+                end_date,
+                campsite_type,
+                campsite_ids,
+                nights=nights,
+                weekends_only=weekends_only,
+                excluded_site_ids=excluded_site_ids,
+                source=source
+            )
 
-    if json_output:
-        output, has_availabilities = generate_json_output(info_by_park_id)
-    else:
-        output, has_availabilities = generate_human_output(
-            info_by_park_id,
-            start_date,
-            end_date,
-            show_campsite_info,
-        )
+        if json_output:
+            output, has_availabilities = generate_json_output(info_by_park_id)
+        else:
+            output, has_availabilities = generate_human_output(
+                info_by_park_id,
+                start_date,
+                end_date,
+                show_campsite_info,
+            )
 
-    print(output)
-
-#! TODO - Setup so it runs in a loop if notify is selected until a site is found. If a site is found exit the loop and notify the user.
-    if notify:
-        send_notification("Success! Campsites Found 😎", "CampQuest")
-        limit_data = check_limit()
-        LOG.info("Message limit: %s, Remaining: %s",
-                 limit_data.get("limit"), limit_data.get("remaining"))
-    LOG.info("Success! Output generated.")
-    return has_availabilities
+        # Setup so it runs in a loop if notify is selected until a site is found
+        if has_availabilities:
+            if notify:
+                print(output)
+                send_notification(output, "CampQuest")
+                limit_data = check_limit()
+                LOG.info("Message limit: %s, Remaining: %s",
+                         limit_data.get("limit"), limit_data.get("remaining"))
+                LOG.info("Success! Output generated - Notification Sent!")
+                return has_availabilities
+            else:
+                print(output)
+                LOG.info("Output: %s", output)
+                LOG.info("Success! Output generated - No Notification Sent!")
+                return has_availabilities
+        else:
+            LOG.info("No campsites found, checking again in 60 seconds...")
+            countdown_timer(60)  # Wait 60 seconds before checking again
 
 
 class TypeConverter:

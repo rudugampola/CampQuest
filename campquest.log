@@ -110,3 +110,193 @@
 2025-01-05 16:39:34,896 - 13340 - INFO - Available site 11: 103813
 2025-01-05 16:39:35,879 - 13340 - INFO - Message limit: 10000, Remaining: 9992
 2025-01-05 16:39:35,879 - 13340 - INFO - Success! Output generated.
+2025-01-06 21:09:26,100 - 16752 - INFO - Received inputs: start_date=2025-01-30 00:00:00, end_date=2025-02-10 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=False
+2025-01-06 21:09:26,847 - 16752 - INFO - Setting number of nights to 11.
+2025-01-06 21:09:26,849 - 16752 - INFO - Available site 1: 103775
+2025-01-06 21:09:26,849 - 16752 - INFO - Available site 2: 103777
+2025-01-06 21:09:26,849 - 16752 - INFO - Available site 3: 103778
+2025-01-06 21:09:26,850 - 16752 - INFO - Available site 4: 103780
+2025-01-06 21:09:26,851 - 16752 - INFO - Available site 5: 103789
+2025-01-06 21:09:26,851 - 16752 - INFO - Available site 6: 103791
+2025-01-06 21:09:26,851 - 16752 - INFO - Available site 7: 103793
+2025-01-06 21:09:26,852 - 16752 - INFO - Available site 8: 103801
+2025-01-06 21:09:26,853 - 16752 - INFO - Available site 9: 103813
+2025-01-06 21:09:26,854 - 16752 - INFO - Success! Output generated.
+2025-01-06 21:09:38,898 - 17048 - INFO - Received inputs: start_date=2025-01-30 00:00:00, end_date=2025-02-10 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=True
+2025-01-06 21:09:39,269 - 17048 - INFO - Setting number of nights to 11.
+2025-01-06 21:09:39,271 - 17048 - INFO - Available site 1: 103775
+2025-01-06 21:09:39,271 - 17048 - INFO - Available site 2: 103777
+2025-01-06 21:09:39,272 - 17048 - INFO - Available site 3: 103778
+2025-01-06 21:09:39,272 - 17048 - INFO - Available site 4: 103780
+2025-01-06 21:09:39,273 - 17048 - INFO - Available site 5: 103789
+2025-01-06 21:09:39,273 - 17048 - INFO - Available site 6: 103791
+2025-01-06 21:09:39,273 - 17048 - INFO - Available site 7: 103793
+2025-01-06 21:09:39,274 - 17048 - INFO - Available site 8: 103801
+2025-01-06 21:09:39,275 - 17048 - INFO - Available site 9: 103813
+2025-01-06 21:09:40,177 - 17048 - INFO - Message limit: 10000, Remaining: 9991
+2025-01-06 21:09:40,177 - 17048 - INFO - Success! Output generated.
+2025-01-06 21:10:07,108 - 7424 - INFO - Received inputs: start_date=2025-01-30 00:00:00, end_date=2025-02-10 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=True
+2025-01-06 21:10:07,716 - 7424 - INFO - Setting number of nights to 11.
+2025-01-06 21:10:07,722 - 7424 - INFO - Available site 1: 103775
+2025-01-06 21:10:07,723 - 7424 - INFO - Available site 2: 103777
+2025-01-06 21:10:07,724 - 7424 - INFO - Available site 3: 103778
+2025-01-06 21:10:07,725 - 7424 - INFO - Available site 4: 103780
+2025-01-06 21:10:07,727 - 7424 - INFO - Available site 5: 103789
+2025-01-06 21:10:07,727 - 7424 - INFO - Available site 6: 103791
+2025-01-06 21:10:07,728 - 7424 - INFO - Available site 7: 103793
+2025-01-06 21:10:07,730 - 7424 - INFO - Available site 8: 103801
+2025-01-06 21:10:07,731 - 7424 - INFO - Available site 9: 103813
+2025-01-06 21:10:09,869 - 7424 - INFO - Message limit: 10000, Remaining: 9990
+2025-01-06 21:10:09,870 - 7424 - INFO - Success! Output generated.
+2025-01-06 21:13:37,420 - 13412 - INFO - Received inputs: start_date=2025-01-30 00:00:00, end_date=2025-02-10 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=True
+2025-01-06 21:13:38,599 - 13412 - INFO - Setting number of nights to 11.
+2025-01-06 21:13:38,602 - 13412 - INFO - Available site 1: 103775
+2025-01-06 21:13:38,603 - 13412 - INFO - Available site 2: 103777
+2025-01-06 21:13:38,603 - 13412 - INFO - Available site 3: 103778
+2025-01-06 21:13:38,603 - 13412 - INFO - Available site 4: 103780
+2025-01-06 21:13:38,604 - 13412 - INFO - Available site 5: 103789
+2025-01-06 21:13:38,604 - 13412 - INFO - Available site 6: 103791
+2025-01-06 21:13:38,604 - 13412 - INFO - Available site 7: 103793
+2025-01-06 21:13:38,605 - 13412 - INFO - Available site 8: 103801
+2025-01-06 21:13:38,606 - 13412 - INFO - Available site 9: 103813
+2025-01-06 21:13:39,440 - 13412 - INFO - Message limit: 10000, Remaining: 9989
+2025-01-06 21:13:39,440 - 13412 - INFO - Success! Output generated.
+2025-01-06 21:15:27,183 - 16312 - INFO - Received inputs: start_date=2025-01-30 00:00:00, end_date=2025-02-10 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=False
+2025-01-06 21:15:27,803 - 16312 - INFO - Setting number of nights to 11.
+2025-01-06 21:15:27,806 - 16312 - INFO - Available site 1: 103775
+2025-01-06 21:15:27,806 - 16312 - INFO - Available site 2: 103777
+2025-01-06 21:15:27,806 - 16312 - INFO - Available site 3: 103778
+2025-01-06 21:15:27,807 - 16312 - INFO - Available site 4: 103780
+2025-01-06 21:15:27,808 - 16312 - INFO - Available site 5: 103789
+2025-01-06 21:15:27,809 - 16312 - INFO - Available site 6: 103791
+2025-01-06 21:15:27,809 - 16312 - INFO - Available site 7: 103793
+2025-01-06 21:15:27,810 - 16312 - INFO - Available site 8: 103801
+2025-01-06 21:15:27,811 - 16312 - INFO - Available site 9: 103813
+2025-01-06 21:15:27,813 - 16312 - INFO - Success! Output generated.
+2025-01-06 21:16:15,663 - 17084 - INFO - Received inputs: start_date=2025-01-30 00:00:00, end_date=2025-02-10 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=False
+2025-01-06 21:16:16,166 - 17084 - INFO - Setting number of nights to 11.
+2025-01-06 21:16:16,170 - 17084 - INFO - Available site 1: 103775
+2025-01-06 21:16:16,171 - 17084 - INFO - Available site 2: 103777
+2025-01-06 21:16:16,171 - 17084 - INFO - Available site 3: 103778
+2025-01-06 21:16:16,172 - 17084 - INFO - Available site 4: 103780
+2025-01-06 21:16:16,177 - 17084 - INFO - Available site 5: 103789
+2025-01-06 21:16:16,177 - 17084 - INFO - Available site 6: 103791
+2025-01-06 21:16:16,178 - 17084 - INFO - Available site 7: 103793
+2025-01-06 21:16:16,180 - 17084 - INFO - Available site 8: 103801
+2025-01-06 21:16:16,183 - 17084 - INFO - Available site 9: 103813
+2025-01-06 21:16:16,184 - 17084 - INFO - Success! Output generated.
+2025-01-06 21:16:16,184 - 17084 - INFO - True
+2025-01-06 21:16:52,711 - 11840 - INFO - Received inputs: start_date=2025-01-30 00:00:00, end_date=2025-02-10 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=False
+2025-01-06 21:16:53,811 - 11840 - INFO - Setting number of nights to 11.
+2025-01-06 21:16:53,813 - 11840 - INFO - Available site 1: 103775
+2025-01-06 21:16:53,814 - 11840 - INFO - Available site 2: 103777
+2025-01-06 21:16:53,814 - 11840 - INFO - Available site 3: 103778
+2025-01-06 21:16:53,815 - 11840 - INFO - Available site 4: 103780
+2025-01-06 21:16:53,816 - 11840 - INFO - Available site 5: 103789
+2025-01-06 21:16:53,816 - 11840 - INFO - Available site 6: 103791
+2025-01-06 21:16:53,816 - 11840 - INFO - Available site 7: 103793
+2025-01-06 21:16:53,817 - 11840 - INFO - Available site 8: 103801
+2025-01-06 21:16:53,818 - 11840 - INFO - Available site 9: 103813
+2025-01-06 21:16:53,819 - 11840 - INFO - Success! Output generated.
+2025-01-06 21:17:06,049 - 8004 - INFO - Received inputs: start_date=2025-01-30 00:00:00, end_date=2025-02-10 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=False
+2025-01-06 21:17:06,392 - 8004 - INFO - Setting number of nights to 11.
+2025-01-06 21:17:06,394 - 8004 - INFO - Available site 1: 103775
+2025-01-06 21:17:06,394 - 8004 - INFO - Available site 2: 103777
+2025-01-06 21:17:06,395 - 8004 - INFO - Available site 3: 103778
+2025-01-06 21:17:06,395 - 8004 - INFO - Available site 4: 103780
+2025-01-06 21:17:06,396 - 8004 - INFO - Available site 5: 103789
+2025-01-06 21:17:06,396 - 8004 - INFO - Available site 6: 103791
+2025-01-06 21:17:06,396 - 8004 - INFO - Available site 7: 103793
+2025-01-06 21:17:06,397 - 8004 - INFO - Available site 8: 103801
+2025-01-06 21:17:06,398 - 8004 - INFO - Available site 9: 103813
+2025-01-06 21:17:06,408 - 8004 - INFO - Success! Output generated.
+2025-01-06 21:21:54,155 - 16400 - INFO - Received inputs: start_date=2025-01-30 00:00:00, end_date=2025-02-10 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=False
+2025-01-06 21:21:55,037 - 16400 - INFO - Setting number of nights to 11.
+2025-01-06 21:21:55,043 - 16400 - INFO - Available site 1: 103775
+2025-01-06 21:21:55,044 - 16400 - INFO - Available site 2: 103777
+2025-01-06 21:21:55,044 - 16400 - INFO - Available site 3: 103778
+2025-01-06 21:21:55,045 - 16400 - INFO - Available site 4: 103780
+2025-01-06 21:21:55,047 - 16400 - INFO - Available site 5: 103789
+2025-01-06 21:21:55,047 - 16400 - INFO - Available site 6: 103791
+2025-01-06 21:21:55,048 - 16400 - INFO - Available site 7: 103793
+2025-01-06 21:21:55,049 - 16400 - INFO - Available site 8: 103801
+2025-01-06 21:21:55,051 - 16400 - INFO - Available site 9: 103813
+2025-01-06 21:21:55,053 - 16400 - INFO - Output: There are campsites available from 2025-01-30 to 2025-02-10 😊
+✅ COTTONWOOD CAMPGROUND (CA) (272299): 9 site(s) available out of 59 site(s)
+2025-01-06 21:21:55,054 - 16400 - INFO - Success! Output generated.
+2025-01-06 21:25:34,010 - 9732 - INFO - Received inputs: start_date=2025-01-10 00:00:00, end_date=2025-01-11 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=False
+2025-01-06 21:25:35,546 - 9732 - INFO - Setting number of nights to 1.
+2025-01-06 21:25:35,548 - 9732 - INFO - Available site 1: 103762
+2025-01-06 21:25:35,548 - 9732 - INFO - Available site 2: 103764
+2025-01-06 21:25:35,549 - 9732 - INFO - Available site 3: 103769
+2025-01-06 21:25:35,549 - 9732 - INFO - Available site 4: 103774
+2025-01-06 21:25:35,550 - 9732 - INFO - Available site 5: 103776
+2025-01-06 21:25:35,550 - 9732 - INFO - Available site 6: 103777
+2025-01-06 21:25:35,551 - 9732 - INFO - Available site 7: 103782
+2025-01-06 21:25:35,551 - 9732 - INFO - Available site 8: 103783
+2025-01-06 21:25:35,552 - 9732 - INFO - Available site 9: 103791
+2025-01-06 21:25:35,552 - 9732 - INFO - Available site 10: 103794
+2025-01-06 21:25:35,553 - 9732 - INFO - Available site 11: 103806
+2025-01-06 21:25:35,556 - 9732 - INFO - Output: There are campsites available from 2025-01-10 to 2025-01-11 😊
+✅ COTTONWOOD CAMPGROUND (CA) (272299): 11 site(s) available out of 59 site(s)
+2025-01-06 21:25:35,556 - 9732 - INFO - Success! Output generated - No notification sent.
+2025-01-06 21:25:58,796 - 13144 - INFO - Received inputs: start_date=2025-01-11 00:00:00, end_date=2025-01-12 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=False
+2025-01-06 21:25:59,115 - 13144 - INFO - Setting number of nights to 1.
+2025-01-06 21:25:59,115 - 13144 - INFO - Available site 1: 103783
+2025-01-06 21:25:59,117 - 13144 - INFO - Output: There are campsites available from 2025-01-11 to 2025-01-12 😊
+✅ COTTONWOOD CAMPGROUND (CA) (272299): 1 site(s) available out of 59 site(s)
+2025-01-06 21:25:59,117 - 13144 - INFO - Success! Output generated - No notification sent.
+2025-01-06 21:26:27,648 - 17772 - INFO - Received inputs: start_date=2025-01-11 00:00:00, end_date=2025-01-12 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=False
+2025-01-06 21:26:28,081 - 17772 - INFO - Setting number of nights to 1.
+2025-01-06 21:26:28,082 - 17772 - INFO - Output: There are no campsites available 😢
+❌ COTTONWOOD CAMPGROUND (CA) (272299): 0 site(s) available out of 59 site(s)
+2025-01-06 21:26:28,083 - 17772 - INFO - Success! Output generated - No notification sent.
+2025-01-06 21:30:29,244 - 18404 - INFO - Received inputs: start_date=2025-01-11 00:00:00, end_date=2025-01-12 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=False
+2025-01-06 21:30:29,557 - 18404 - INFO - Setting number of nights to 1.
+2025-01-06 21:30:29,557 - 18404 - INFO - No campsites found, checking again in 60 seconds...
+2025-01-06 21:31:25,425 - 17804 - INFO - Received inputs: start_date=2025-01-11 00:00:00, end_date=2025-01-12 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=False
+2025-01-06 21:31:25,740 - 17804 - INFO - Setting number of nights to 1.
+2025-01-06 21:31:25,742 - 17804 - INFO - No campsites found, checking again in 60 seconds...
+2025-01-06 21:32:26,189 - 17804 - INFO - Setting number of nights to 1.
+2025-01-06 21:32:26,191 - 17804 - INFO - No campsites found, checking again in 60 seconds...
+2025-01-06 21:33:26,767 - 17804 - INFO - Setting number of nights to 1.
+2025-01-06 21:33:26,769 - 17804 - INFO - No campsites found, checking again in 60 seconds...
+2025-01-06 21:34:27,242 - 17804 - INFO - Setting number of nights to 1.
+2025-01-06 21:34:27,243 - 17804 - INFO - Available site 1: 103783
+2025-01-06 21:34:27,247 - 17804 - INFO - Output: There are campsites available from 2025-01-11 to 2025-01-12 😊
+✅ COTTONWOOD CAMPGROUND (CA) (272299): 1 site(s) available out of 59 site(s)
+2025-01-06 21:34:27,247 - 17804 - INFO - Success! Output generated - No Notification Sent!
+2025-01-06 21:40:14,703 - 6424 - INFO - Received inputs: start_date=2025-01-11 00:00:00, end_date=2025-01-12 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=False
+2025-01-06 21:40:15,231 - 6424 - INFO - Setting number of nights to 1.
+2025-01-06 21:40:15,232 - 6424 - INFO - No campsites found, checking again in 60 seconds...
+2025-01-06 21:41:16,338 - 6424 - INFO - Setting number of nights to 1.
+2025-01-06 21:41:16,339 - 6424 - INFO - No campsites found, checking again in 60 seconds...
+2025-01-06 21:41:48,926 - 17548 - INFO - Received inputs: start_date=2025-01-11 00:00:00, end_date=2025-01-12 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=False
+2025-01-06 21:41:49,351 - 17548 - INFO - Setting number of nights to 1.
+2025-01-06 21:41:49,351 - 17548 - INFO - No campsites found, checking again in 60 seconds...
+2025-01-06 21:42:50,578 - 17548 - INFO - Setting number of nights to 1.
+2025-01-06 21:42:50,578 - 17548 - INFO - No campsites found, checking again in 60 seconds...
+2025-01-06 21:43:51,732 - 17548 - INFO - Setting number of nights to 1.
+2025-01-06 21:43:51,733 - 17548 - INFO - No campsites found, checking again in 60 seconds...
+2025-01-06 21:44:52,655 - 17548 - INFO - Setting number of nights to 1.
+2025-01-06 21:44:52,655 - 17548 - INFO - No campsites found, checking again in 60 seconds...
+2025-01-06 21:44:59,931 - 1696 - INFO - Received inputs: start_date=2025-01-11 00:00:00, end_date=2025-01-12 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=False
+2025-01-06 21:45:00,198 - 1696 - INFO - Setting number of nights to 1.
+2025-01-06 21:45:00,198 - 1696 - INFO - No campsites found, checking again in 60 seconds...
+2025-01-06 21:46:01,407 - 1696 - INFO - Setting number of nights to 1.
+2025-01-06 21:46:01,408 - 1696 - INFO - No campsites found, checking again in 60 seconds...
+2025-01-06 21:47:02,414 - 1696 - INFO - Setting number of nights to 1.
+2025-01-06 21:47:02,415 - 1696 - INFO - No campsites found, checking again in 60 seconds...
+2025-01-06 21:48:03,648 - 1696 - INFO - Setting number of nights to 1.
+2025-01-06 21:48:03,649 - 1696 - INFO - Available site 1: 103783
+2025-01-06 21:48:03,650 - 1696 - INFO - Output: There are campsites available from 2025-01-11 to 2025-01-12 😊
+✅ COTTONWOOD CAMPGROUND (CA) (272299): 1 site(s) available out of 59 site(s)
+2025-01-06 21:48:03,650 - 1696 - INFO - Success! Output generated - No Notification Sent!
+2025-01-06 21:51:19,427 - 14592 - INFO - Received inputs: start_date=2025-01-11 00:00:00, end_date=2025-01-12 00:00:00, nights=None, campsite_ids=(), show_campsite_info=True, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=False
+2025-01-06 21:51:19,757 - 14592 - INFO - Setting number of nights to 1.
+2025-01-06 21:51:19,759 - 14592 - INFO - Available site 1: 103783
+2025-01-06 21:51:19,764 - 14592 - INFO - Output: There are campsites available from 2025-01-11 to 2025-01-12 😊
+✅ COTTONWOOD CAMPGROUND (CA) (272299): 1 site(s) available out of 59 site(s)
+  * Site 103783 is available on the following dates:
+    * 2025-01-11 -> 2025-01-12
+2025-01-06 21:51:19,764 - 14592 - INFO - Success! Output generated - No Notification Sent!
