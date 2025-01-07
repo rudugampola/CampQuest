@@ -34,6 +34,18 @@ fh.setFormatter(log_formatter)
 LOG.addHandler(fh)
 
 
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+
 def get_park_information(
     park_id, start_date, end_date, campsite_type=None, campsite_ids=(), excluded_site_ids=[]
 ):
@@ -248,8 +260,7 @@ def generate_human_output(
 
     if has_availabilities:
         out.insert(
-            0,
-            "There are campsites available from {start} to {end} 😊".format(
+            0, "There are campsites available from {start} to {end} 😊".format(
                 start=start_date.strftime(DateFormat.INPUT_DATE_FORMAT.value),
                 end=end_date.strftime(DateFormat.INPUT_DATE_FORMAT.value),
             ),
@@ -289,8 +300,8 @@ def remove_comments(lines: list[str]) -> list[str]:
 def countdown_timer(seconds):
     for remaining in range(seconds, 0, -1):
         sys.stdout.write("\r")
-        sys.stdout.write(
-            f"No campsites found, checking again in {remaining} seconds...")
+        sys.stdout.write(bcolors.WARNING +
+                         f"No campsites found, checking again in {remaining} seconds..." + bcolors.ENDC)
         sys.stdout.flush()
         time.sleep(1)
     sys.stdout.write("\r")  # Move cursor to the beginning of the line
