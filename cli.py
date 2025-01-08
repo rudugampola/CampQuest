@@ -35,6 +35,8 @@ LOG.addHandler(fh)
 
 
 class bcolors:
+    """ ANSI color codes for terminal output
+    """
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
     OKCYAN = '\033[96m'
@@ -49,6 +51,19 @@ class bcolors:
 def get_park_information(
     park_id, start_date, end_date, campsite_type=None, campsite_ids=(), excluded_site_ids=[]
 ):
+    """ Get park information for a given date range.
+
+    Args:
+        park_id: The park ID to get information for.
+        start_date: The start date of the date range.
+        end_date: The end date of the date range.
+        campsite_type: The campsite type, only for recreation.gov. Defaults to None.
+        campsite_ids: The campsite IDs to get information for. Defaults to ().
+        excluded_site_ids: The campsite IDs to exclude. Defaults to [].
+
+    Returns:
+        dict: The park information.
+    """
     # Get each first of the month for months in the range we care about.
     start_of_month = datetime(start_date.year, start_date.month, 1)
     months = list(
@@ -96,6 +111,14 @@ def get_park_information(
 
 
 def is_weekend(date):
+    """ Check if a date is a weekend.
+
+    Args:
+        date: The date to check if it is a weekend.
+
+    Returns:
+        bool: True if the date is a weekend, False otherwise.
+    """
     weekday = date.weekday()
     return weekday == 5 or weekday == 6
 
@@ -103,6 +126,18 @@ def is_weekend(date):
 def get_num_available_sites(
     park_information, start_date, end_date, nights=None, weekends_only=False,
 ):
+    """ Get the number of available sites for a given date range.
+
+    Args:
+        park_information: The park information.
+        start_date: The start date of the date range.
+        end_date: The end date of the date range.
+        nights: The number of nights. Defaults to None.
+        weekends_only: Whether to include only weekends. Defaults to False.
+
+    Returns:
+        tuple: The number of available sites, the maximum number of sites, and the available dates by campsite ID
+    """
     maximum = len(park_information)
 
     num_available = 0
@@ -152,12 +187,15 @@ def get_num_available_sites(
 
 
 def consecutive_nights(available, nights):
-    """
-    Returns a list of dates from which you can start that have
-    enough consecutive nights.
+    """ Returns a list of dates from which you can start that have
+    enough consecutive nights. If there is one or more entries in this list, there is at least one date range for this site that is available.
 
-    If there is one or more entries in this list, there is at least one
-    date range for this site that is available.
+    Args:
+        available: The list of available dates.
+        nights: The number of nights to find.
+
+    Returns:
+        list: The list of consecutive nights.
     """
     ordinal_dates = [
         datetime.strptime(
@@ -193,6 +231,22 @@ def consecutive_nights(available, nights):
 def check_park(
     park_id, start_date, end_date, campsite_type, campsite_ids=(), nights=None, weekends_only=False, excluded_site_ids=[], source="recreation",
 ):
+    """ Check a park for availability.
+
+    Args:
+        park_id: The park ID to check.
+        start_date: The start date.
+        end_date: The end date.
+        campsite_type: The campsite type. Defaults to None.
+        campsite_ids: The campsite IDs. Defaults to ().
+        nights: The number of nights. Defaults to None.
+        weekends_only: Whether to include only weekends. Defaults to False.
+        excluded_site_ids: The campsite IDs to exclude. Defaults to [].
+        source: The source of the park information, recreation or reserve_california. Defaults to "recreation".
+
+    Returns:
+        tuple: The number of available sites, the maximum number of sites, and the available dates by campsite ID
+    """
     if source == "recreation":
         park_information = get_park_information(
             park_id, start_date, end_date, campsite_type, campsite_ids, excluded_site_ids=excluded_site_ids,
@@ -223,6 +277,17 @@ def check_park(
 def generate_human_output(
     info_by_park_id, start_date, end_date, gen_campsite_info=False
 ):
+    """ Generate human readable output. If gen_campsite_info is True, it will also display campsite ID and availability dates.
+
+    Args:
+        info_by_park_id: The information by park ID.
+        start_date: The start date.
+        end_date: The end date.
+        gen_campsite_info: Whether to display campsite ID and availability dates. Defaults to False. 
+
+    Returns:
+        tuple: The human readable output and whether there are availabilities.
+    """
     out = []
     has_availabilities = False
     for park_id, info in info_by_park_id.items():
@@ -271,6 +336,14 @@ def generate_human_output(
 
 
 def generate_json_output(info_by_park_id):
+    """ Generate JSON output.
+
+    Args:
+        info_by_park_id: The information by park ID. 
+
+    Returns:
+        tuple: The JSON output and whether there are availabilities.
+    """
     availabilities_by_park_id = {}
     has_availabilities = False
     for park_id, info in info_by_park_id.items():
@@ -283,6 +356,14 @@ def generate_json_output(info_by_park_id):
 
 
 def remove_comments(lines: list[str]) -> list[str]:
+    """ Remove comments from a list of lines. Comments are lines that start with a '#'.
+
+    Args:
+        lines (list[str]): The list of lines to remove comments from.
+
+    Returns:
+        list[str]: The list of lines with comments removed.
+    """
     new_lines = []
     for line in lines:
         if line.startswith("#"):  # Deal with comment as the first character
@@ -298,6 +379,11 @@ def remove_comments(lines: list[str]) -> list[str]:
 
 
 def countdown_timer(seconds):
+    """ Countdown timer for a given number of seconds.  
+
+    Args:
+        seconds: The number of seconds to countdown.
+    """
     for remaining in range(seconds, 0, -1):
         sys.stdout.write("\r")
         sys.stdout.write(bcolors.WARNING +
