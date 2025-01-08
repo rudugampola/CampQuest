@@ -327,3 +327,18 @@
 2025-01-06 22:20:15,134 - 20452 - INFO - Available site 1: 103783
 2025-01-06 22:20:16,024 - 20452 - INFO - Message limit: 10000, Remaining: 9987
 2025-01-06 22:20:16,024 - 20452 - INFO - Success! Output generated - Notification Sent!
+2025-01-07 20:02:12,189 - 14052 - INFO - Received inputs: start_date=2025-01-11 00:00:00, end_date=2025-01-12 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=False
+2025-01-07 20:02:12,658 - 14052 - INFO - Setting number of nights to 1.
+2025-01-07 20:02:12,658 - 14052 - INFO - No campsites found, checking again in 60 seconds...
+2025-01-07 20:08:03,324 - 18268 - INFO - Received inputs: start_date=2025-01-10 00:00:00, end_date=2025-01-11 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=False
+2025-01-07 20:08:03,803 - 18268 - INFO - Setting number of nights to 1.
+2025-01-07 20:08:03,805 - 18268 - INFO - Available site 1: 103762
+2025-01-07 20:08:03,805 - 18268 - INFO - Available site 2: 103764
+2025-01-07 20:08:03,806 - 18268 - INFO - Available site 3: 103769
+2025-01-07 20:08:03,806 - 18268 - INFO - Available site 4: 103777
+2025-01-07 20:08:03,807 - 18268 - INFO - Available site 5: 103791
+2025-01-07 20:08:03,808 - 18268 - INFO - Available site 6: 103794
+2025-01-07 20:08:03,808 - 18268 - INFO - Available site 7: 103806
+2025-01-07 20:08:03,810 - 18268 - INFO - Output: There are campsites available from 2025-01-10 to 2025-01-11 😊
+✅ COTTONWOOD CAMPGROUND (CA) (272299): 7 site(s) available out of 59 site(s)
+2025-01-07 20:08:03,811 - 18268 - INFO - Success! Output generated - No Notification Sent!

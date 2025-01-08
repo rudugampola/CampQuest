@@ -60,6 +60,7 @@ soupsieve==1.8
 sqlparse==0.5.3
 tenacity==8.2.3
 toml==0.10.0
+tomli==2.2.1
 tornado==6.4.2
 typing_extensions==4.12.2
 tzdata==2024.2
