@@ -480,8 +480,13 @@ def countdown_timer(seconds):
     is_flag=True,
     help="Send a Pushover notification when campsites are available.",
 )
+@click.option(
+    "--continuous",
+    is_flag=True,
+    help="Run the search continuously until a campsite is found."
+)
 def main(debug, start_date, end_date, nights, campsite_ids, show_campsite_info, campsite_type, json_output,
-         weekends_only, exclusion_file, parks, stdin, source, notify):
+         weekends_only, exclusion_file, parks, stdin, source, notify, continuous):
     """ 
         This program is designed to check the availability of campsites in various parks over a specified date range. It uses a rich set of options to customize the search criteria and output format.
     """
@@ -492,8 +497,8 @@ def main(debug, start_date, end_date, nights, campsite_ids, show_campsite_info, 
     else:
         LOG.setLevel(logging.INFO)
 
-    LOG.info("Received inputs: start_date=%s, end_date=%s, nights=%s, campsite_ids=%s, show_campsite_info=%s, campsite_type=%s, json_output=%s, weekends_only=%s, exclusion_file=%s, parks=%s, stdin=%s, source=%s, notify=%s",
-             start_date, end_date, nights, campsite_ids, show_campsite_info, campsite_type, json_output, weekends_only, exclusion_file, parks, stdin, source, notify)
+    LOG.info("Received inputs: start_date=%s, end_date=%s, nights=%s, campsite_ids=%s, show_campsite_info=%s, campsite_type=%s, json_output=%s, weekends_only=%s, exclusion_file=%s, parks=%s, stdin=%s, source=%s, notify=%s, continuous=%s",
+             start_date, end_date, nights, campsite_ids, show_campsite_info, campsite_type, json_output, weekends_only, exclusion_file, parks, stdin, source, notify, continuous)
 
     if stdin:
         input_lines = sys.stdin.read().strip().split('\n')
@@ -557,12 +562,16 @@ def main(debug, start_date, end_date, nights, campsite_ids, show_campsite_info, 
                     LOG.info("Success! Output generated - Notification Sent!")
                     return has_availabilities
             else:
+                print(output)
                 LOG.info(f"No availability for park ID {park_id}.")
+
+        if not continuous:  # Exit the loop if not in continuous mode
+            break
 
         if remaining_parks:
             LOG.info(
                 "No availability found for some parks, checking again in 60 seconds...")
-            countdown_timer(60)  # Wait 60 seconds before re-checking
+            countdown_timer(5)  # Wait 60 seconds before re-checking
         else:
             LOG.info("All parks checked. Exiting loop.")
 

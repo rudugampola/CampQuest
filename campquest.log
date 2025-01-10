@@ -468,3 +468,756 @@
     * 2025-01-11 -> 2025-01-12
 2025-01-09 20:15:55,560 - 15372 - INFO - Success! Output generated - No Notification Sent!
 2025-01-09 20:15:55,560 - 15372 - INFO - All parks checked. Exiting loop.
+2025-01-09 22:27:30,600 - 12248 - INFO - Setting number of nights to 1.
+2025-01-09 22:27:30,601 - 12248 - INFO - No availability for park ID 272299.
+2025-01-09 22:28:04,935 - 16232 - INFO - Setting number of nights to 1.
+2025-01-09 22:28:04,936 - 16232 - INFO - No availability for park ID 272299.
+2025-01-09 22:28:04,936 - 16232 - INFO - No availability found for some parks, checking again in 60 seconds...
+2025-01-09 22:29:08,814 - 15852 - INFO - Received inputs: start_date=2025-01-11 00:00:00, end_date=2025-01-12 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=False, continuous=True
+2025-01-09 22:29:09,078 - 15852 - INFO - Setting number of nights to 1.
+2025-01-09 22:29:09,078 - 15852 - INFO - No availability for park ID 272299.
+2025-01-09 22:29:09,078 - 15852 - INFO - No availability found for some parks, checking again in 60 seconds...
+2025-01-09 22:29:16,959 - 16868 - INFO - Received inputs: start_date=2025-01-11 00:00:00, end_date=2025-01-12 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=False, continuous=False
+2025-01-09 22:29:17,264 - 16868 - INFO - Setting number of nights to 1.
+2025-01-09 22:29:17,264 - 16868 - INFO - No availability for park ID 272299.
+2025-01-09 22:30:13,506 - 17404 - INFO - Received inputs: start_date=2025-01-11 00:00:00, end_date=2025-01-12 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=False, continuous=False
+2025-01-09 22:30:13,914 - 17404 - INFO - Setting number of nights to 1.
+2025-01-09 22:30:13,916 - 17404 - INFO - No availability for park ID 272299.
+2025-01-09 22:30:20,084 - 11496 - INFO - Received inputs: start_date=2025-01-11 00:00:00, end_date=2025-01-12 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=False, continuous=True
+2025-01-09 22:30:20,351 - 11496 - INFO - Setting number of nights to 1.
+2025-01-09 22:30:20,353 - 11496 - INFO - No availability for park ID 272299.
+2025-01-09 22:30:20,354 - 11496 - INFO - No availability found for some parks, checking again in 60 seconds...
+2025-01-09 22:30:35,395 - 18156 - INFO - Received inputs: start_date=2025-01-11 00:00:00, end_date=2025-01-12 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=False, continuous=True
+2025-01-09 22:30:36,155 - 18156 - INFO - Setting number of nights to 1.
+2025-01-09 22:30:36,156 - 18156 - INFO - No availability for park ID 272299.
+2025-01-09 22:30:36,156 - 18156 - INFO - No availability found for some parks, checking again in 60 seconds...
+2025-01-09 22:30:41,427 - 18156 - INFO - Setting number of nights to 1.
+2025-01-09 22:30:41,429 - 18156 - INFO - No availability for park ID 272299.
+2025-01-09 22:30:41,429 - 18156 - INFO - No availability found for some parks, checking again in 60 seconds...
+2025-01-09 22:30:46,900 - 18156 - INFO - Setting number of nights to 1.
+2025-01-09 22:30:46,902 - 18156 - INFO - No availability for park ID 272299.
+2025-01-09 22:30:46,902 - 18156 - INFO - No availability found for some parks, checking again in 60 seconds...
+2025-01-09 22:30:55,088 - 18048 - INFO - Received inputs: start_date=2025-01-11 00:00:00, end_date=2025-01-12 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=False, continuous=False
+2025-01-09 22:30:55,362 - 18048 - INFO - Setting number of nights to 1.
+2025-01-09 22:30:55,364 - 18048 - INFO - No availability for park ID 272299.
+2025-01-09 22:31:18,468 - 15608 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=False, continuous=False
+2025-01-09 22:31:19,007 - 15608 - INFO - Setting number of nights to 1.
+2025-01-09 22:31:19,008 - 15608 - INFO - Available site 1: 103758
+2025-01-09 22:31:19,008 - 15608 - INFO - Available site 2: 103759
+2025-01-09 22:31:19,008 - 15608 - INFO - Available site 3: 103761
+2025-01-09 22:31:19,008 - 15608 - INFO - Available site 4: 103762
+2025-01-09 22:31:19,008 - 15608 - INFO - Available site 5: 103763
+2025-01-09 22:31:19,008 - 15608 - INFO - Available site 6: 103764
+2025-01-09 22:31:19,008 - 15608 - INFO - Available site 7: 103766
+2025-01-09 22:31:19,009 - 15608 - INFO - Available site 8: 103767
+2025-01-09 22:31:19,009 - 15608 - INFO - Available site 9: 103769
+2025-01-09 22:31:19,009 - 15608 - INFO - Available site 10: 103770
+2025-01-09 22:31:19,009 - 15608 - INFO - Available site 11: 103772
+2025-01-09 22:31:19,009 - 15608 - INFO - Available site 12: 103775
+2025-01-09 22:31:19,009 - 15608 - INFO - Available site 13: 103776
+2025-01-09 22:31:19,009 - 15608 - INFO - Available site 14: 103777
+2025-01-09 22:31:19,009 - 15608 - INFO - Available site 15: 103778
+2025-01-09 22:31:19,009 - 15608 - INFO - Available site 16: 103780
+2025-01-09 22:31:19,010 - 15608 - INFO - Available site 17: 103783
+2025-01-09 22:31:19,010 - 15608 - INFO - Available site 18: 103784
+2025-01-09 22:31:19,010 - 15608 - INFO - Available site 19: 103785
+2025-01-09 22:31:19,010 - 15608 - INFO - Available site 20: 103786
+2025-01-09 22:31:19,010 - 15608 - INFO - Available site 21: 103787
+2025-01-09 22:31:19,010 - 15608 - INFO - Available site 22: 103788
+2025-01-09 22:31:19,010 - 15608 - INFO - Available site 23: 103790
+2025-01-09 22:31:19,010 - 15608 - INFO - Available site 24: 103791
+2025-01-09 22:31:19,010 - 15608 - INFO - Available site 25: 103793
+2025-01-09 22:31:19,011 - 15608 - INFO - Available site 26: 103794
+2025-01-09 22:31:19,011 - 15608 - INFO - Available site 27: 103796
+2025-01-09 22:31:19,011 - 15608 - INFO - Available site 28: 103798
+2025-01-09 22:31:19,011 - 15608 - INFO - Available site 29: 103799
+2025-01-09 22:31:19,011 - 15608 - INFO - Available site 30: 103802
+2025-01-09 22:31:19,011 - 15608 - INFO - Available site 31: 103803
+2025-01-09 22:31:19,011 - 15608 - INFO - Available site 32: 103805
+2025-01-09 22:31:19,011 - 15608 - INFO - Available site 33: 103809
+2025-01-09 22:31:19,011 - 15608 - INFO - Available site 34: 103810
+2025-01-09 22:31:19,012 - 15608 - INFO - Available site 35: 103812
+2025-01-09 22:31:19,012 - 15608 - INFO - Available site 36: 103813
+2025-01-09 22:31:19,012 - 15608 - INFO - Available site 37: 103814
+2025-01-09 22:31:19,012 - 15608 - INFO - Available site 38: 103817
+2025-01-09 22:31:19,012 - 15608 - INFO - Available site 39: 103818
+2025-01-09 22:31:19,012 - 15608 - INFO - Available site 40: 103819
+2025-01-09 22:31:19,013 - 15608 - INFO - Output: There are campsites available from 2025-01-16 to 2025-01-17 😊
+✅ COTTONWOOD CAMPGROUND (CA) (272299): 40 site(s) available out of 59 site(s)
+2025-01-09 22:31:19,013 - 15608 - INFO - Success! Output generated - No Notification Sent!
+2025-01-09 22:31:22,854 - 3580 - INFO - Received inputs: start_date=2025-01-11 00:00:00, end_date=2025-01-12 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=False, continuous=True
+2025-01-09 22:31:23,191 - 3580 - INFO - Setting number of nights to 1.
+2025-01-09 22:31:23,192 - 3580 - INFO - No availability for park ID 272299.
+2025-01-09 22:31:23,192 - 3580 - INFO - No availability found for some parks, checking again in 60 seconds...
+2025-01-09 22:31:28,531 - 3580 - INFO - Setting number of nights to 1.
+2025-01-09 22:31:28,533 - 3580 - INFO - No availability for park ID 272299.
+2025-01-09 22:31:28,533 - 3580 - INFO - No availability found for some parks, checking again in 60 seconds...
+2025-01-09 22:31:36,640 - 14808 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=False, continuous=True
+2025-01-09 22:31:37,078 - 14808 - INFO - Setting number of nights to 1.
+2025-01-09 22:31:37,079 - 14808 - INFO - Available site 1: 103758
+2025-01-09 22:31:37,079 - 14808 - INFO - Available site 2: 103759
+2025-01-09 22:31:37,079 - 14808 - INFO - Available site 3: 103761
+2025-01-09 22:31:37,080 - 14808 - INFO - Available site 4: 103762
+2025-01-09 22:31:37,080 - 14808 - INFO - Available site 5: 103763
+2025-01-09 22:31:37,080 - 14808 - INFO - Available site 6: 103764
+2025-01-09 22:31:37,080 - 14808 - INFO - Available site 7: 103766
+2025-01-09 22:31:37,080 - 14808 - INFO - Available site 8: 103767
+2025-01-09 22:31:37,080 - 14808 - INFO - Available site 9: 103769
+2025-01-09 22:31:37,080 - 14808 - INFO - Available site 10: 103770
+2025-01-09 22:31:37,081 - 14808 - INFO - Available site 11: 103772
+2025-01-09 22:31:37,081 - 14808 - INFO - Available site 12: 103775
+2025-01-09 22:31:37,081 - 14808 - INFO - Available site 13: 103776
+2025-01-09 22:31:37,081 - 14808 - INFO - Available site 14: 103777
+2025-01-09 22:31:37,081 - 14808 - INFO - Available site 15: 103778
+2025-01-09 22:31:37,081 - 14808 - INFO - Available site 16: 103780
+2025-01-09 22:31:37,081 - 14808 - INFO - Available site 17: 103783
+2025-01-09 22:31:37,081 - 14808 - INFO - Available site 18: 103784
+2025-01-09 22:31:37,081 - 14808 - INFO - Available site 19: 103785
+2025-01-09 22:31:37,082 - 14808 - INFO - Available site 20: 103786
+2025-01-09 22:31:37,082 - 14808 - INFO - Available site 21: 103787
+2025-01-09 22:31:37,082 - 14808 - INFO - Available site 22: 103788
+2025-01-09 22:31:37,082 - 14808 - INFO - Available site 23: 103790
+2025-01-09 22:31:37,082 - 14808 - INFO - Available site 24: 103791
+2025-01-09 22:31:37,082 - 14808 - INFO - Available site 25: 103793
+2025-01-09 22:31:37,082 - 14808 - INFO - Available site 26: 103794
+2025-01-09 22:31:37,082 - 14808 - INFO - Available site 27: 103796
+2025-01-09 22:31:37,082 - 14808 - INFO - Available site 28: 103798
+2025-01-09 22:31:37,083 - 14808 - INFO - Available site 29: 103799
+2025-01-09 22:31:37,083 - 14808 - INFO - Available site 30: 103802
+2025-01-09 22:31:37,083 - 14808 - INFO - Available site 31: 103803
+2025-01-09 22:31:37,083 - 14808 - INFO - Available site 32: 103805
+2025-01-09 22:31:37,083 - 14808 - INFO - Available site 33: 103809
+2025-01-09 22:31:37,083 - 14808 - INFO - Available site 34: 103810
+2025-01-09 22:31:37,083 - 14808 - INFO - Available site 35: 103812
+2025-01-09 22:31:37,083 - 14808 - INFO - Available site 36: 103813
+2025-01-09 22:31:37,083 - 14808 - INFO - Available site 37: 103814
+2025-01-09 22:31:37,084 - 14808 - INFO - Available site 38: 103817
+2025-01-09 22:31:37,084 - 14808 - INFO - Available site 39: 103818
+2025-01-09 22:31:37,084 - 14808 - INFO - Available site 40: 103819
+2025-01-09 22:31:37,085 - 14808 - INFO - Output: There are campsites available from 2025-01-16 to 2025-01-17 😊
+✅ COTTONWOOD CAMPGROUND (CA) (272299): 40 site(s) available out of 59 site(s)
+2025-01-09 22:31:37,085 - 14808 - INFO - Success! Output generated - No Notification Sent!
+2025-01-09 22:31:37,085 - 14808 - INFO - All parks checked. Exiting loop.
+2025-01-09 22:31:58,851 - 14916 - INFO - Received inputs: start_date=2025-01-11 00:00:00, end_date=2025-01-12 00:00:00, nights=None, campsite_ids=(), show_campsite_info=True, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(), stdin=True, source=recreation, notify=False, continuous=False
+2025-01-09 22:31:59,175 - 14916 - INFO - Setting number of nights to 1.
+2025-01-09 22:31:59,176 - 14916 - INFO - No availability for park ID 232448.
+2025-01-09 22:31:59,591 - 14916 - INFO - Setting number of nights to 1.
+2025-01-09 22:31:59,593 - 14916 - INFO - No availability for park ID 232449.
+2025-01-09 22:31:59,878 - 14916 - INFO - Setting number of nights to 1.
+2025-01-09 22:31:59,881 - 14916 - INFO - No availability for park ID 232450.
+2025-01-09 22:32:00,318 - 14916 - INFO - Setting number of nights to 1.
+2025-01-09 22:32:00,320 - 14916 - INFO - No availability for park ID 272299.
+2025-01-09 22:32:00,605 - 14916 - INFO - Setting number of nights to 1.
+2025-01-09 22:32:00,607 - 14916 - INFO - No availability for park ID 232447.
+2025-01-09 22:32:13,495 - 13904 - INFO - Received inputs: start_date=2025-01-11 00:00:00, end_date=2025-01-12 00:00:00, nights=None, campsite_ids=(), show_campsite_info=True, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(), stdin=True, source=recreation, notify=False, continuous=False
+2025-01-09 22:32:13,916 - 13904 - INFO - Setting number of nights to 1.
+2025-01-09 22:32:13,918 - 13904 - INFO - No availability for park ID 232448.
+2025-01-09 22:32:14,211 - 13904 - INFO - Setting number of nights to 1.
+2025-01-09 22:32:14,212 - 13904 - INFO - No availability for park ID 232449.
+2025-01-09 22:32:14,599 - 13904 - INFO - Setting number of nights to 1.
+2025-01-09 22:32:14,601 - 13904 - INFO - No availability for park ID 232450.
+2025-01-09 22:32:15,033 - 13904 - INFO - Setting number of nights to 1.
+2025-01-09 22:32:15,034 - 13904 - INFO - No availability for park ID 272299.
+2025-01-09 22:32:15,356 - 13904 - INFO - Setting number of nights to 1.
+2025-01-09 22:32:15,357 - 13904 - INFO - No availability for park ID 232447.
+2025-01-09 22:32:29,066 - 16148 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=True, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(), stdin=True, source=recreation, notify=False, continuous=False
+2025-01-09 22:32:29,366 - 16148 - INFO - Setting number of nights to 1.
+2025-01-09 22:32:29,367 - 16148 - INFO - No availability for park ID 232448.
+2025-01-09 22:32:30,128 - 16148 - INFO - Setting number of nights to 1.
+2025-01-09 22:32:30,129 - 16148 - INFO - No availability for park ID 232449.
+2025-01-09 22:32:30,728 - 16148 - INFO - Setting number of nights to 1.
+2025-01-09 22:32:30,729 - 16148 - INFO - No availability for park ID 232450.
+2025-01-09 22:32:31,274 - 16148 - INFO - Setting number of nights to 1.
+2025-01-09 22:32:31,274 - 16148 - INFO - Available site 1: 103758
+2025-01-09 22:32:31,275 - 16148 - INFO - Available site 2: 103759
+2025-01-09 22:32:31,275 - 16148 - INFO - Available site 3: 103761
+2025-01-09 22:32:31,275 - 16148 - INFO - Available site 4: 103762
+2025-01-09 22:32:31,275 - 16148 - INFO - Available site 5: 103763
+2025-01-09 22:32:31,275 - 16148 - INFO - Available site 6: 103764
+2025-01-09 22:32:31,275 - 16148 - INFO - Available site 7: 103766
+2025-01-09 22:32:31,275 - 16148 - INFO - Available site 8: 103767
+2025-01-09 22:32:31,275 - 16148 - INFO - Available site 9: 103769
+2025-01-09 22:32:31,275 - 16148 - INFO - Available site 10: 103770
+2025-01-09 22:32:31,276 - 16148 - INFO - Available site 11: 103772
+2025-01-09 22:32:31,276 - 16148 - INFO - Available site 12: 103775
+2025-01-09 22:32:31,276 - 16148 - INFO - Available site 13: 103776
+2025-01-09 22:32:31,276 - 16148 - INFO - Available site 14: 103777
+2025-01-09 22:32:31,276 - 16148 - INFO - Available site 15: 103778
+2025-01-09 22:32:31,276 - 16148 - INFO - Available site 16: 103780
+2025-01-09 22:32:31,276 - 16148 - INFO - Available site 17: 103783
+2025-01-09 22:32:31,276 - 16148 - INFO - Available site 18: 103784
+2025-01-09 22:32:31,277 - 16148 - INFO - Available site 19: 103785
+2025-01-09 22:32:31,277 - 16148 - INFO - Available site 20: 103786
+2025-01-09 22:32:31,277 - 16148 - INFO - Available site 21: 103787
+2025-01-09 22:32:31,277 - 16148 - INFO - Available site 22: 103788
+2025-01-09 22:32:31,277 - 16148 - INFO - Available site 23: 103790
+2025-01-09 22:32:31,277 - 16148 - INFO - Available site 24: 103791
+2025-01-09 22:32:31,277 - 16148 - INFO - Available site 25: 103793
+2025-01-09 22:32:31,277 - 16148 - INFO - Available site 26: 103794
+2025-01-09 22:32:31,278 - 16148 - INFO - Available site 27: 103796
+2025-01-09 22:32:31,278 - 16148 - INFO - Available site 28: 103798
+2025-01-09 22:32:31,278 - 16148 - INFO - Available site 29: 103799
+2025-01-09 22:32:31,278 - 16148 - INFO - Available site 30: 103802
+2025-01-09 22:32:31,278 - 16148 - INFO - Available site 31: 103803
+2025-01-09 22:32:31,278 - 16148 - INFO - Available site 32: 103805
+2025-01-09 22:32:31,278 - 16148 - INFO - Available site 33: 103809
+2025-01-09 22:32:31,278 - 16148 - INFO - Available site 34: 103810
+2025-01-09 22:32:31,278 - 16148 - INFO - Available site 35: 103812
+2025-01-09 22:32:31,279 - 16148 - INFO - Available site 36: 103813
+2025-01-09 22:32:31,279 - 16148 - INFO - Available site 37: 103814
+2025-01-09 22:32:31,279 - 16148 - INFO - Available site 38: 103817
+2025-01-09 22:32:31,279 - 16148 - INFO - Available site 39: 103818
+2025-01-09 22:32:31,279 - 16148 - INFO - Available site 40: 103819
+2025-01-09 22:32:31,292 - 16148 - INFO - Output: There are campsites available from 2025-01-16 to 2025-01-17 😊
+✅ COTTONWOOD CAMPGROUND (CA) (272299): 40 site(s) available out of 59 site(s)
+  * Site 103758 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103759 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103761 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103762 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103763 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103764 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103766 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103767 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103769 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103770 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103772 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103775 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103776 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103777 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103778 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103780 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103783 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103784 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103785 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103786 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103787 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103788 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103790 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103791 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103793 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103794 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103796 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103798 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103799 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103802 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103803 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103805 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103809 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103810 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103812 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103813 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103814 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103817 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103818 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103819 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+2025-01-09 22:32:31,292 - 16148 - INFO - Success! Output generated - No Notification Sent!
+2025-01-09 22:32:32,424 - 16148 - INFO - Setting number of nights to 1.
+2025-01-09 22:32:32,424 - 16148 - INFO - Available site 1: 100
+2025-01-09 22:32:32,424 - 16148 - INFO - Available site 2: 103
+2025-01-09 22:32:32,425 - 16148 - INFO - Available site 3: 105
+2025-01-09 22:32:32,425 - 16148 - INFO - Available site 4: 107
+2025-01-09 22:32:32,425 - 16148 - INFO - Available site 5: 108
+2025-01-09 22:32:32,425 - 16148 - INFO - Available site 6: 109
+2025-01-09 22:32:32,425 - 16148 - INFO - Available site 7: 138
+2025-01-09 22:32:32,425 - 16148 - INFO - Available site 8: 139
+2025-01-09 22:32:32,425 - 16148 - INFO - Available site 9: 140
+2025-01-09 22:32:32,425 - 16148 - INFO - Available site 10: 143
+2025-01-09 22:32:32,425 - 16148 - INFO - Available site 11: 145
+2025-01-09 22:32:32,426 - 16148 - INFO - Available site 12: 146
+2025-01-09 22:32:32,426 - 16148 - INFO - Available site 13: 172
+2025-01-09 22:32:32,426 - 16148 - INFO - Available site 14: 174
+2025-01-09 22:32:32,426 - 16148 - INFO - Available site 15: 175
+2025-01-09 22:32:32,426 - 16148 - INFO - Available site 16: 221
+2025-01-09 22:32:32,426 - 16148 - INFO - Available site 17: 222
+2025-01-09 22:32:32,426 - 16148 - INFO - Available site 18: 223
+2025-01-09 22:32:32,426 - 16148 - INFO - Available site 19: 224
+2025-01-09 22:32:32,426 - 16148 - INFO - Available site 20: 229
+2025-01-09 22:32:32,427 - 16148 - INFO - Available site 21: 230
+2025-01-09 22:32:32,427 - 16148 - INFO - Available site 22: 232
+2025-01-09 22:32:32,427 - 16148 - INFO - Available site 23: 256
+2025-01-09 22:32:32,427 - 16148 - INFO - Available site 24: 257
+2025-01-09 22:32:32,427 - 16148 - INFO - Available site 25: 259
+2025-01-09 22:32:32,427 - 16148 - INFO - Available site 26: 260
+2025-01-09 22:32:32,427 - 16148 - INFO - Available site 27: 262
+2025-01-09 22:32:32,427 - 16148 - INFO - Available site 28: 263
+2025-01-09 22:32:32,427 - 16148 - INFO - Available site 29: 284
+2025-01-09 22:32:32,428 - 16148 - INFO - Available site 30: 285
+2025-01-09 22:32:32,428 - 16148 - INFO - Available site 31: 286
+2025-01-09 22:32:32,428 - 16148 - INFO - Available site 32: 287
+2025-01-09 22:32:32,428 - 16148 - INFO - Available site 33: 289
+2025-01-09 22:32:32,428 - 16148 - INFO - Available site 34: 290
+2025-01-09 22:32:32,428 - 16148 - INFO - Available site 35: 291
+2025-01-09 22:32:32,428 - 16148 - INFO - Available site 36: 293
+2025-01-09 22:32:32,428 - 16148 - INFO - Available site 37: 294
+2025-01-09 22:32:32,428 - 16148 - INFO - Available site 38: 309
+2025-01-09 22:32:32,429 - 16148 - INFO - Available site 39: 310
+2025-01-09 22:32:32,429 - 16148 - INFO - Available site 40: 311
+2025-01-09 22:32:32,429 - 16148 - INFO - Available site 41: 312
+2025-01-09 22:32:32,429 - 16148 - INFO - Available site 42: 75
+2025-01-09 22:32:32,429 - 16148 - INFO - Available site 43: 76
+2025-01-09 22:32:32,429 - 16148 - INFO - Available site 44: 86
+2025-01-09 22:32:32,429 - 16148 - INFO - Available site 45: 87
+2025-01-09 22:32:32,429 - 16148 - INFO - Available site 46: 88
+2025-01-09 22:32:32,429 - 16148 - INFO - Available site 47: 96
+2025-01-09 22:32:32,430 - 16148 - INFO - Available site 48: 98
+2025-01-09 22:32:32,447 - 16148 - INFO - Output: There are campsites available from 2025-01-16 to 2025-01-17 😊
+✅ Upper Pines Campground (232447): 48 site(s) available out of 237 site(s)
+  * Site 100 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 105 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 107 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 108 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 109 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 138 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 139 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 140 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 143 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 145 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 146 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 172 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 174 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 175 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 221 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 222 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 223 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 224 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 229 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 230 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 232 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 256 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 257 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 259 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 260 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 262 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 263 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 284 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 285 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 286 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 287 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 289 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 290 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 291 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 293 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 294 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 309 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 310 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 311 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 312 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 75 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 76 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 86 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 87 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 88 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 96 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 98 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+2025-01-09 22:32:32,448 - 16148 - INFO - Success! Output generated - No Notification Sent!
+2025-01-09 22:32:59,459 - 18020 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=True, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(), stdin=True, source=recreation, notify=False, continuous=True
+2025-01-09 22:32:59,901 - 18020 - INFO - Setting number of nights to 1.
+2025-01-09 22:32:59,903 - 18020 - INFO - No availability for park ID 232448.
+2025-01-09 22:33:00,246 - 18020 - INFO - Setting number of nights to 1.
+2025-01-09 22:33:00,247 - 18020 - INFO - No availability for park ID 232449.
+2025-01-09 22:33:00,567 - 18020 - INFO - Setting number of nights to 1.
+2025-01-09 22:33:00,570 - 18020 - INFO - No availability for park ID 232450.
+2025-01-09 22:33:00,818 - 18020 - INFO - Setting number of nights to 1.
+2025-01-09 22:33:00,818 - 18020 - INFO - Available site 1: 103758
+2025-01-09 22:33:00,819 - 18020 - INFO - Available site 2: 103759
+2025-01-09 22:33:00,819 - 18020 - INFO - Available site 3: 103761
+2025-01-09 22:33:00,819 - 18020 - INFO - Available site 4: 103762
+2025-01-09 22:33:00,819 - 18020 - INFO - Available site 5: 103763
+2025-01-09 22:33:00,819 - 18020 - INFO - Available site 6: 103764
+2025-01-09 22:33:00,819 - 18020 - INFO - Available site 7: 103766
+2025-01-09 22:33:00,819 - 18020 - INFO - Available site 8: 103767
+2025-01-09 22:33:00,819 - 18020 - INFO - Available site 9: 103769
+2025-01-09 22:33:00,820 - 18020 - INFO - Available site 10: 103770
+2025-01-09 22:33:00,820 - 18020 - INFO - Available site 11: 103772
+2025-01-09 22:33:00,820 - 18020 - INFO - Available site 12: 103775
+2025-01-09 22:33:00,820 - 18020 - INFO - Available site 13: 103776
+2025-01-09 22:33:00,820 - 18020 - INFO - Available site 14: 103777
+2025-01-09 22:33:00,820 - 18020 - INFO - Available site 15: 103778
+2025-01-09 22:33:00,820 - 18020 - INFO - Available site 16: 103780
+2025-01-09 22:33:00,821 - 18020 - INFO - Available site 17: 103783
+2025-01-09 22:33:00,821 - 18020 - INFO - Available site 18: 103784
+2025-01-09 22:33:00,821 - 18020 - INFO - Available site 19: 103785
+2025-01-09 22:33:00,821 - 18020 - INFO - Available site 20: 103786
+2025-01-09 22:33:00,821 - 18020 - INFO - Available site 21: 103787
+2025-01-09 22:33:00,821 - 18020 - INFO - Available site 22: 103788
+2025-01-09 22:33:00,821 - 18020 - INFO - Available site 23: 103790
+2025-01-09 22:33:00,821 - 18020 - INFO - Available site 24: 103791
+2025-01-09 22:33:00,822 - 18020 - INFO - Available site 25: 103793
+2025-01-09 22:33:00,822 - 18020 - INFO - Available site 26: 103794
+2025-01-09 22:33:00,822 - 18020 - INFO - Available site 27: 103796
+2025-01-09 22:33:00,822 - 18020 - INFO - Available site 28: 103798
+2025-01-09 22:33:00,822 - 18020 - INFO - Available site 29: 103799
+2025-01-09 22:33:00,822 - 18020 - INFO - Available site 30: 103802
+2025-01-09 22:33:00,822 - 18020 - INFO - Available site 31: 103803
+2025-01-09 22:33:00,822 - 18020 - INFO - Available site 32: 103805
+2025-01-09 22:33:00,822 - 18020 - INFO - Available site 33: 103809
+2025-01-09 22:33:00,823 - 18020 - INFO - Available site 34: 103810
+2025-01-09 22:33:00,823 - 18020 - INFO - Available site 35: 103812
+2025-01-09 22:33:00,823 - 18020 - INFO - Available site 36: 103813
+2025-01-09 22:33:00,823 - 18020 - INFO - Available site 37: 103814
+2025-01-09 22:33:00,823 - 18020 - INFO - Available site 38: 103817
+2025-01-09 22:33:00,823 - 18020 - INFO - Available site 39: 103818
+2025-01-09 22:33:00,824 - 18020 - INFO - Available site 40: 103819
+2025-01-09 22:33:00,844 - 18020 - INFO - Output: There are campsites available from 2025-01-16 to 2025-01-17 😊
+✅ COTTONWOOD CAMPGROUND (CA) (272299): 40 site(s) available out of 59 site(s)
+  * Site 103758 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103759 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103761 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103762 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103763 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103764 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103766 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103767 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103769 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103770 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103772 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103775 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103776 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103777 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103778 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103780 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103783 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103784 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103785 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103786 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103787 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103788 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103790 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103791 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103793 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103794 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103796 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103798 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103799 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103802 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103803 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103805 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103809 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103810 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103812 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103813 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103814 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103817 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103818 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103819 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+2025-01-09 22:33:00,844 - 18020 - INFO - Success! Output generated - No Notification Sent!
+2025-01-09 22:33:01,185 - 18020 - INFO - Setting number of nights to 1.
+2025-01-09 22:33:01,186 - 18020 - INFO - Available site 1: 100
+2025-01-09 22:33:01,186 - 18020 - INFO - Available site 2: 103
+2025-01-09 22:33:01,186 - 18020 - INFO - Available site 3: 105
+2025-01-09 22:33:01,187 - 18020 - INFO - Available site 4: 107
+2025-01-09 22:33:01,187 - 18020 - INFO - Available site 5: 108
+2025-01-09 22:33:01,187 - 18020 - INFO - Available site 6: 109
+2025-01-09 22:33:01,187 - 18020 - INFO - Available site 7: 138
+2025-01-09 22:33:01,188 - 18020 - INFO - Available site 8: 139
+2025-01-09 22:33:01,188 - 18020 - INFO - Available site 9: 140
+2025-01-09 22:33:01,188 - 18020 - INFO - Available site 10: 143
+2025-01-09 22:33:01,188 - 18020 - INFO - Available site 11: 145
+2025-01-09 22:33:01,189 - 18020 - INFO - Available site 12: 146
+2025-01-09 22:33:01,189 - 18020 - INFO - Available site 13: 172
+2025-01-09 22:33:01,189 - 18020 - INFO - Available site 14: 174
+2025-01-09 22:33:01,189 - 18020 - INFO - Available site 15: 175
+2025-01-09 22:33:01,190 - 18020 - INFO - Available site 16: 221
+2025-01-09 22:33:01,190 - 18020 - INFO - Available site 17: 222
+2025-01-09 22:33:01,190 - 18020 - INFO - Available site 18: 223
+2025-01-09 22:33:01,191 - 18020 - INFO - Available site 19: 224
+2025-01-09 22:33:01,191 - 18020 - INFO - Available site 20: 229
+2025-01-09 22:33:01,191 - 18020 - INFO - Available site 21: 230
+2025-01-09 22:33:01,191 - 18020 - INFO - Available site 22: 232
+2025-01-09 22:33:01,192 - 18020 - INFO - Available site 23: 256
+2025-01-09 22:33:01,192 - 18020 - INFO - Available site 24: 257
+2025-01-09 22:33:01,192 - 18020 - INFO - Available site 25: 259
+2025-01-09 22:33:01,192 - 18020 - INFO - Available site 26: 260
+2025-01-09 22:33:01,193 - 18020 - INFO - Available site 27: 262
+2025-01-09 22:33:01,193 - 18020 - INFO - Available site 28: 263
+2025-01-09 22:33:01,193 - 18020 - INFO - Available site 29: 284
+2025-01-09 22:33:01,194 - 18020 - INFO - Available site 30: 285
+2025-01-09 22:33:01,194 - 18020 - INFO - Available site 31: 286
+2025-01-09 22:33:01,194 - 18020 - INFO - Available site 32: 287
+2025-01-09 22:33:01,194 - 18020 - INFO - Available site 33: 289
+2025-01-09 22:33:01,195 - 18020 - INFO - Available site 34: 290
+2025-01-09 22:33:01,195 - 18020 - INFO - Available site 35: 291
+2025-01-09 22:33:01,196 - 18020 - INFO - Available site 36: 293
+2025-01-09 22:33:01,196 - 18020 - INFO - Available site 37: 294
+2025-01-09 22:33:01,196 - 18020 - INFO - Available site 38: 309
+2025-01-09 22:33:01,197 - 18020 - INFO - Available site 39: 310
+2025-01-09 22:33:01,197 - 18020 - INFO - Available site 40: 311
+2025-01-09 22:33:01,197 - 18020 - INFO - Available site 41: 312
+2025-01-09 22:33:01,197 - 18020 - INFO - Available site 42: 75
+2025-01-09 22:33:01,198 - 18020 - INFO - Available site 43: 76
+2025-01-09 22:33:01,198 - 18020 - INFO - Available site 44: 86
+2025-01-09 22:33:01,198 - 18020 - INFO - Available site 45: 87
+2025-01-09 22:33:01,198 - 18020 - INFO - Available site 46: 88
+2025-01-09 22:33:01,199 - 18020 - INFO - Available site 47: 96
+2025-01-09 22:33:01,199 - 18020 - INFO - Available site 48: 98
+2025-01-09 22:33:01,227 - 18020 - INFO - Output: There are campsites available from 2025-01-16 to 2025-01-17 😊
+✅ Upper Pines Campground (232447): 48 site(s) available out of 237 site(s)
+  * Site 100 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 103 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 105 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 107 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 108 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 109 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 138 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 139 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 140 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 143 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 145 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 146 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 172 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 174 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 175 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 221 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 222 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 223 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 224 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 229 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 230 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 232 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 256 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 257 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 259 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 260 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 262 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 263 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 284 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 285 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 286 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 287 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 289 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 290 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 291 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 293 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 294 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 309 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 310 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 311 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 312 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 75 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 76 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 86 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 87 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 88 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 96 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+  * Site 98 is available on the following dates:
+    * 2025-01-16 -> 2025-01-17
+2025-01-09 22:33:01,228 - 18020 - INFO - Success! Output generated - No Notification Sent!
+2025-01-09 22:33:01,228 - 18020 - INFO - No availability found for some parks, checking again in 60 seconds...
+2025-01-09 22:33:06,507 - 18020 - INFO - Setting number of nights to 1.
+2025-01-09 22:33:06,510 - 18020 - INFO - No availability for park ID 232448.
+2025-01-09 22:33:06,767 - 18020 - INFO - Setting number of nights to 1.
+2025-01-09 22:33:06,768 - 18020 - INFO - No availability for park ID 232449.
+2025-01-09 22:33:07,029 - 18020 - INFO - Setting number of nights to 1.
+2025-01-09 22:33:07,032 - 18020 - INFO - No availability for park ID 232450.
+2025-01-09 22:33:07,033 - 18020 - INFO - No availability found for some parks, checking again in 60 seconds...
+2025-01-09 22:33:12,352 - 18020 - INFO - Setting number of nights to 1.
+2025-01-09 22:33:12,354 - 18020 - INFO - No availability for park ID 232448.
+2025-01-09 22:33:12,630 - 18020 - INFO - Setting number of nights to 1.
+2025-01-09 22:33:12,632 - 18020 - INFO - No availability for park ID 232449.
+2025-01-09 22:33:12,996 - 18020 - INFO - Setting number of nights to 1.
+2025-01-09 22:33:12,999 - 18020 - INFO - No availability for park ID 232450.
+2025-01-09 22:33:12,999 - 18020 - INFO - No availability found for some parks, checking again in 60 seconds...
+2025-01-09 22:33:18,403 - 18020 - INFO - Setting number of nights to 1.
+2025-01-09 22:33:18,404 - 18020 - INFO - No availability for park ID 232448.
+2025-01-09 22:33:18,931 - 18020 - INFO - Setting number of nights to 1.
+2025-01-09 22:33:18,934 - 18020 - INFO - No availability for park ID 232449.
+2025-01-09 22:33:19,184 - 18020 - INFO - Setting number of nights to 1.
+2025-01-09 22:33:19,185 - 18020 - INFO - No availability for park ID 232450.
+2025-01-09 22:33:19,185 - 18020 - INFO - No availability found for some parks, checking again in 60 seconds...
+2025-01-09 22:33:24,516 - 18020 - INFO - Setting number of nights to 1.
+2025-01-09 22:33:24,518 - 18020 - INFO - No availability for park ID 232448.
+2025-01-09 22:33:24,798 - 18020 - INFO - Setting number of nights to 1.
+2025-01-09 22:33:24,799 - 18020 - INFO - No availability for park ID 232449.
+2025-01-09 22:33:25,078 - 18020 - INFO - Setting number of nights to 1.
+2025-01-09 22:33:25,081 - 18020 - INFO - No availability for park ID 232450.
+2025-01-09 22:33:25,081 - 18020 - INFO - No availability found for some parks, checking again in 60 seconds...
+2025-01-09 22:33:30,445 - 18020 - INFO - Setting number of nights to 1.
+2025-01-09 22:33:30,446 - 18020 - INFO - No availability for park ID 232448.
+2025-01-09 22:33:30,706 - 18020 - INFO - Setting number of nights to 1.
+2025-01-09 22:33:30,708 - 18020 - INFO - No availability for park ID 232449.
+2025-01-09 22:33:31,164 - 18020 - INFO - Setting number of nights to 1.
+2025-01-09 22:33:31,165 - 18020 - INFO - No availability for park ID 232450.
+2025-01-09 22:33:31,165 - 18020 - INFO - No availability found for some parks, checking again in 60 seconds...
+2025-01-09 22:33:37,029 - 18020 - INFO - Setting number of nights to 1.
+2025-01-09 22:33:37,030 - 18020 - INFO - No availability for park ID 232448.
+2025-01-09 22:33:37,556 - 18020 - INFO - Setting number of nights to 1.
+2025-01-09 22:33:37,557 - 18020 - INFO - No availability for park ID 232449.
+2025-01-09 22:33:37,817 - 18020 - INFO - Setting number of nights to 1.
+2025-01-09 22:33:37,820 - 18020 - INFO - No availability for park ID 232450.
+2025-01-09 22:33:37,821 - 18020 - INFO - No availability found for some parks, checking again in 60 seconds...
