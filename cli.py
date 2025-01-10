@@ -500,7 +500,10 @@ def main(debug, start_date, end_date, nights, campsite_ids, show_campsite_info, 
              start_date, end_date, nights, campsite_ids, show_campsite_info, campsite_type, json_output, weekends_only, exclusion_file, parks, stdin, source, notify)
 
     if stdin:
-        parks = tuple(map(int, sys.stdin.read().strip().split()))
+        input_lines = sys.stdin.read().strip().split('\n')
+        filtered_lines = remove_comments(input_lines)
+        parks = tuple(map(int, ' '.join(filtered_lines).split()))
+        # parks = tuple(map(int, sys.stdin.read().strip().split()))
     elif not parks:
         raise click.UsageError(
             "You must provide at least one park ID using --parks or --stdin.")

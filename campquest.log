@@ -342,3 +342,87 @@
 2025-01-07 20:08:03,810 - 18268 - INFO - Output: There are campsites available from 2025-01-10 to 2025-01-11 😊
 ✅ COTTONWOOD CAMPGROUND (CA) (272299): 7 site(s) available out of 59 site(s)
 2025-01-07 20:08:03,811 - 18268 - INFO - Success! Output generated - No Notification Sent!
+2025-01-09 19:23:46,500 - 15784 - INFO - Received inputs: start_date=2025-01-18 00:00:00, end_date=2025-01-19 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=False
+2025-01-09 19:23:47,105 - 15784 - INFO - Setting number of nights to 1.
+2025-01-09 19:23:47,105 - 15784 - INFO - No campsites found, checking again in 60 seconds...
+2025-01-09 19:27:21,886 - 15068 - INFO - Received inputs: start_date=2025-01-11 00:00:00, end_date=2025-01-12 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(), stdin=True, source=recreation, notify=False
+2025-01-09 19:27:22,247 - 15068 - INFO - Setting number of nights to 1.
+2025-01-09 19:27:22,248 - 15068 - INFO - Available site 1: 146
+2025-01-09 19:27:22,655 - 15068 - INFO - Setting number of nights to 1.
+2025-01-09 19:27:23,000 - 15068 - INFO - Setting number of nights to 1.
+2025-01-09 19:27:23,616 - 15068 - INFO - Setting number of nights to 1.
+2025-01-09 19:27:23,923 - 15068 - INFO - Setting number of nights to 1.
+2025-01-09 19:27:23,924 - 15068 - INFO - Available site 1: 103813
+2025-01-09 19:27:23,930 - 15068 - INFO - Output: There are campsites available from 2025-01-11 to 2025-01-12 😊
+✅ Upper Pines Campground (232447): 1 site(s) available out of 237 site(s)
+❌ North Pines Campground (232449): 0 site(s) available out of 80 site(s)
+❌ Lower Pines Campground (232450): 0 site(s) available out of 74 site(s)
+❌ Tuolumne Meadows Campground (232448): 0 site(s) available out of 5 site(s)
+✅ COTTONWOOD CAMPGROUND (CA) (272299): 1 site(s) available out of 59 site(s)
+2025-01-09 19:27:23,931 - 15068 - INFO - Success! Output generated - No Notification Sent!
+2025-01-09 19:28:12,972 - 16432 - INFO - Received inputs: start_date=2025-01-11 00:00:00, end_date=2025-01-12 00:00:00, nights=None, campsite_ids=(), show_campsite_info=True, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(), stdin=True, source=recreation, notify=False
+2025-01-09 19:28:13,375 - 16432 - INFO - Setting number of nights to 1.
+2025-01-09 19:28:13,375 - 16432 - INFO - Available site 1: 146
+2025-01-09 19:28:13,688 - 16432 - INFO - Setting number of nights to 1.
+2025-01-09 19:28:13,953 - 16432 - INFO - Setting number of nights to 1.
+2025-01-09 19:28:14,235 - 16432 - INFO - Setting number of nights to 1.
+2025-01-09 19:28:14,513 - 16432 - INFO - Setting number of nights to 1.
+2025-01-09 19:28:14,513 - 16432 - INFO - Available site 1: 103813
+2025-01-09 19:28:14,517 - 16432 - INFO - Output: There are campsites available from 2025-01-11 to 2025-01-12 😊
+✅ Upper Pines Campground (232447): 1 site(s) available out of 237 site(s)
+  * Site 146 is available on the following dates:
+    * 2025-01-11 -> 2025-01-12
+❌ North Pines Campground (232449): 0 site(s) available out of 80 site(s)
+❌ Lower Pines Campground (232450): 0 site(s) available out of 74 site(s)
+❌ Tuolumne Meadows Campground (232448): 0 site(s) available out of 5 site(s)
+✅ COTTONWOOD CAMPGROUND (CA) (272299): 1 site(s) available out of 59 site(s)
+  * Site 103813 is available on the following dates:
+    * 2025-01-11 -> 2025-01-12
+2025-01-09 19:28:14,518 - 16432 - INFO - Success! Output generated - No Notification Sent!
+2025-01-09 19:42:45,824 - 16588 - INFO - Received inputs: start_date=2025-01-11 00:00:00, end_date=2025-01-12 00:00:00, nights=None, campsite_ids=(), show_campsite_info=True, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(), stdin=True, source=recreation, notify=False
+2025-01-09 19:48:18,290 - 12200 - INFO - Received inputs: start_date=2025-01-11 00:00:00, end_date=2025-01-12 00:00:00, nights=None, campsite_ids=(), show_campsite_info=True, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(), stdin=True, source=recreation, notify=False
+2025-01-09 19:48:18,892 - 12200 - INFO - Setting number of nights to 1.
+2025-01-09 19:48:19,318 - 12200 - INFO - Setting number of nights to 1.
+2025-01-09 19:48:19,894 - 12200 - INFO - Setting number of nights to 1.
+2025-01-09 19:48:20,611 - 12200 - INFO - Setting number of nights to 1.
+2025-01-09 19:48:20,612 - 12200 - INFO - Available site 1: 103813
+2025-01-09 19:48:20,617 - 12200 - INFO - Output: There are campsites available from 2025-01-11 to 2025-01-12 😊
+❌ North Pines Campground (232449): 0 site(s) available out of 80 site(s)
+❌ Lower Pines Campground (232450): 0 site(s) available out of 74 site(s)
+❌ Tuolumne Meadows Campground (232448): 0 site(s) available out of 5 site(s)
+✅ COTTONWOOD CAMPGROUND (CA) (272299): 1 site(s) available out of 59 site(s)
+  * Site 103813 is available on the following dates:
+    * 2025-01-11 -> 2025-01-12
+2025-01-09 19:48:20,617 - 12200 - INFO - Success! Output generated - No Notification Sent!
+2025-01-09 19:48:31,986 - 13088 - INFO - Received inputs: start_date=2025-01-11 00:00:00, end_date=2025-01-12 00:00:00, nights=None, campsite_ids=(), show_campsite_info=True, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(), stdin=True, source=recreation, notify=False
+2025-01-09 19:48:32,432 - 13088 - INFO - Setting number of nights to 1.
+2025-01-09 19:48:32,666 - 13088 - INFO - Setting number of nights to 1.
+2025-01-09 19:48:32,881 - 13088 - INFO - Setting number of nights to 1.
+2025-01-09 19:48:33,129 - 13088 - INFO - Setting number of nights to 1.
+2025-01-09 19:48:33,765 - 13088 - INFO - Setting number of nights to 1.
+2025-01-09 19:48:33,765 - 13088 - INFO - Available site 1: 103813
+2025-01-09 19:48:33,768 - 13088 - INFO - Output: There are campsites available from 2025-01-11 to 2025-01-12 😊
+❌ Upper Pines Campground (232447): 0 site(s) available out of 237 site(s)
+❌ North Pines Campground (232449): 0 site(s) available out of 80 site(s)
+❌ Lower Pines Campground (232450): 0 site(s) available out of 74 site(s)
+❌ Tuolumne Meadows Campground (232448): 0 site(s) available out of 5 site(s)
+✅ COTTONWOOD CAMPGROUND (CA) (272299): 1 site(s) available out of 59 site(s)
+  * Site 103813 is available on the following dates:
+    * 2025-01-11 -> 2025-01-12
+2025-01-09 19:48:33,769 - 13088 - INFO - Success! Output generated - No Notification Sent!
+2025-01-09 19:48:46,496 - 13532 - INFO - Received inputs: start_date=2025-01-11 00:00:00, end_date=2025-01-12 00:00:00, nights=None, campsite_ids=(), show_campsite_info=True, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(), stdin=True, source=recreation, notify=False
+2025-01-09 19:48:49,459 - 13532 - INFO - Setting number of nights to 1.
+2025-01-09 19:48:49,798 - 13532 - INFO - Setting number of nights to 1.
+2025-01-09 19:48:50,110 - 13532 - INFO - Setting number of nights to 1.
+2025-01-09 19:48:50,565 - 13532 - INFO - Setting number of nights to 1.
+2025-01-09 19:48:51,038 - 13532 - INFO - Setting number of nights to 1.
+2025-01-09 19:48:51,039 - 13532 - INFO - Available site 1: 103813
+2025-01-09 19:48:51,043 - 13532 - INFO - Output: There are campsites available from 2025-01-11 to 2025-01-12 😊
+❌ Upper Pines Campground (232447): 0 site(s) available out of 237 site(s)
+❌ North Pines Campground (232449): 0 site(s) available out of 80 site(s)
+❌ Lower Pines Campground (232450): 0 site(s) available out of 74 site(s)
+❌ Tuolumne Meadows Campground (232448): 0 site(s) available out of 5 site(s)
+✅ COTTONWOOD CAMPGROUND (CA) (272299): 1 site(s) available out of 59 site(s)
+  * Site 103813 is available on the following dates:
+    * 2025-01-11 -> 2025-01-12
+2025-01-09 19:48:51,043 - 13532 - INFO - Success! Output generated - No Notification Sent!
