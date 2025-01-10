@@ -432,18 +432,14 @@ def countdown_timer(seconds):
 @click.option(
     "--campsite-type",
     help=(
-        "Optional, can specify type of campsite such as:"
-        '"STANDARD NONELECTRIC" or TODO'
+        "Optional, can specify type of campsite such as: STANDARD NONELECTRIC"
     ),
 )
 @click.option(
     "--json-output",
     is_flag=True,
     help=(
-        "This make the script output JSON instead of human readable "
-        "output. Note, this is incompatible with the twitter notifier. "
-        "This output includes more precise information, such as the exact "
-        "available dates and which sites are available."
+        "This make the script output JSON instead of human readable output. Note, this is incompatible with the twitter notifier. This output includes more precise information, such as the exact available dates and which sites are available."
     ),
 )
 @click.option(
@@ -515,9 +511,13 @@ def main(debug, start_date, end_date, nights, campsite_ids, show_campsite_info, 
             excluded_site_ids = [l.strip() for l in excluded_site_ids]
             excluded_site_ids = remove_comments(excluded_site_ids)
 
-    while True:
-        info_by_park_id = {}
-        for park_id in parks:
+    remaining_parks = set(parks)  # Track parks without availability
+
+    while remaining_parks:
+        parks_to_check = list(remaining_parks)  # Copy the remaining parks list
+
+        for park_id in parks_to_check:
+            info_by_park_id = {}
             info_by_park_id[park_id] = check_park(
                 park_id,
                 start_date,
@@ -530,34 +530,41 @@ def main(debug, start_date, end_date, nights, campsite_ids, show_campsite_info, 
                 source=source
             )
 
-        if json_output:
-            output, has_availabilities = generate_json_output(info_by_park_id)
-        else:
-            output, has_availabilities = generate_human_output(
-                info_by_park_id,
-                start_date,
-                end_date,
-                show_campsite_info,
-            )
-
-        # Setup so it runs in a loop if notify is selected until a site is found
-        if has_availabilities:
-            if notify:
-                print(output)
-                send_notification(output, "CampQuest")
-                limit_data = check_limit()
-                LOG.info("Message limit: %s, Remaining: %s",
-                         limit_data.get("limit"), limit_data.get("remaining"))
-                LOG.info("Success! Output generated - Notification Sent!")
-                return has_availabilities
+            if json_output:
+                output, has_availabilities = generate_json_output(
+                    info_by_park_id)
             else:
+                output, has_availabilities = generate_human_output(
+                    info_by_park_id,
+                    start_date,
+                    end_date,
+                    show_campsite_info,
+                )
+
+            #  Setup so it runs in a loop if notify is selected until a site is found
+            if has_availabilities:
                 print(output)
                 LOG.info("Output: %s", output)
                 LOG.info("Success! Output generated - No Notification Sent!")
-                return has_availabilities
+                remaining_parks.remove(park_id)  # Remove park from the loop
+                # return has_availabilities
+                if notify:
+                    print(output)
+                    send_notification(output, "CampQuest")
+                    limit_data = check_limit()
+                    LOG.info("Message limit: %s, Remaining: %s",
+                             limit_data.get("limit"), limit_data.get("remaining"))
+                    LOG.info("Success! Output generated - Notification Sent!")
+                    return has_availabilities
+            else:
+                LOG.info(f"No availability for park ID {park_id}.")
+
+        if remaining_parks:
+            LOG.info(
+                "No availability found for some parks, checking again in 60 seconds...")
+            countdown_timer(60)  # Wait 60 seconds before re-checking
         else:
-            LOG.info("No campsites found, checking again in 60 seconds...")
-            countdown_timer(60)  # Wait 60 seconds before checking again
+            LOG.info("All parks checked. Exiting loop.")
 
 
 class TypeConverter:

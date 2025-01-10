@@ -426,3 +426,45 @@
   * Site 103813 is available on the following dates:
     * 2025-01-11 -> 2025-01-12
 2025-01-09 19:48:51,043 - 13532 - INFO - Success! Output generated - No Notification Sent!
+2025-01-09 20:13:54,381 - 18112 - INFO - Received inputs: start_date=2025-01-11 00:00:00, end_date=2025-01-12 00:00:00, nights=None, campsite_ids=(), show_campsite_info=True, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(), stdin=True, source=recreation, notify=False
+2025-01-09 20:13:55,547 - 18112 - INFO - Setting number of nights to 1.
+2025-01-09 20:13:55,547 - 18112 - INFO - No availability for park ID 232448.
+2025-01-09 20:13:56,163 - 18112 - INFO - Setting number of nights to 1.
+2025-01-09 20:13:56,163 - 18112 - INFO - No availability for park ID 232449.
+2025-01-09 20:13:56,958 - 18112 - INFO - Setting number of nights to 1.
+2025-01-09 20:13:56,958 - 18112 - INFO - No availability for park ID 232450.
+2025-01-09 20:13:57,558 - 18112 - INFO - Setting number of nights to 1.
+2025-01-09 20:13:57,560 - 18112 - INFO - Available site 1: 103813
+2025-01-09 20:13:57,561 - 18112 - INFO - Output: There are campsites available from 2025-01-11 to 2025-01-12 😊
+✅ COTTONWOOD CAMPGROUND (CA) (272299): 1 site(s) available out of 59 site(s)
+  * Site 103813 is available on the following dates:
+    * 2025-01-11 -> 2025-01-12
+2025-01-09 20:13:57,561 - 18112 - INFO - Success! Output generated - No Notification Sent!
+2025-01-09 20:13:58,270 - 18112 - INFO - Setting number of nights to 1.
+2025-01-09 20:13:58,271 - 18112 - INFO - No availability for park ID 232447.
+2025-01-09 20:13:58,271 - 18112 - INFO - No availability found for some parks, checking again in 60 seconds...
+2025-01-09 20:14:59,362 - 18112 - INFO - Setting number of nights to 1.
+2025-01-09 20:14:59,363 - 18112 - INFO - No availability for park ID 232448.
+2025-01-09 20:14:59,712 - 18112 - INFO - Setting number of nights to 1.
+2025-01-09 20:14:59,713 - 18112 - INFO - No availability for park ID 232449.
+2025-01-09 20:15:00,005 - 18112 - INFO - Setting number of nights to 1.
+2025-01-09 20:15:00,005 - 18112 - INFO - No availability for park ID 232450.
+2025-01-09 20:15:00,287 - 18112 - INFO - Setting number of nights to 1.
+2025-01-09 20:15:00,288 - 18112 - INFO - No availability for park ID 232447.
+2025-01-09 20:15:00,288 - 18112 - INFO - No availability found for some parks, checking again in 60 seconds...
+2025-01-09 20:15:43,767 - 14216 - INFO - Received inputs: start_date=2025-01-11 00:00:00, end_date=2025-01-12 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=False
+2025-01-09 20:15:44,409 - 14216 - INFO - Setting number of nights to 1.
+2025-01-09 20:15:44,410 - 14216 - INFO - Available site 1: 103813
+2025-01-09 20:15:44,411 - 14216 - INFO - Output: There are campsites available from 2025-01-11 to 2025-01-12 😊
+✅ COTTONWOOD CAMPGROUND (CA) (272299): 1 site(s) available out of 59 site(s)
+2025-01-09 20:15:44,411 - 14216 - INFO - Success! Output generated - No Notification Sent!
+2025-01-09 20:15:44,411 - 14216 - INFO - All parks checked. Exiting loop.
+2025-01-09 20:15:55,201 - 15372 - INFO - Received inputs: start_date=2025-01-11 00:00:00, end_date=2025-01-12 00:00:00, nights=None, campsite_ids=(), show_campsite_info=True, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(272299,), stdin=False, source=recreation, notify=False
+2025-01-09 20:15:55,555 - 15372 - INFO - Setting number of nights to 1.
+2025-01-09 20:15:55,558 - 15372 - INFO - Available site 1: 103813
+2025-01-09 20:15:55,560 - 15372 - INFO - Output: There are campsites available from 2025-01-11 to 2025-01-12 😊
+✅ COTTONWOOD CAMPGROUND (CA) (272299): 1 site(s) available out of 59 site(s)
+  * Site 103813 is available on the following dates:
+    * 2025-01-11 -> 2025-01-12
+2025-01-09 20:15:55,560 - 15372 - INFO - Success! Output generated - No Notification Sent!
+2025-01-09 20:15:55,560 - 15372 - INFO - All parks checked. Exiting loop.
