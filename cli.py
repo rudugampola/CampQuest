@@ -245,17 +245,12 @@ def check_park(
         source: The source of the park information, recreation or reserve_california. Defaults to "recreation".
 
     Returns:
-        tuple: The number of available sites, the maximum number of sites, and the available dates by campsite ID
+        tuple: The number of available sites, the maximum number of sites, and the available dates by campsite ID, park name
     """
     if source == "recreation":
         park_information = get_park_information(
             park_id, start_date, end_date, campsite_type, campsite_ids, excluded_site_ids=excluded_site_ids,
         )
-        # LOG.info(
-        #     "Information for park {}: {}".format(
-        #         park_id, json.dumps(park_information, indent=2)
-        #     )
-        # )
         park_name = RecreationClient.get_park_name(park_id)
         current, maximum, availabilities_filtered = get_num_available_sites(
             park_information, start_date, end_date, nights=nights, weekends_only=weekends_only,
@@ -264,8 +259,8 @@ def check_park(
         park_information = rc_get_all_available_campsites(
             park_id, start_date, (end_date - start_date).days // 30
         )
-        # Update with the actual park name if available
-        park_name = "ReserveCalifornia Park"
+        # Get the campground name from the first available campsite
+        park_name = park_information[0].campsite.campground if park_information else "Unknown"
         current = len(park_information)
         maximum = current  # Update with the actual max if available
         availabilities_filtered = {site.campsite.campsite: [
@@ -347,12 +342,15 @@ def generate_json_output(info_by_park_id):
     availabilities_by_park_id = {}
     has_availabilities = False
     for park_id, info in info_by_park_id.items():
-        current, _, available_dates_by_site_id, _ = info
+        current, _, available_dates_by_site_id, park_name = info
         if current:
             has_availabilities = True
-            availabilities_by_park_id[park_id] = available_dates_by_site_id
+            availabilities_by_park_id[park_id] = {
+                "park_name": park_name,
+                "availabilities": available_dates_by_site_id
+            }
 
-    return json.dumps(availabilities_by_park_id), has_availabilities
+    return json.dumps(availabilities_by_park_id, indent=2), has_availabilities
 
 
 def remove_comments(lines: list[str]) -> list[str]:

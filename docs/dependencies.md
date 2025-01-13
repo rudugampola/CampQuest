@@ -1,0 +1,77 @@
+# Dependencies
+
+## This project uses the following dependencies:
+
+-   [appdirs](https://pypi.org/project/appdirs/) - A small Python module for determining appropriate platform-specific dirs, e.g. a "user data dir".
+-   [asgiref](https://pypi.org/project/asgiref/) - ASGI is a standard for Python asynchronous web apps and servers to communicate with each other, and positioned as an asynchronous successor to WSGI.
+-   [attrs](https://pypi.org/project/attrs/) - A Python package with class decorators that ease the chores of implementing the most common attribute-related object protocols.
+-   [babel](https://pypi.org/project/Babel/) - A collection of tools for internationalizing Python applications.
+-   [black](https://pypi.org/project/black/) - The uncompromising Python code formatter.
+-   [callouts](https://pypi.org/project/callouts/) - A simple Python package to create callouts in Markdown.
+-   [certifi](https://pypi.org/project/certifi/) - A carefully curated collection of Root Certificates for validating the trustworthiness of SSL certificates while verifying the identity of TLS hosts.
+-   [chardet](https://pypi.org/project/chardet/) - Universal character encoding detector for Python 2 and 3.
+-   [charset-normalizer](https://pypi.org/project/charset-normalizer/) - The Universal Character Encoding Detector (UCED) makes it possible to detect the encoding of text data.
+-   [click](https://pypi.org/project/click/) - A simple Python package to create beautiful command line interfaces in a composable way.
+-   [colorama](https://pypi.org/project/colorama/) - A simple Python package to create colored terminal text.
+-   [coloredlogs](https://pypi.org/project/coloredlogs/) - A Python package to enable colored terminal output for logging.
+-   [Django](https://pypi.org/project/Django/) - A high-level Python web framework that encourages rapid development and clean, pragmatic design.
+-   [django-livereload-server](https://pypi.org/project/django-livereload-server/) - A Django app to provide livereload functionality.
+-   [django-livesync](https://pypi.org/project/django-livesync/) - A Django app to provide live sync functionality.
+-   [django-user-agents](https://pypi.org/project/django-user-agents/) - A Django app to provide user agent functionality.
+-   [fake-useragent](https://pypi.org/project/fake-useragent/) - A Python package to generate fake user agents.
+-   [future](https://pypi.org/project/future/) - A Python package that provides a compatibility layer between Python 2 and Python 3.
+-   [ghp-import](https://pypi.org/project/ghp-import/) - A Python package to import a directory into a GitHub Pages branch.
+-   [humanfriendly](https://pypi.org/project/humanfriendly/) - A Python package to create human-friendly output.
+-   [idna](https://pypi.org/project/idna/) - A Python package to support the Internationalized Domain Names in Applications (IDNA) protocol.
+-   [ijson](https://pypi.org/project/ijson/) - A Python package to provide a simple way to read JSON files.
+-   [isort](https://pypi.org/project/isort/) - A Python package to sort imports alphabetically and automatically separated into sections.
+-   [Jinja2](https://pypi.org/project/Jinja2/) - A Python package to provide a fast, expressive, and extensible template engine.
+-   [Markdown](https://pypi.org/project/Markdown/) - A Python package to provide a Python implementation of John Gruber's Markdown.
+-   [markdown-it-py](https://pypi.org/project/markdown-it-py/) - A Python package to provide a Python implementation of Markdown-it.
+-   [MarkupSafe](https://pypi.org/project/MarkupSafe/) - A Python package to provide a library for safe string interpolation.
+-   [mdurl](https://pypi.org/project/mdurl/) - A Python package to provide a Markdown URL encoder/decoder.
+-   [mergedeep](https://pypi.org/project/mergedeep/) - A Python package to provide a deep merge for dictionaries.
+-   [mkdocs](https://pypi.org/project/mkdocs/) - A Python package to provide a fast, simple, and downright gorgeous static site generator that's geared towards building project documentation.
+-   [mkdocs-click](https://pypi.org/project/mkdocs-click/) - A Python package to provide a click extension for mkdocs.
+-   [mkdocs-get-deps](https://pypi.org/project/mkdocs-get-deps/) - A Python package to provide a mkdocs plugin to get dependencies.
+-   [mkdocs-material](https://pypi.org/project/mkdocs-material/) - A Python package to provide a material design theme for mkdocs.
+-   [mkdocs-material-extensions](https://pypi.org/project/mkdocs-material-extensions/) - A Python package to provide material design extensions for mkdocs.
+-   [numpy](https://pypi.org/project/numpy/) - A Python package to provide a powerful N-dimensional array object.
+-   [oauthlib](https://pypi.org/project/oauthlib/) - A Python package to provide a generic, spec-compliant, thorough implementation of the OAuth request-signing logic.
+-   [packaging](https://pypi.org/project/packaging/) - A Python package to provide core utilities for Python packages.
+-   [paginate](https://pypi.org/project/paginate/) - A Python package to provide a simple pagination library.
+-   [pandas](https://pypi.org/project/pandas/) - A Python package to provide a fast, powerful, flexible, and easy-to-use open-source data analysis and data manipulation library.
+-   [pathspec](https://pypi.org/project/pathspec/) - A Python package to provide utility functions for pattern matching of file paths.
+-   [platformdirs](https://pypi.org/project/platformdirs/) - A Python package to provide a library for determining platform-specific directories.
+-   [pydantic](https://pypi.org/project/pydantic/) - A Python package to provide data validation and settings management using Python type hints.
+-   [Pygments](https://pypi.org/project/Pygments/) - A Python package to provide a generic syntax highlighter for general use in all kinds of software.
+-   [pymdown-extensions](https://pypi.org/project/pymdown-extensions/) - A Python package to provide a collection of extensions for Python Markdown.
+-   [pyreadline3](https://pypi.org/project/pyreadline3/) - A Python package to provide a readline library for Windows.
+-   [python-dateutil](https://pypi.org/project/python-dateutil/) - A Python package to provide extensions to the standard Python datetime module.
+-   [python-dotenv](https://pypi.org/project/python-dotenv/) - A Python package to provide a Python-dotenv reads key-value pairs from a .env file and can set them as environment variables.
+-   [python-twitter](https://pypi.org/project/python-twitter/) - A Python package to provide a Python wrapper around the Twitter API.
+-   [pytz](https://pypi.org/project/pytz/) - A Python package to provide the Olson timezone database (commonly known as the IANA timezone database).
+-   [PyYAML](https://pypi.org/project/PyYAML/) - A Python package to provide a YAML parser and emitter for Python.
+-   [pyyaml_env_tag](https://pypi.org/project/pyyaml_env_tag/) - A Python package to provide a YAML tag for environment variables.
+-   [ratelimit](https://pypi.org/project/ratelimit/) - A Python package to provide a rate limiting decorator for Python.
+-   [regex](https://pypi.org/project/regex/) - A Python package to provide a regular expression engine that supports full Unicode.
+-   [requests](https://pypi.org/project/requests/) - A Python package to provide a simple, yet elegant HTTP library.
+-   [requests-oauthlib](https://pypi.org/project/requests-oauthlib/) - A Python package to provide OAuthlib authentication support for Requests.
+-   [rich](https://pypi.org/project/rich/) - A Python package to provide a library for rich text and beautiful formatting in the terminal.
+-   [rich-click](https://pypi.org/project/rich-click/) - A Python package to provide a click extension for rich.
+-   [six](https://pypi.org/project/six/) - A Python package to provide a compatibility library for Python 2 and 3.  
+-   [soupsieve](https://pypi.org/project/soupsieve/) - A Python package to provide a CSS selector library for BeautifulSoup.
+-   [sqlparse](https://pypi.org/project/sqlparse/) - A Python package to provide a non-validating SQL parser.
+-   [tenacity](https://pypi.org/project/tenacity/) - A Python package to provide a general-purpose retrying library.
+-   [toml](https://pypi.org/project/toml/) - A Python package to provide a Python library for parsing and creating TOML.
+-   [tomli](https://pypi.org/project/tomli/) - A Python package to provide a TOML parser and serializer.
+-   [tornado](https://pypi.org/project/tornado/) - A Python package to provide a web framework and asynchronous networking library.
+-   [typing_extensions](https://pypi.org/project/typing-extensions/) - A Python package to provide backported and experimental type hints for Python.
+-   [tzdata](https://pypi.org/project/tzdata/) - A Python package to provide a library for the IANA time zone database.
+-   [ua-parser](https://pypi.org/project/ua-parser/) - A Python package to provide a Python implementation of the UA parser.
+-   [ua-parser-builtins](https://pypi.org/project/ua-parser-builtins/) - A Python package to provide a Python implementation of the UA parser builtins.
+-   [urllib3](https://pypi.org/project/urllib3/) - A Python package to provide a powerful HTTP client for Python.
+-   [user-agents](https://pypi.org/project/user-agents/) - A Python package to provide a library to identify devices (phones, tablets) and their capabilities by parsing (browser) user agent strings.
+-   [user_agent](https://pypi.org/project/user_agent/) - A Python package to provide a library to generate random user agents.
+-   [watchdog](https://pypi.org/project/watchdog/) - A Python package to provide a file system monitoring library.
+-   [websocket-client](https://pypi.org/project/websocket-client/) - A Python package to provide a WebSocket client for Python.

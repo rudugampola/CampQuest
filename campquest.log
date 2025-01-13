@@ -1221,3 +1221,218 @@
 2025-01-09 22:33:37,817 - 18020 - INFO - Setting number of nights to 1.
 2025-01-09 22:33:37,820 - 18020 - INFO - No availability for park ID 232450.
 2025-01-09 22:33:37,821 - 18020 - INFO - No availability found for some parks, checking again in 60 seconds...
+2025-01-12 17:50:09,890 - 14668 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(690,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 17:50:10,322 - 14668 - ERROR - Could not find campground with ID: 690
+2025-01-12 17:50:28,933 - 16620 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(612,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 17:50:29,165 - 16620 - ERROR - Could not find campground with ID: 612
+2025-01-12 17:51:02,829 - 15820 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(690,), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 17:51:15,542 - 15864 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(612,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 17:51:15,724 - 15864 - ERROR - Could not find campground with ID: 612
+2025-01-12 17:52:37,236 - 9392 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(691,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 17:52:37,743 - 9392 - ERROR - Could not find campground with ID: 691
+2025-01-12 17:53:12,026 - 17036 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(232447,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 17:53:12,228 - 17036 - ERROR - Could not find campground with ID: 232447
+2025-01-12 17:53:20,070 - 16444 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(232447,), stdin=False, source=recreation, notify=False, continuous=False
+2025-01-12 17:53:20,483 - 16444 - INFO - Setting number of nights to 1.
+2025-01-12 17:53:20,485 - 16444 - INFO - Available site 1: 100
+2025-01-12 17:53:20,486 - 16444 - INFO - Available site 2: 103
+2025-01-12 17:53:20,486 - 16444 - INFO - Available site 3: 105
+2025-01-12 17:53:20,487 - 16444 - INFO - Available site 4: 108
+2025-01-12 17:53:20,488 - 16444 - INFO - Available site 5: 109
+2025-01-12 17:53:20,489 - 16444 - INFO - Available site 6: 138
+2025-01-12 17:53:20,489 - 16444 - INFO - Available site 7: 139
+2025-01-12 17:53:20,490 - 16444 - INFO - Available site 8: 140
+2025-01-12 17:53:20,490 - 16444 - INFO - Available site 9: 143
+2025-01-12 17:53:20,490 - 16444 - INFO - Available site 10: 145
+2025-01-12 17:53:20,491 - 16444 - INFO - Available site 11: 146
+2025-01-12 17:53:20,491 - 16444 - INFO - Available site 12: 175
+2025-01-12 17:53:20,491 - 16444 - INFO - Available site 13: 221
+2025-01-12 17:53:20,492 - 16444 - INFO - Available site 14: 222
+2025-01-12 17:53:20,492 - 16444 - INFO - Available site 15: 223
+2025-01-12 17:53:20,492 - 16444 - INFO - Available site 16: 224
+2025-01-12 17:53:20,493 - 16444 - INFO - Available site 17: 229
+2025-01-12 17:53:20,493 - 16444 - INFO - Available site 18: 230
+2025-01-12 17:53:20,493 - 16444 - INFO - Available site 19: 232
+2025-01-12 17:53:20,493 - 16444 - INFO - Available site 20: 256
+2025-01-12 17:53:20,494 - 16444 - INFO - Available site 21: 257
+2025-01-12 17:53:20,494 - 16444 - INFO - Available site 22: 258
+2025-01-12 17:53:20,494 - 16444 - INFO - Available site 23: 259
+2025-01-12 17:53:20,495 - 16444 - INFO - Available site 24: 260
+2025-01-12 17:53:20,495 - 16444 - INFO - Available site 25: 262
+2025-01-12 17:53:20,495 - 16444 - INFO - Available site 26: 263
+2025-01-12 17:53:20,496 - 16444 - INFO - Available site 27: 284
+2025-01-12 17:53:20,496 - 16444 - INFO - Available site 28: 287
+2025-01-12 17:53:20,496 - 16444 - INFO - Available site 29: 289
+2025-01-12 17:53:20,497 - 16444 - INFO - Available site 30: 290
+2025-01-12 17:53:20,497 - 16444 - INFO - Available site 31: 291
+2025-01-12 17:53:20,497 - 16444 - INFO - Available site 32: 294
+2025-01-12 17:53:20,497 - 16444 - INFO - Available site 33: 309
+2025-01-12 17:53:20,498 - 16444 - INFO - Available site 34: 310
+2025-01-12 17:53:20,498 - 16444 - INFO - Available site 35: 311
+2025-01-12 17:53:20,498 - 16444 - INFO - Available site 36: 312
+2025-01-12 17:53:20,499 - 16444 - INFO - Available site 37: 75
+2025-01-12 17:53:20,499 - 16444 - INFO - Available site 38: 76
+2025-01-12 17:53:20,499 - 16444 - INFO - Available site 39: 86
+2025-01-12 17:53:20,500 - 16444 - INFO - Available site 40: 87
+2025-01-12 17:53:20,500 - 16444 - INFO - Available site 41: 96
+2025-01-12 17:53:20,500 - 16444 - INFO - Available site 42: 98
+2025-01-12 17:53:20,502 - 16444 - INFO - Output: There are campsites available from 2025-01-16 to 2025-01-17 😊
+✅ Upper Pines Campground (232447): 42 site(s) available out of 237 site(s)
+2025-01-12 17:53:20,502 - 16444 - INFO - Success! Output generated - No Notification Sent!
+2025-01-12 17:54:41,530 - 2228 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(1,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 17:54:41,779 - 2228 - ERROR - Could not find campground with ID: 1
+2025-01-12 17:55:02,678 - 8384 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(690,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 17:55:02,840 - 8384 - ERROR - Could not find campground with ID: 690
+2025-01-12 17:56:35,695 - 8300 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(1120,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 17:56:35,916 - 8300 - ERROR - Could not find campground with ID: 1120
+2025-01-12 17:59:56,412 - 16900 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(691,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 17:59:56,636 - 16900 - ERROR - Could not find campground with ID: 691
+2025-01-12 18:01:42,500 - 16964 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(691,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 18:01:42,787 - 16964 - ERROR - Could not find campground with ID: 691
+2025-01-12 18:01:54,638 - 1784 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(691,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 18:01:54,808 - 1784 - ERROR - Could not find campground with ID: 691
+2025-01-12 18:02:29,247 - 3572 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(691,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 18:02:29,761 - 3572 - ERROR - Could not find campground with ID: 691
+2025-01-12 18:03:07,054 - 16940 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(691,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 18:04:40,465 - 17188 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(691,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 18:04:40,695 - 17188 - ERROR - Could not find campground with ID: 691
+2025-01-12 18:14:47,562 - 16736 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(767,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 18:14:48,373 - 16736 - INFO - Found campground: Main Camp (sites 131-188) (campground id: 767)
+2025-01-12 18:14:48,410 - 16736 - INFO - Output: There are campsites available from 2025-01-16 to 2025-01-17 😊
+✅ ReserveCalifornia Park (767): 497 site(s) available out of 497 site(s)
+2025-01-12 18:14:48,410 - 16736 - INFO - Success! Output generated - No Notification Sent!
+2025-01-12 18:15:07,126 - 5780 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(767,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 18:15:07,335 - 5780 - ERROR - Could not find campground with ID: 767
+2025-01-12 18:15:19,622 - 16844 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(767,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 18:15:19,802 - 16844 - ERROR - Could not find campground with ID: 767
+2025-01-12 18:15:52,003 - 4032 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(767,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 18:15:52,872 - 4032 - INFO - Found campground: Main Camp (sites 131-188) (campground id: 767)
+2025-01-12 18:15:52,883 - 4032 - INFO - Output: There are campsites available from 2025-01-16 to 2025-01-17 😊
+✅ ReserveCalifornia Park (767): 497 site(s) available out of 497 site(s)
+2025-01-12 18:15:52,883 - 4032 - INFO - Success! Output generated - No Notification Sent!
+2025-01-12 18:16:04,765 - 11772 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(767,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 18:16:05,018 - 11772 - INFO - Found campground: Main Camp (sites 131-188) (campground id: 767)
+2025-01-12 18:16:05,029 - 11772 - INFO - Output: There are campsites available from 2025-01-16 to 2025-01-17 😊
+✅ ReserveCalifornia Park (767): 497 site(s) available out of 497 site(s)
+2025-01-12 18:16:05,029 - 11772 - INFO - Success! Output generated - No Notification Sent!
+2025-01-12 18:16:06,959 - 16116 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(767,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 18:16:07,187 - 16116 - INFO - Found campground: Main Camp (sites 131-188) (campground id: 767)
+2025-01-12 18:16:07,195 - 16116 - INFO - Output: There are campsites available from 2025-01-16 to 2025-01-17 😊
+✅ ReserveCalifornia Park (767): 497 site(s) available out of 497 site(s)
+2025-01-12 18:16:07,195 - 16116 - INFO - Success! Output generated - No Notification Sent!
+2025-01-12 18:16:08,587 - 1464 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(767,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 18:16:08,832 - 1464 - INFO - Found campground: Main Camp (sites 131-188) (campground id: 767)
+2025-01-12 18:16:08,843 - 1464 - INFO - Output: There are campsites available from 2025-01-16 to 2025-01-17 😊
+✅ ReserveCalifornia Park (767): 497 site(s) available out of 497 site(s)
+2025-01-12 18:16:08,844 - 1464 - INFO - Success! Output generated - No Notification Sent!
+2025-01-12 18:16:31,255 - 8204 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(611,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 18:16:33,345 - 8204 - INFO - Found campground: South Camp (sites 1-78) (campground id: 611)
+2025-01-12 18:16:33,346 - 8204 - INFO - No availability for park ID 611.
+2025-01-12 18:17:04,823 - 11580 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(612,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 18:17:05,026 - 11580 - ERROR - Could not find campground with ID: 612
+2025-01-12 18:17:09,148 - 14800 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(611,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 18:17:09,320 - 14800 - INFO - Found campground: South Camp (sites 1-78) (campground id: 611)
+2025-01-12 18:17:09,323 - 14800 - INFO - No availability for park ID 611.
+2025-01-12 18:17:12,162 - 8636 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(612,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 18:17:12,339 - 8636 - INFO - Found campground: Weyland Camp (sites 79-130) (campground id: 612)
+2025-01-12 18:17:12,344 - 8636 - INFO - Output: There are campsites available from 2025-01-16 to 2025-01-17 😊
+✅ ReserveCalifornia Park (612): 171 site(s) available out of 171 site(s)
+2025-01-12 18:17:12,344 - 8636 - INFO - Success! Output generated - No Notification Sent!
+2025-01-12 18:18:10,072 - 14800 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(612,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 18:18:10,301 - 14800 - INFO - Found campground: Weyland Camp (sites 79-130) (campground id: 612)
+2025-01-12 18:18:10,305 - 14800 - INFO - Output: There are campsites available from 2025-01-16 to 2025-01-17 😊
+✅ ReserveCalifornia Park (612): 171 site(s) available out of 171 site(s)
+2025-01-12 18:18:10,305 - 14800 - INFO - Success! Output generated - No Notification Sent!
+2025-01-12 18:18:35,532 - 16768 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(767,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 18:18:35,754 - 16768 - INFO - Found campground: Main Camp (sites 131-188) (campground id: 767)
+2025-01-12 18:18:35,761 - 16768 - INFO - Output: There are campsites available from 2025-01-16 to 2025-01-17 😊
+✅ ReserveCalifornia Park (767): 497 site(s) available out of 497 site(s)
+2025-01-12 18:18:35,762 - 16768 - INFO - Success! Output generated - No Notification Sent!
+2025-01-12 18:29:02,354 - 11400 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(767,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 18:29:37,344 - 6876 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(767,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 18:29:38,269 - 6876 - INFO - Found campground: Main Camp (sites 131-188) (campground id: 767)
+2025-01-12 18:29:38,282 - 6876 - INFO - Output: There are campsites available from 2025-01-16 to 2025-01-17 😊
+✅ ReserveCalifornia Park (767): 497 site(s) available out of 497 site(s)
+2025-01-12 18:29:38,282 - 6876 - INFO - Success! Output generated - No Notification Sent!
+2025-01-12 18:30:14,220 - 16984 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(612,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 18:30:14,389 - 16984 - INFO - Found campground: Weyland Camp (sites 79-130) (campground id: 612)
+2025-01-12 18:30:14,393 - 16984 - INFO - Output: There are campsites available from 2025-01-16 to 2025-01-17 😊
+✅ ReserveCalifornia Park (612): 171 site(s) available out of 171 site(s)
+2025-01-12 18:30:14,393 - 16984 - INFO - Success! Output generated - No Notification Sent!
+2025-01-12 18:30:52,396 - 12752 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(612,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 18:30:52,617 - 12752 - INFO - Found campground: Weyland Camp (sites 79-130) (campground id: 612)
+2025-01-12 18:30:52,683 - 12752 - INFO - Output: There are campsites available from 2025-01-16 to 2025-01-17 😊
+✅ ReserveCalifornia Park (612): 171 site(s) available out of 171 site(s)
+2025-01-12 18:30:52,683 - 12752 - INFO - Success! Output generated - No Notification Sent!
+2025-01-12 18:35:44,637 - 17396 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(612,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 18:35:44,987 - 17396 - INFO - Found campground: Weyland Camp (sites 79-130) (campground id: 612)
+2025-01-12 18:35:44,991 - 17396 - INFO - Output: There are campsites available from 2025-01-16 to 2025-01-17 😊
+✅ Weyland Camp (sites 79-130) (612): 171 site(s) available out of 171 site(s)
+2025-01-12 18:35:44,991 - 17396 - INFO - Success! Output generated - No Notification Sent!
+2025-01-12 18:35:52,690 - 16260 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(612,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 18:35:52,889 - 16260 - INFO - Found campground: Weyland Camp (sites 79-130) (campground id: 612)
+2025-01-12 18:35:52,893 - 16260 - INFO - Output: There are campsites available from 2025-01-16 to 2025-01-17 😊
+✅ Weyland Camp (sites 79-130) (612): 171 site(s) available out of 171 site(s)
+2025-01-12 18:35:52,893 - 16260 - INFO - Success! Output generated - No Notification Sent!
+2025-01-12 18:36:11,913 - 18048 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(232447,), stdin=False, source=recreation, notify=False, continuous=False
+2025-01-12 18:36:12,473 - 18048 - INFO - Setting number of nights to 1.
+2025-01-12 18:36:12,474 - 18048 - INFO - Available site 1: 100
+2025-01-12 18:36:12,475 - 18048 - INFO - Available site 2: 103
+2025-01-12 18:36:12,475 - 18048 - INFO - Available site 3: 105
+2025-01-12 18:36:12,476 - 18048 - INFO - Available site 4: 108
+2025-01-12 18:36:12,476 - 18048 - INFO - Available site 5: 109
+2025-01-12 18:36:12,477 - 18048 - INFO - Available site 6: 138
+2025-01-12 18:36:12,477 - 18048 - INFO - Available site 7: 139
+2025-01-12 18:36:12,478 - 18048 - INFO - Available site 8: 140
+2025-01-12 18:36:12,478 - 18048 - INFO - Available site 9: 143
+2025-01-12 18:36:12,478 - 18048 - INFO - Available site 10: 145
+2025-01-12 18:36:12,479 - 18048 - INFO - Available site 11: 146
+2025-01-12 18:36:12,479 - 18048 - INFO - Available site 12: 175
+2025-01-12 18:36:12,480 - 18048 - INFO - Available site 13: 221
+2025-01-12 18:36:12,480 - 18048 - INFO - Available site 14: 222
+2025-01-12 18:36:12,481 - 18048 - INFO - Available site 15: 223
+2025-01-12 18:36:12,481 - 18048 - INFO - Available site 16: 224
+2025-01-12 18:36:12,481 - 18048 - INFO - Available site 17: 229
+2025-01-12 18:36:12,482 - 18048 - INFO - Available site 18: 230
+2025-01-12 18:36:12,482 - 18048 - INFO - Available site 19: 232
+2025-01-12 18:36:12,482 - 18048 - INFO - Available site 20: 256
+2025-01-12 18:36:12,482 - 18048 - INFO - Available site 21: 257
+2025-01-12 18:36:12,483 - 18048 - INFO - Available site 22: 258
+2025-01-12 18:36:12,483 - 18048 - INFO - Available site 23: 259
+2025-01-12 18:36:12,483 - 18048 - INFO - Available site 24: 260
+2025-01-12 18:36:12,484 - 18048 - INFO - Available site 25: 262
+2025-01-12 18:36:12,484 - 18048 - INFO - Available site 26: 263
+2025-01-12 18:36:12,484 - 18048 - INFO - Available site 27: 284
+2025-01-12 18:36:12,485 - 18048 - INFO - Available site 28: 287
+2025-01-12 18:36:12,485 - 18048 - INFO - Available site 29: 289
+2025-01-12 18:36:12,485 - 18048 - INFO - Available site 30: 290
+2025-01-12 18:36:12,485 - 18048 - INFO - Available site 31: 291
+2025-01-12 18:36:12,486 - 18048 - INFO - Available site 32: 294
+2025-01-12 18:36:12,486 - 18048 - INFO - Available site 33: 309
+2025-01-12 18:36:12,486 - 18048 - INFO - Available site 34: 310
+2025-01-12 18:36:12,486 - 18048 - INFO - Available site 35: 311
+2025-01-12 18:36:12,487 - 18048 - INFO - Available site 36: 312
+2025-01-12 18:36:12,487 - 18048 - INFO - Available site 37: 75
+2025-01-12 18:36:12,487 - 18048 - INFO - Available site 38: 76
+2025-01-12 18:36:12,487 - 18048 - INFO - Available site 39: 86
+2025-01-12 18:36:12,488 - 18048 - INFO - Available site 40: 87
+2025-01-12 18:36:12,488 - 18048 - INFO - Available site 41: 96
+2025-01-12 18:36:12,488 - 18048 - INFO - Available site 42: 98
+2025-01-12 18:36:12,489 - 18048 - INFO - Output: There are campsites available from 2025-01-16 to 2025-01-17 😊
+✅ Upper Pines Campground (232447): 42 site(s) available out of 237 site(s)
+2025-01-12 18:36:12,489 - 18048 - INFO - Success! Output generated - No Notification Sent!
+2025-01-12 18:36:16,370 - 18384 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(612,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 18:36:25,188 - 18384 - INFO - Found campground: Weyland Camp (sites 79-130) (campground id: 612)
+2025-01-12 18:36:25,193 - 18384 - INFO - Output: There are campsites available from 2025-01-16 to 2025-01-17 😊
+✅ Weyland Camp (sites 79-130) (612): 171 site(s) available out of 171 site(s)
+2025-01-12 18:36:25,193 - 18384 - INFO - Success! Output generated - No Notification Sent!
+2025-01-12 18:36:48,833 - 14816 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(615,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 18:36:49,269 - 14816 - INFO - Found campground: North Beach Campground (campground id: 615)
+2025-01-12 18:36:49,282 - 14816 - INFO - Output: There are campsites available from 2025-01-16 to 2025-01-17 😊
+✅ North Beach Campground (615): 876 site(s) available out of 876 site(s)
+2025-01-12 18:36:49,282 - 14816 - INFO - Success! Output generated - No Notification Sent!
+2025-01-12 18:49:57,979 - 15072 - INFO - Received inputs: start_date=2025-01-16 00:00:00, end_date=2025-01-17 00:00:00, nights=None, campsite_ids=(), show_campsite_info=False, campsite_type=None, json_output=False, weekends_only=False, exclusion_file=False, parks=(615,), stdin=False, source=reserve_california, notify=False, continuous=False
+2025-01-12 18:49:58,240 - 15072 - INFO - Found campground: North Beach Campground (campground id: 615)
+2025-01-12 18:49:58,260 - 15072 - INFO - Output: There are campsites available from 2025-01-16 to 2025-01-17 😊
+✅ North Beach Campground (615): 876 site(s) available out of 876 site(s)
+2025-01-12 18:49:58,260 - 15072 - INFO - Success! Output generated - No Notification Sent!

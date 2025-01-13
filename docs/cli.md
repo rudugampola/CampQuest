@@ -31,6 +31,7 @@ search criteria and output format.
    --debug               -d                                   Enable debug mode log level
    --source                  [recreation|reserve_california]  Source of park information.
    --notify                                                   Send a Pushover notification when campsites are available.
+   --continuous                                               Run the search continuously until a campsite is found.     
    --help                                                     Show this message and exit.
 
 ```
@@ -50,3 +51,5 @@ python cli.py --start-date 2021-07-01 --end-date 2021-07-05 --parks 272299 --sho
 ```
 
 ```--notify``` will send a pushover notification if campsites are available. If no sites are available, the search will be repeated every 1 minute until an unavailable site becomes available.
+
+```--continuous``` will run the search continuously until a campsite is found. If a site is found, the result will be displayed/notified and the search will continue for the remaining sites. 

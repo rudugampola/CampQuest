@@ -50,7 +50,7 @@ class AvailableCampsite:
 
 @dataclass
 class ReserveCaliforniaCampsite:
-    Campground: str
+    Campground: str  # Add this line to ensure the campground name is included
     UnitId: int
     Name: str
     ShortName: str
